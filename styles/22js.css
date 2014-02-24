@@ -1,0 +1,99 @@
+body {
+	background-color: #ababab;
+	color: #222;
+}
+#nav {
+	position: fixed;
+	z-index: 9995;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	background: #333;
+	background: rgba(0,0,0,0.7);
+}
+
+	#nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	#nav li {
+		list-style-type: none;
+		float: left;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		line-height: 80px;
+	}
+
+
+#page {
+	min-height: 1000px;
+	color: #222;
+}
+
+#legal {
+	width: 100%;
+	background: #090909;
+	color: #999999;
+	min-height: 140px;
+}
+
+
+#posts {
+	max-width: 1200px;
+	min-width: 960px;
+}
+
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+
+/* These are the classes that are going to be applied: */
+.column { float: left; }
+.size-1of3 { width: 33.333%; }
+
+/* Also, don't forget to add this: */
+[data-columns]::before { display: none; }
+
+
+
+
+
+@media screen and (max-width: 480px){
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+	#posts {
+		max-width: 480px;
+		min-width: 480px;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#grid[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+	#posts {
+		max-width: 768px;
+		min-width: 481px;
+	}
+}
+@media screen and (min-width: 769px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+	#posts {
+		max-width: 959px;
+		min-width: 769px;
+	}	
+}
+
+/* Again, you're free to use and define the classes: */
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
+
+
