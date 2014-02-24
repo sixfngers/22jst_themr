@@ -118,7 +118,12 @@ body {
 {
 	border-radius: 0px;
 }
-            
+
+.link-wrapper h2 a 
+{
+	background-color:transparent;
+	border-radius: 0px;
+}            
 
 
 
