@@ -129,6 +129,11 @@ body {
 	border-radius: 0px;
 }
 
+.photo .photo-wrapper-inner 
+{
+	padding:0;
+}
+
 .link-wrapper h2 a 
 {
 	background-color:transparent;
@@ -140,7 +145,7 @@ article.active .panel {
     z-index: 2;
     filter: alpha(opacity = 100);
     margin-bottom:2px;
-    
+
 }
 
 .panel {
