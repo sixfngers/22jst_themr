@@ -445,47 +445,6 @@
                                         </div>
                                         {/block:Answer}
 
-                                        {block:RebloggedFrom}
-                                        <section class="attribution-tags clearfix">
-                                            <ul>
-                                                <li>
-                                                    <a class="reblog-link" href="{ReblogParentURL}">{ReblogParentName}</a>
-                                                </li>
-                                                {block:ContentSource}
-                                                <li>
-                                                    <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
-                                                </li>
-                                                {/block:ContentSource}
-                                                {block:HasTags}
-                                                    {block:Tags}
-                                                        <li>
-                                                            <a href="{TagURL}" class="tag">{Tag}</a>
-                                                        </li>
-                                                    {/block:Tags}
-                                                {/block:HasTags} 
-                                            </ul>
-                                        </section>
-                                        {/block:RebloggedFrom}
-
-                                        {block:NotReblog}
-                                            {block:HasTags}
-                                            <section class="attribution-tags clearfix">
-                                                <ul>
-                                                    {block:ContentSource}
-                                                    <li>
-                                                        <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
-                                                    </li>
-                                                    {/block:ContentSource}
-                                                    {block:Tags}
-                                                        <li>
-                                                            <a href="{TagURL}" class="tag">{Tag}</a>
-                                                        </li>
-                                                    {/block:Tags}
-                                                </ul>
-                                            </section>
-                                            {/block:HasTags}                                
-                                        {/block:NotReblog}
-
                                     </section>
                                     
                                     {block:Date}
@@ -514,7 +473,11 @@
                                             
                                             <section class="post-controls">
                                                 <ul>
-                                                    <li class="share-control">
+                                                    <li class="reblog-control">{ReblogButton size="21" color="white"}</li>
+                                                    <li class="like-control">{LikeButton size="20" color="white"}</li>
+                                                
+
+                                                <li class="share-control">
                                                         <nav class="pop">
                                                             <a href="#" class="share selector"></a>
                                                             <div class="pop-menu share-menu south" id="share_{PostID}">
@@ -527,10 +490,50 @@
                                                             </div>
                                                         </nav>
                                                     </li>
-                                                    <li class="reblog-control">{ReblogButton size="21" color="black"}</li>
-                                                    <li class="like-control">{LikeButton size="20" color="black"}</li>
+
                                                 </ul>
                                             </section>
+
+                                            {block:RebloggedFrom}
+                                            <section class="attribution-tags clearfix">
+                                                <ul>
+                                                    <li>
+                                                        <a class="reblog-link" href="{ReblogParentURL}">{ReblogParentName}</a>
+                                                    </li>
+                                                    {block:ContentSource}
+                                                    <li>
+                                                        <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+                                                    </li>
+                                                    {/block:ContentSource}
+                                                    {block:HasTags}
+                                                        {block:Tags}
+                                                            <li>
+                                                                <a href="{TagURL}" class="tag">{Tag}</a>
+                                                            </li>
+                                                        {/block:Tags}
+                                                    {/block:HasTags} 
+                                                </ul>
+                                            </section>
+                                            {/block:RebloggedFrom}
+
+                                            {block:NotReblog}
+                                                {block:HasTags}
+                                                <section class="attribution-tags clearfix">
+                                                    <ul>
+                                                        {block:ContentSource}
+                                                        <li>
+                                                            <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+                                                        </li>
+                                                        {/block:ContentSource}
+                                                        {block:Tags}
+                                                            <li>
+                                                                <a href="{TagURL}" class="tag">{Tag}</a>
+                                                            </li>
+                                                        {/block:Tags}
+                                                    </ul>
+                                                </section>
+                                                {/block:HasTags}                                
+                                            {/block:NotReblog}
                                         </footer>
                                     </section>
                                     {/block:Date}
