@@ -104,16 +104,17 @@ body {
 
 #post article
 {
-	margin-bottom:7px;
+	border: 1px solid #cd210d;
+	margin: 3px 2px 4px 2px;
 }
+
 .post-wrapper
 {
-	background-color: #cd210d;
 	border-radius: 0px;
 }
     
 
-.photo-wrapper
+.photo .photo-wrapper
 {
 	border-radius: 0px;
 }
