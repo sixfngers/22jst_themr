@@ -340,11 +340,50 @@
                                                     {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">{LinkCloseTag}
                                                 </div>
                                             </div>
+                                            <div class="hover-content">
+                                                {block:Date}
+                                            
+                                                <footer class="post-footer">
+                                                    <section class="meta"> 
+                                                        <ul class="post-date">
+                                                            <li>
+                                                                <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
+                                                            </li>
+                                                            {block:NoteCount}
+                                                            <li> 
+                                                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                                                            </li>
+                                                            {/block:NoteCount}
+                                                        </ul>
+                                                    </section>
+                                                    
+                                                    <section class="post-controls">
+                                                        <ul>
+                                                            <li class="share-control">
+                                                                <nav class="pop">
+                                                                    <a href="#" class="share selector"></a>
+                                                                    <div class="pop-menu share-menu south" id="share_{PostID}">
+                                                                        <ul>
+                                                                            <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">Open in app</a></li>
+                                                                            <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
+                                                                            <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">Tweet</a></li>
+                                                                            <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">Mail</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </nav>
+                                                            </li>
+                                                            <li class="reblog-control">{ReblogButton size="21" color="black"}</li>
+                                                            <li class="like-control">{LikeButton size="20" color="black"}</li>
+                                                        </ul>
+                                                    </section>
+                                                </footer>
+                                            {/block:Date}
                                             {block:Caption}
                                             <figcaption class="caption">
                                                 {Caption}
                                             </figcaption>
                                             {/block:Caption}
+                                            </div>
                                         </figure>
                                         {/block:Photo}
 
@@ -491,46 +530,11 @@
                                             {/block:HasTags}                                
                                         {/block:NotReblog}
 
+                                        
+
                                     </section>
                                     
-                                    {block:Date}
-                                    <section class="panel">
-                                        <footer class="post-footer">
-                                            <section class="meta"> 
-                                                <ul class="post-date">
-                                                    <li>
-                                                        <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
-                                                    </li>
-                                                    {block:NoteCount}
-                                                    <li> 
-                                                        <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
-                                                    </li>
-                                                    {/block:NoteCount}
-                                                </ul>
-                                            </section>
-                                            
-                                            <section class="post-controls">
-                                                <ul>
-                                                    <li class="share-control">
-                                                        <nav class="pop">
-                                                            <a href="#" class="share selector"></a>
-                                                            <div class="pop-menu share-menu south" id="share_{PostID}">
-                                                                <ul>
-                                                                    <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">Open in app</a></li>
-                                                                    <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
-                                                                    <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">Tweet</a></li>
-                                                                    <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">Mail</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </nav>
-                                                    </li>
-                                                    <li class="reblog-control">{ReblogButton size="21" color="black"}</li>
-                                                    <li class="like-control">{LikeButton size="20" color="black"}</li>
-                                                </ul>
-                                            </section>
-                                        </footer>
-                                    </section>
-                                    {/block:Date}
+                                    
                                     {block:PermalinkPage}
 
                                         {block:PostNotes}
