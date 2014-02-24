@@ -106,6 +106,7 @@ body {
 {
 	border: 1px solid #cd210d;
 	margin: 3px 2px 4px 2px;
+	/* perhaps not necessary anymore */
 	-webkit-transition: none !important;
     -o-transition: none !important;
     -ms-transition: none !important;
@@ -116,12 +117,13 @@ body {
 
 #posts article.active
 {
-	margin-bottom:2px
+	margin-bottom:4px
 }
 
 .post
 {
 	margin-bottom:0;
+	/* perhaps not necessary anymore */
 	-webkit-transition: none !important;
     -o-transition: none !important;
     -ms-transition: none !important;
