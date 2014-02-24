@@ -106,6 +106,7 @@ body {
 {
 	border: 1px solid #cd210d;
 	margin: 3px 2px 4px 2px;
+
 }
 
 #posts article.active
@@ -116,6 +117,11 @@ body {
 .post
 {
 	margin-bottom:0;
+	-webkit-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    transition: none;
 }
 
 .post-wrapper
