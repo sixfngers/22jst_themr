@@ -110,7 +110,7 @@ body {
 
 #posts article.active
 {
-	margin-bottom:0;
+	margin-bottom:2px
 }
 
 .post
