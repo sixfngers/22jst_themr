@@ -129,6 +129,14 @@
 
             /* Custom CSS */
             {CustomCSS}
+            
+            
+.reblog-button
+{
+    position: relative;
+    height: 50%;
+    width: 50%;
+}
         </style>
 
 
@@ -473,11 +481,12 @@
                                             
                                             <section class="post-controls">
                                                 <ul>
-                                                    <li class="reblog-control">{ReblogButton size="21" color="white"}</li>
-                                                    <li class="like-control">{LikeButton size="20" color="white"}</li>
+                                                    <li class="reblog-control bg-fill">{ReblogButton size="21" color="white"}</li>
+                                                    <li class="like-control bg-fill">{LikeButton size="20" color="white"}</li>
+                                                    <li class="permalink-control bg-fill"><a href="{ReblogURL}"></a></li>
                                                 
 
-                                                <li class="share-control">
+                                                <li class="share-control bg-fill">
                                                         <nav class="pop">
                                                             <a href="#" class="share selector"></a>
                                                             <div class="pop-menu share-menu south" id="share_{PostID}">
@@ -535,6 +544,7 @@
                                                 {/block:HasTags}                                
                                             {/block:NotReblog}
                                         </footer>
+                                        <a href=""><div class="post-link-shim"><div></a>
                                     </section>
                                     {/block:Date}
                                     {block:PermalinkPage}
