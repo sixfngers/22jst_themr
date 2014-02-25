@@ -192,7 +192,7 @@ article.active .panel {
 }
 
 
-.like-control:hover, .reblog-control:hover, .share-control:hover ,.permalink-button:hover
+.like-control:hover, .reblog-control:hover, .share-control:hover ,.permalink-control:hover
 { 
 	/*
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
