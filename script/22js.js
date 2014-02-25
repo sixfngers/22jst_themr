@@ -16,7 +16,22 @@ log = ( window.location.href.indexOf('22new.tumblr') > -1 || window.location.hre
 log('debug dev events');
 
 
-$(function() {
+var detectViewPort = function()
+{
+	log($(nav-wrapper));
+    log($(nav-wrapper).height);
+    log($(header-nav-dummy).height);
+
+    $(header-nav-dummy).height = $(nav-wrapper).height;
+};
 
 
+$(window).resize(function () {
+   detectViewPort();
 });
+
+
+$(function() {
+	detectViewPort();
+});
+
