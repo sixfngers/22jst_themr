@@ -18,11 +18,7 @@ log('debug dev events');
 
 var detectViewPort = function()
 {
-	log($('nav-wrapper'));
-    log($('nav-wrapper').height);
-    log($('header-nav-dummy').height);
-
-    $(header-nav-dummy).css('height') = $('#nav-wrapper').css('height');
+    $(header-nav-dummy).height( $('#nav-wrapper')height() );
 };
 
 
