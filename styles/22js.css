@@ -227,8 +227,10 @@ article.active .panel {
     margin: 20px auto auto;
 }
 
-.post-controls li a .permalink-control
+.post-controls li .permalink-control
 {
+	width:60px;
+	height:62px;
 	background: url(https://24.media.tumblr.com/30daddadec9ab8024be7e4dedc230476/tumblr_n1izbe3B2s1tsri92o1_100.png) 0 -124px no-repeat
 }
 
