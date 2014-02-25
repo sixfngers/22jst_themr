@@ -157,9 +157,9 @@
 
 #nav
 {
-    max-width:960px;
-    margin-left:auto;
-    margin-right:auto;
+    /*max-width:960px;*/
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
 }
 
     #nav ul {
@@ -265,7 +265,7 @@
 
 @media screen and (max-width: 480px){
     #grid[data-columns]::before {
-        content: '1 .column.size-1of1';
+        content: '1 .column.size-1of1' style="margin-top:213px";
     }
     #posts {
         max-width: 480px;
@@ -297,11 +297,13 @@
 .size-1of1 { width: 100%; }
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.333%; }
+.size-2of3 { width: 66.666%; }
 
 
-
-
-
+section #posts
+{
+    margin-top:-216px;
+}
 
 
 #posts article
@@ -315,6 +317,16 @@
     -moz-transition: none !important;
     transition: none !important;
 
+}
+.featured-posts article
+{
+    border: 1px solid #cd210d;
+    margin: 3px 2px 4px 2px;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    -moz-transition: none !important;
+    transition: none !important;
 }
 
 #posts article.active
@@ -479,6 +491,41 @@ article.active .panel {
     display:block;
 }
 
+.no-image.avatar-style-circle #header
+{
+    margin-top: 0;
+}
+.no-image #header
+{
+    margin-top: 0;
+    padding:1px 20px;
+}
+
+.avatar-style-circle h1
+{
+    margin-top: 0;
+}
+
+.center-max-width-960
+{
+    /* duplicate nav center positioning */
+    max-width:960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#header-nav-dummy
+{
+    /* changes height based on nav height on resize*/
+    height:48px;
+    background:#ff0000;
+}
+
+.featured-subhead
+{
+    margin-top:7px;
+}
+
         </style>
 
     </head>
@@ -486,7 +533,7 @@ article.active .panel {
         <section id="page">
 
             <div id="nav-wrapper">
-                <div id="nav">
+                <div id="nav" class="center-max-width-960">
                     <ul>
                         <li class="follow">
                             <a href="#" class="sprite ir follow"><img src="//31.media.tumblr.com/c7e1f611b3806f1de399dbe26fe4675f/tumblr_n1j503nzMh1tsri92o1_400.png" width="385px" height="48px" alt="22 Jump Street Movie In Theaters June 13th"/></a>
@@ -519,18 +566,68 @@ article.active .panel {
                 {block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage}
                 {block:IfShowHeaderImage}{block:IfNotHeaderImage}no-image {/block:IfNotHeaderImage}{/block:IfShowHeaderImage}
                 avatar-style-{select:Avatar style}">
+                
+                
+                <div id="header-nav-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser --></div>
 
-                <header id="header">
+                <header id="header" class="center-max-width-960">
                     {block:IfShowTitle}
-                    <h1><a href="/">{Title}</a></h1>
                     {/block:IfShowTitle}
                     {block:IfShowDescription}
-                    <span class="sub-title">
-                        {Description}
-                    </span>
                     {/block:IfShowDescription}
                     <!-- what's this thing? -->
                     <div class="back-to-top"><a class="top" href="#"></a></div>
+                    
+                        <div class="featured-subhead">
+        <div class="featured-posts">
+            <div id="featured-leftcol" class="column size-1of3">
+                <article class="photo not-page">
+                    <div class="post-wrapper clearfix">
+                        <section class="post">
+                            <figure class="high-res with-caption" data-photo-width="330">
+                                <div class="photo-wrapper">
+                                    <div class="photo-wrapper-inner">
+                                        <a href="http://www.sony.com"><img src="https://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" alt="keyart" width="330" height="511"></a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </section>
+                    </div>
+                </article>
+                <article class="photo not-page">
+                    <div class="post-wrapper clearfix">
+                        <section class="post">
+                            <figure class="high-res with-caption" data-photo-width="330">
+                                <div class="photo-wrapper">
+                                    <div class="photo-wrapper-inner">
+                                        <a href="http://www.tumblr.com/follow/"{BlogURL}><img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1kj96rlcf1tsri92o1_400.png" alt="follow us" width="330" height="36"></a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </section>
+                    </div>
+                </article>
+            </div>
+            <div id="featured-rightcol" class="column size-2of3">
+                <article class="photo not-page">
+                    <div class="post-wrapper clearfix">
+                        <section class="post">
+                            <figure class="high-res with-caption" data-photo-width="640">
+                                <div class="photo-wrapper">
+                                    <div class="photo-wrapper-inner">
+                                        <a href="youtube.com"><img src="https://24.media.tumblr.com/8ea39422d569988667721b874fd560a4/tumblr_n1kh0gtaoB1tsri92o1_r4_1280.png" alt="watch the red band trailer" width="640" height="282"></a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </section>
+                    </div>
+                </article>
+            </div>
+                    
+        </div>
+        <div class="clearfix"></div>
+    </div>
+                    
 
                 </header>
             </div>
@@ -548,20 +645,20 @@ article.active .panel {
 
                 <div id="grid" data-page-id="{CurrentPage}" data-columns>
 
- {block:IfFeaturedTag}
-   <h1 class="featured-subhead">
-     Featured Posts <a href="/tagged/{text:Featured Tag}"> + </a>
-   </h1>
- {/block:IfFeaturedTag}
+ <!--{block:IfFeaturedTag}-->
+ <!--  <h1 class="featured-subhead">-->
+ <!--    Featured Posts <a href="/tagged/{text:Featured Tag}"> + </a>-->
+ <!--  </h1>-->
+ <!--{/block:IfFeaturedTag}-->
  
 
-                    <article class="hero">
-                        <div class="post-wrapper clearfix">
-                            <section class="post">
-                                22JS static image
-                            </section>
-                        </div>
-                    </article>
+                    <!--<article class="hero">-->
+                    <!--    <div class="post-wrapper clearfix">-->
+                    <!--        <section class="post">-->
+                    <!--            22JS static image-->
+                    <!--        </section>-->
+                    <!--    </div>-->
+                    <!--</article>-->
                     {block:Posts}
                             <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
                                 <div class="post-wrapper clearfix">
@@ -858,7 +955,10 @@ article.active .panel {
         {block:IfFeaturedTag}
     var rssurl = '/tagged/{text:Featured Tag}/rss';
     $.get(rssurl, function(data) {
-    $('.featured-subhead').append('<div class="featured-posts">');
+        
+        log(data);
+        
+    $('.featured-subhead').append('<div class="featured-posts"><div id="featured-leftcol" class="column size-1of3"></div><div id="featured-rightcol" class="column size-2of3"></div><div class="clearfix"></div>');
     var $xml = $(data);
     var vari = 0;
     $xml.find("item").each(function() {
@@ -870,9 +970,16 @@ article.active .panel {
                 pubDate: $this.find("pubDate").text(),
                 author: $this.find("author").text()
         }
+        
+        var appendto = $('#featured-rightcol');
         vari = vari +1;
-        if(vari <4){
-        $('.featured-subhead').append('<div class="featured-post" style="overflow:hidden;"><h2 class="featured-title"><a href="' + item.link + '">' + item.title + '</a></h2><div class="featured-post-description' + vari + '">' + item.description + '</div><div class="featured-post-link"><a href="' + item.link + '">Read More</a></div></div>');
+        if(vari < 3)
+        {
+            if(vari == 2)
+            {
+                appendto = $('#featured-leftcol');
+            }
+        appendto.append('<div class="featured-post" style="overflow:hidden;"><div class="featured-post-description' + vari + '"><div class="photo-wrapper"><div class="photo-wrapper-inner">' + item.description + '</div></div></div></div>');
         //Do something with item here...
         }
     });
