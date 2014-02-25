@@ -212,9 +212,15 @@ article.active .panel {
     background-color: black;
 }
 
-.reblog-button .like-button
+.post-controls li .like-button
 {
     margin: 20px auto auto;
 }
+
+
+.post-controls li .reblog_button {
+    margin: 20px auto auto;
+}
+
 
 
