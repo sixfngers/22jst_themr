@@ -28,5 +28,5 @@ $(window).resize(function () {
 
 $(document).ready(function(){
 	detectViewPort();
-	$('#grid').children(".column:first").css('margin-top','212px');
+	//$('#grid').children(".column:first").css('margin-top','212px');
 });
