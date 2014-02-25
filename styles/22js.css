@@ -206,9 +206,9 @@ article.active .panel {
 .post-controls > ul > li
 {
     float: left;
-    height: 60px;
+    height: 62px;
     position: relative;
-    width: 62px;
+    width: 60px;
    
 }
 
@@ -229,6 +229,7 @@ article.active .panel {
 
 .post-controls li .permalink-button
 {
+	display:block;
 	width:60px;
 	height:62px;
 	background: url(https://24.media.tumblr.com/30daddadec9ab8024be7e4dedc230476/tumblr_n1izbe3B2s1tsri92o1_100.png);
