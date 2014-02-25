@@ -203,13 +203,18 @@ article.active .panel {
 	opacity: 0.5;
 }
 
-.post-controls > ul > li .bg-fill
+.post-controls > ul > li
 {
     float: left;
     height: 60px;
     position: relative;
     width: 62px;
-    background-color: black;
+   
+}
+
+.bg-fill
+{
+	background-color: black;
 }
 
 .post-controls li .like_button 
