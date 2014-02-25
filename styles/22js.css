@@ -203,4 +203,18 @@ article.active .panel {
 	opacity: 0.5;
 }
 
+.post-controls > ul > li
+{
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 62px;
+    background-color: black;
+}
+
+.reblog-button .like-button
+{
+    margin: 20px auto auto;
+}
+
 
