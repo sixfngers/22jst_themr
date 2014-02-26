@@ -302,7 +302,7 @@
 
 section #posts
 {
-    margin-top:-216px;
+    /*margin-top:-217px;*/
 }
 
 
@@ -523,7 +523,7 @@ article.active .panel {
 
 .featured-subhead
 {
-    margin-top:7px;
+    
 }
 
         </style>
@@ -557,10 +557,47 @@ article.active .panel {
     
                 </div>
             </div>
+            
+            <div id="about-section" class='synopsis-container'>
 
+<h1>SYNOPSIS</h1>
+<p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
+</p>
 
+</div>
 
-<!--             <div class="nav-menu-bg"></div> -->
+<div id="about-section" class='fixed-section-container'>
+    <h1>CAST &amp; CREW</h1>
+    <div class="leftcol">
+        <p class="cast-header-initial">DIRECTED BY</p>
+        <p class="cast-body">Phil Lord &amp; Christopher Miller</p>
+        <br />
+        <p class="cast-header">SCREENPLAY BY</p>
+        <p class="cast-body">Oren Uziel and Rodney Rothman</p>
+        <br />
+        <p class="cast-header">STORY BY</p>
+        <p class="cast-body">Michael Bacall & Jonah Hill</p>
+        <br />
+        <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY</p>
+        <p class="cast-body">Patrick Hasburgh & Stephen J. Cannell</p>
+    </div>
+
+    <div class="rightcol">
+        <p class="cast-header-initial">PRODUCED BY</p>
+        <p class="cast-body">Neal H. Moritz, Jonah Hill, Channing Tatum</p>
+        <br />
+        <p class="cast-header">EXECUTIVE PRODUCERS</p>
+        <p class="cast-body">Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
+        <br />
+        <p class="cast-header">STORY BY</p>
+        <p class="cast-body">Michael Bacall & Jonah Hill</p>
+        <br />
+        <p class="cast-header">CAST</p>
+        <p class="cast-body">Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
+    </div>
+
+</div>
+
             <div class="header-wrapper
                 {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}
                 {block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage}
@@ -644,21 +681,6 @@ article.active .panel {
     
 
                 <div id="grid" data-page-id="{CurrentPage}" data-columns>
-
- <!--{block:IfFeaturedTag}-->
- <!--  <h1 class="featured-subhead">-->
- <!--    Featured Posts <a href="/tagged/{text:Featured Tag}"> + </a>-->
- <!--  </h1>-->
- <!--{/block:IfFeaturedTag}-->
- 
-
-                    <!--<article class="hero">-->
-                    <!--    <div class="post-wrapper clearfix">-->
-                    <!--        <section class="post">-->
-                    <!--            22JS static image-->
-                    <!--        </section>-->
-                    <!--    </div>-->
-                    <!--</article>-->
                     {block:Posts}
                             <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
                                 <div class="post-wrapper clearfix">
@@ -949,7 +971,7 @@ article.active .panel {
 
         <!-- vendor scripts -->
         <script src="http://dev.bpginteractive.com/22jump/script/22js.js"></script>
-        <script src="http://dev.bpginteractive.com/22jump/script/salvattore.js"></script>
+        <!--<script src="http://dev.bpginteractive.com/22jump/script/salvattore.js"></script>-->
 
         <script>
         {block:IfFeaturedTag}
