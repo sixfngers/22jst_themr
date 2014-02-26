@@ -35,10 +35,12 @@ $(document).ready(function(){
 
 function setupNav()
 {
-	$('#nav ul li .about').on('click', function(){
+	$('#nav ul li #about-link').on('click', function(){
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
 		showSiteSection($("#about-section"), $("#about-section-wrapper"));
     });
+
+    
 
     $('#about-section .section-header .close-button').on('click', function(){
 		closeSiteSection($("#about-section"), $("#about-section-wrapper"));
