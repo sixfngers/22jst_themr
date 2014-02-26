@@ -41,6 +41,7 @@ function setupNav()
     });
 
     $('#about-section .section-header .close-button').on('click', function(){
+		log("hit close");
 		hideSiteSection($("#about-section"), $("#about-section-wrapper")));
     }); 
 }
