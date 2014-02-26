@@ -19,6 +19,7 @@ log('debug dev events');
 var detectViewPort = function()
 {
     $('#header-nav-dummy').height($('#nav-wrapper').height());
+    $('.nav-height-dummy').height($('#nav-wrapper').height());
 };
 
 
@@ -28,5 +29,4 @@ $(window).resize(function () {
 
 $(document).ready(function(){
 	detectViewPort();
-	$('#grid').children(".column:first").css('margin-top','212px');
 });

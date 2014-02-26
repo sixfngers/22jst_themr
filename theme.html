@@ -132,9 +132,6 @@
             {CustomCSS}
         </style>
 
-
-        <!--<link rel='stylesheet' href="http://dev.bpginteractive.com/22jump/styles/22js.css">-->
-
         <style type='text/css'>
             body {
                 
@@ -228,6 +225,31 @@
 {
     opacity:.5;
 }
+/*
+end fixed nav styles
+*/
+
+/*
+start about section
+*/
+#about-section-wrapper
+{
+    position: fixed;
+    z-index: 9990;
+    top: 0;
+    width:100%;
+    height:100%;
+    margin:0 auto 0 auto;
+    text-align:center;
+}
+
+
+/*
+end about section
+*/
+
+
+
 
 
 #page {
@@ -521,6 +543,14 @@ article.active .panel {
     background:#ff0000;
 }
 
+
+.nav-height-dummy
+{
+    /* changes height based on nav height on resize*/
+    height:48px;
+    background:#ff0000;
+}
+
 .featured-subhead
 {
     
@@ -558,45 +588,46 @@ article.active .panel {
                 </div>
             </div>
             
-            <div id="about-section" class='synopsis-container'>
+            <div id="about-section-wrapper">
+                <div class="nav-height-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser --></div>
+                <div id="about-section" class='synopsis-container'>
+                    <h3>SYNOPSIS</h3>
+                    <p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
+                    </p>
+                </div>
 
-<h1>SYNOPSIS</h1>
-<p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
-</p>
+                <div id="about-section" class='fixed-section-container'>
+                    <h3>CAST &amp; CREW</h3>
+                    <div class="leftcol">
+                        <p class="cast-header-initial">DIRECTED BY</p>
+                        <p class="cast-body">Phil Lord &amp; Christopher Miller</p>
+                        <br />
+                        <p class="cast-header">SCREENPLAY BY</p>
+                        <p class="cast-body">Oren Uziel and Rodney Rothman</p>
+                        <br />
+                        <p class="cast-header">STORY BY</p>
+                        <p class="cast-body">Michael Bacall & Jonah Hill</p>
+                        <br />
+                        <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY</p>
+                        <p class="cast-body">Patrick Hasburgh & Stephen J. Cannell</p>
+                    </div>
 
-</div>
+                    <div class="rightcol">
+                        <p class="cast-header-initial">PRODUCED BY</p>
+                        <p class="cast-body">Neal H. Moritz, Jonah Hill, Channing Tatum</p>
+                        <br />
+                        <p class="cast-header">EXECUTIVE PRODUCERS</p>
+                        <p class="cast-body">Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
+                        <br />
+                        <p class="cast-header">STORY BY</p>
+                        <p class="cast-body">Michael Bacall & Jonah Hill</p>
+                        <br />
+                        <p class="cast-header">CAST</p>
+                        <p class="cast-body">Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
+                    </div>
 
-<div id="about-section" class='fixed-section-container'>
-    <h1>CAST &amp; CREW</h1>
-    <div class="leftcol">
-        <p class="cast-header-initial">DIRECTED BY</p>
-        <p class="cast-body">Phil Lord &amp; Christopher Miller</p>
-        <br />
-        <p class="cast-header">SCREENPLAY BY</p>
-        <p class="cast-body">Oren Uziel and Rodney Rothman</p>
-        <br />
-        <p class="cast-header">STORY BY</p>
-        <p class="cast-body">Michael Bacall & Jonah Hill</p>
-        <br />
-        <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY</p>
-        <p class="cast-body">Patrick Hasburgh & Stephen J. Cannell</p>
-    </div>
-
-    <div class="rightcol">
-        <p class="cast-header-initial">PRODUCED BY</p>
-        <p class="cast-body">Neal H. Moritz, Jonah Hill, Channing Tatum</p>
-        <br />
-        <p class="cast-header">EXECUTIVE PRODUCERS</p>
-        <p class="cast-body">Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
-        <br />
-        <p class="cast-header">STORY BY</p>
-        <p class="cast-body">Michael Bacall & Jonah Hill</p>
-        <br />
-        <p class="cast-header">CAST</p>
-        <p class="cast-body">Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
-    </div>
-
-</div>
+                </div>
+            </div>
 
             <div class="header-wrapper
                 {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}
