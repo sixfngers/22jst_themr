@@ -35,7 +35,9 @@ $(document).ready(function(){
 
 function setupNav()
 {
-	$('#nav ul li #about-link').on('click', function(){
+
+	// $('#nav ul li #about-link').on('click', function(){
+	$("a[href='#about']").click(function() {
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
 		showSiteSection($("#about-section"), $("#about-section-wrapper"));
     });
@@ -52,7 +54,7 @@ function showSiteSection(div, divWrapper)
 	
 	div.show();
 	divWrapper.addClass("section-padding");
-	scrollToTop(500);
+	scrollToTop("fast");
 }
 
 function closeSiteSection(div, divWrapper)
@@ -63,5 +65,5 @@ function closeSiteSection(div, divWrapper)
 
 function scrollToTop(time)
 {
-	$("html, body").animate({scrollTop: ($(this).offset()).top}, time);
+	$("html, body").animate({ scrollTop: 0 }, time);
 }
