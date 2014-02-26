@@ -176,7 +176,7 @@
     }
     
 
-#nav .official-site-link
+#nav .official-site-link 
 ,#nav .about
 {
     width:225px;
@@ -234,13 +234,75 @@ start about section
 */
 #about-section-wrapper
 {
-    position: fixed;
-    z-index: 9990;
+    position: absolute;
+    z-index: 100;
     top: 0;
+    width:100%;
+    margin:0 auto 0 auto;
+    text-align:center;
+    background-color: rgba(0,0,0,0.9);
+    /*padding-bottom: 40px;*/
+    min-width: 960px;
+}
+
+#about-section
+{
+    margin-top:24px;
+    /*display:none;*/
+}
+
+#about-header-image
+{
+    text-align: left;
+}
+
+#about-section-content
+{
+    text-align: left;
+    color:#ffffff;
+    padding:24px 10px 0 10px;
+}
+
+#about-section-content .leftcol, #about-section-content .rightcol
+{
+    float:left;
+    width:50%;
+    margin-top:12px;
+}
+
+
+.cast-body, .cast-header
+{
+    margin:0;
+    line-height:.5em;
+    padding-right: 90px;
+}
+
+#about-section-content h3
+{
+    margin:0;
+}
+
+#about-section-content p
+{
+    line-height:1.25em;
+}
+
+#section-blackout
+{
+    position: absolute;
+    top:0;
+    z-index: 1;
+    background: #000000;
     width:100%;
     height:100%;
     margin:0 auto 0 auto;
-    text-align:center;
+    opacity: 0.8;
+}
+
+#synopsis
+{
+    width:746px;
 }
 
 
@@ -265,8 +327,9 @@ end about section
 }
 
 
-#posts {
-    max-width: 1200px;
+#posts
+{
+    max-width: 960px;
     min-width: 960px;
 }
 
@@ -285,33 +348,40 @@ end about section
 
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 320px){
+    /*#about-section {
+        max-width: 320px;
+        min-width: 320px;
+    }*/
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px){
     #grid[data-columns]::before {
-        content: '1 .column.size-1of1' style="margin-top:213px";
+        content: '1 .column.size-1of1';
     }
-    #posts {
+    /*#posts, #about-section {
         max-width: 480px;
-        min-width: 480px;
-    }
+        min-width: 321px;
+    }*/
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     #grid[data-columns]::before {
         content: '2 .column.size-1of2';
     }
-    #posts {
+    /*#posts, #about-section {
         max-width: 768px;
         min-width: 481px;
-    }
+    }*/
 }
 @media screen and (min-width: 769px) {
     #grid[data-columns]::before {
         content: '3 .column.size-1of3';
     }
-    #posts {
+    /*#posts, #about-section{
         max-width: 959px;
         min-width: 769px;
-    }   
+    }*/   
 }
 
 /* Again, you're free to use and define the classes: */
@@ -325,6 +395,7 @@ end about section
 section #posts
 {
     /*margin-top:-217px;*/
+    max-width:960px !important;
 }
 
 
@@ -369,6 +440,7 @@ section #posts
 
 .post-wrapper
 {
+    background:transparent;
     border-radius: 0px;
 }
     
@@ -531,7 +603,17 @@ article.active .panel {
 .center-max-width-960
 {
     /* duplicate nav center positioning */
+    min-width:960px;
+
     max-width:960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.center-max-width-1000
+{
+    /* duplicate nav center positioning */
+    max-width:1000px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -555,8 +637,7 @@ article.active .panel {
 {
     
 }
-
-        </style>
+</style>
 
     </head>
     <body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}">
@@ -589,45 +670,69 @@ article.active .panel {
             </div>
             
             <div id="about-section-wrapper">
-                <div class="nav-height-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser --></div>
-                <div id="about-section" class='synopsis-container'>
-                    <h3>SYNOPSIS</h3>
-                    <p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
-                    </p>
+                <div class="nav-height-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser -->
                 </div>
+                
+                <div id="about-section" class="center-max-width-960">
 
-                <div id="about-section" class='fixed-section-container'>
-                    <h3>CAST &amp; CREW</h3>
-                    <div class="leftcol">
-                        <p class="cast-header-initial">DIRECTED BY</p>
-                        <p class="cast-body">Phil Lord &amp; Christopher Miller</p>
-                        <br />
-                        <p class="cast-header">SCREENPLAY BY</p>
-                        <p class="cast-body">Oren Uziel and Rodney Rothman</p>
-                        <br />
-                        <p class="cast-header">STORY BY</p>
-                        <p class="cast-body">Michael Bacall & Jonah Hill</p>
-                        <br />
-                        <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY</p>
-                        <p class="cast-body">Patrick Hasburgh & Stephen J. Cannell</p>
+                    <article id="about-header-image" class="photo not-page">
+                        <div class="post-wrapper clearfix">
+                            <section class="post">
+                                <figure class="high-res with-caption" data-photo-width="330">
+                                    <div class="photo-wrapper">
+                                        <div class="photo-wrapper-inner">
+                                            <img src="https://31.media.tumblr.com/8e7487e25d7de74fae1b0c0beb3abecb/tumblr_n1kw2sqLh71tsri92o1_r1_1280.png" />
+                                        </div>
+                                    </div>
+                                </figure>
+                            </section>
+                        </div>
+                    </article>
+
+
+                    <div id="about-section-content">
+                        <div id="synopsis">
+                            <h3>SYNOPSIS</h3>
+                            <p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
+                            </p>
+                        </div>
+
+                        <div id="cast-crew" class="center-max-width-960">
+                            <h3>CAST &amp; CREW</h3>
+                            <div class="leftcol">
+                                <p class="cast-header">DIRECTED BY</p>
+                                <p class="cast-body">Phil Lord &amp; Christopher Miller</p>
+                                <br />
+                                <p class="cast-header">SCREENPLAY BY</p>
+                                <p class="cast-body">Oren Uziel and Rodney Rothman</p>
+                                <br />
+                                <p class="cast-header">STORY BY</p>
+                                <p class="cast-body">Michael Bacall & Jonah Hill</p>
+                                <br />
+                                <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY</p>
+                                <p class="cast-body">Patrick Hasburgh & Stephen J. Cannell</p>
+                            </div>
+
+                            <div class="rightcol">
+                                <p class="cast-header">PRODUCED BY</p>
+                                <p class="cast-body">Neal H. Moritz, Jonah Hill, Channing Tatum</p>
+                                <br />
+                                <p class="cast-header">EXECUTIVE PRODUCERS</p>
+                                <p class="cast-body">Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
+                                <br />
+                                <p class="cast-header">STORY BY</p>
+                                <p class="cast-body">Michael Bacall & Jonah Hill</p>
+                                <br />
+                                <p class="cast-header">CAST</p>
+                                <p class="cast-body">Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
+                            </div>
+
+                        </div>
                     </div>
-
-                    <div class="rightcol">
-                        <p class="cast-header-initial">PRODUCED BY</p>
-                        <p class="cast-body">Neal H. Moritz, Jonah Hill, Channing Tatum</p>
-                        <br />
-                        <p class="cast-header">EXECUTIVE PRODUCERS</p>
-                        <p class="cast-body">Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
-                        <br />
-                        <p class="cast-header">STORY BY</p>
-                        <p class="cast-body">Michael Bacall & Jonah Hill</p>
-                        <br />
-                        <p class="cast-header">CAST</p>
-                        <p class="cast-body">Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
-                    </div>
-
                 </div>
             </div>
+
+            <!-- <div id="section-blackout"></div> -->
 
             <div class="header-wrapper
                 {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}
@@ -636,7 +741,8 @@ article.active .panel {
                 avatar-style-{select:Avatar style}">
                 
                 
-                <div id="header-nav-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser --></div>
+                <div id="header-nav-dummy"><!-- resizes to mimic the size of the navs height to adjust the position of the header content because the nav is fixed to the top of the browser -->
+                </div>
 
                 <header id="header" class="center-max-width-960">
                     {block:IfShowTitle}
@@ -646,57 +752,55 @@ article.active .panel {
                     <!-- what's this thing? -->
                     <div class="back-to-top"><a class="top" href="#"></a></div>
                     
-                        <div class="featured-subhead">
-        <div class="featured-posts">
-            <div id="featured-leftcol" class="column size-1of3">
-                <article class="photo not-page">
-                    <div class="post-wrapper clearfix">
-                        <section class="post">
-                            <figure class="high-res with-caption" data-photo-width="330">
-                                <div class="photo-wrapper">
-                                    <div class="photo-wrapper-inner">
-                                        <a href="http://www.sony.com"><img src="https://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" alt="keyart" width="330" height="511"></a>
+                    <div class="featured-subhead">
+                        <div class="featured-posts">
+                            <div id="featured-leftcol" class="column size-1of3">
+                                <article class="photo not-page">
+                                    <div class="post-wrapper clearfix">
+                                        <section class="post">
+                                            <figure class="high-res with-caption" data-photo-width="330">
+                                                <div class="photo-wrapper">
+                                                    <div class="photo-wrapper-inner">
+                                                        <a href="http://www.sony.com"><img src="https://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" alt="keyart" width="330" height="511"></a>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </section>
                                     </div>
-                                </div>
-                            </figure>
-                        </section>
-                    </div>
-                </article>
-                <article class="photo not-page">
-                    <div class="post-wrapper clearfix">
-                        <section class="post">
-                            <figure class="high-res with-caption" data-photo-width="330">
-                                <div class="photo-wrapper">
-                                    <div class="photo-wrapper-inner">
-                                        <a href="http://www.tumblr.com/follow/"{BlogURL}><img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1kj96rlcf1tsri92o1_400.png" alt="follow us" width="330" height="36"></a>
+                                </article>
+                                <article class="photo not-page">
+                                    <div class="post-wrapper clearfix">
+                                        <section class="post">
+                                            <figure class="high-res with-caption" data-photo-width="330">
+                                                <div class="photo-wrapper">
+                                                    <div class="photo-wrapper-inner">
+                                                        <a href="http://www.tumblr.com/follow/"{BlogURL}><img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1kj96rlcf1tsri92o1_400.png" alt="follow us" width="330" height="36"></a>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </section>
                                     </div>
-                                </div>
-                            </figure>
-                        </section>
-                    </div>
-                </article>
-            </div>
-            <div id="featured-rightcol" class="column size-2of3">
-                <article class="photo not-page">
-                    <div class="post-wrapper clearfix">
-                        <section class="post">
-                            <figure class="high-res with-caption" data-photo-width="640">
-                                <div class="photo-wrapper">
-                                    <div class="photo-wrapper-inner">
-                                        <a href="youtube.com"><img src="https://24.media.tumblr.com/8ea39422d569988667721b874fd560a4/tumblr_n1kh0gtaoB1tsri92o1_r4_1280.png" alt="watch the red band trailer" width="640" height="282"></a>
+                                </article>
+                            </div>
+                            <div id="featured-rightcol" class="column size-2of3">
+                                <article class="photo not-page">
+                                    <div class="post-wrapper clearfix">
+                                        <section class="post">
+                                            <figure class="high-res with-caption" data-photo-width="640">
+                                                <div class="photo-wrapper">
+                                                    <div class="photo-wrapper-inner">
+                                                        <a href="youtube.com"><img src="https://24.media.tumblr.com/8ea39422d569988667721b874fd560a4/tumblr_n1kh0gtaoB1tsri92o1_r4_1280.png" alt="watch the red band trailer" width="640" height="282"></a>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </section>
                                     </div>
-                                </div>
-                            </figure>
-                        </section>
+                                </article>
+                            </div>
+                                    
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                </article>
-            </div>
-                    
-        </div>
-        <div class="clearfix"></div>
-    </div>
-                    
-
                 </header>
             </div>
             {block:SearchPage}
@@ -708,246 +812,248 @@ article.active .panel {
                 </div>
             {/block:SearchPage}
 
-            <section id="posts" class="content clearfix {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}{block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage} avatar-style-{select:Avatar style}">
-    
+            <div class="center-max-width-1000">
+                <section id="posts" class="content clearfix {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}{block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage} avatar-style-{select:Avatar style}">
+        
 
-                <div id="grid" data-page-id="{CurrentPage}" data-columns>
-                    {block:Posts}
-                            <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
-                                <div class="post-wrapper clearfix">
-                                    <section class="post">
-                                        {block:Text}
-                                            {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                            {block:Body}
-                                            <div class="body-text">
-                                                {Body}
-                                            </div>
-                                            {/block:Body}
-                                        {/block:Text}
-
-                                        {block:Photo}
-                                        <figure class="{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
-                                            <div class="photo-wrapper">
-                                                <div class="photo-wrapper-inner">
-                                                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">{LinkCloseTag}
+                    <div id="grid" data-page-id="{CurrentPage}" data-columns>
+                        {block:Posts}
+                                <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
+                                    <div class="post-wrapper clearfix">
+                                        <section class="post">
+                                            {block:Text}
+                                                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                                {block:Body}
+                                                <div class="body-text">
+                                                    {Body}
                                                 </div>
-                                            </div>
-                                        </figure>
-                                        {/block:Photo}
+                                                {/block:Body}
+                                            {/block:Text}
 
-                                        {block:Photoset}
-                                        <figure class="photoset {block:Caption}with-caption{/block:Caption}">
-                                            {Photoset}
-                                            {block:Caption}
-                                            <figcaption class="caption">
-                                                {Caption}
-                                            </figcaption>
-                                            {/block:Caption}
-                                        </figure>
-                                        {/block:Photoset}
-
-                                        {block:Quote}
-                                        <blockquote class="{Length}">
-                                            {Quote}
-                                        </blockquote>
-                                        {block:Source}
-                                        <div class="source">{Source}</div>
-                                        {/block:Source}
-                                        {/block:Quote}
-
-
-                                        {block:Link}
-                                        <div class="link-wrapper">
-                                            <h2><a {Target} href="{URL}">{Name}</a></h2>
-                                        </div>
-                                        {block:Description}
-                                        <div class="caption">
-                                            {Description}
-                                        </div>
-                                        {/block:Description}
-                                        {/block:Link}
-
-
-                                        {block:Chat}
-                                        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                            <ul class="conversation">
-                                            {block:Lines}
-                                                <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
-                                            {/block:Lines}
-                                            </ul>
-                                        {/block:Chat}
-
-
-                                        {block:Audio}
-                                        <div class="audio_container">
-                                            {block:AudioEmbed}
-                                                {AudioEmbed color="white"}
-                                            {/block:AudioEmbed}
-                                        </div>
-                                        {block:Caption}
-                                        <div class="caption">
-                                            {Caption}
-                                        </div>
-                                        {/block:Caption}
-                                        {/block:Audio}
-
-
-                                        {block:Video}                            
-                                        <figure {block:Caption}class="with-caption"{/block:Caption}>
-                                            <div class="video-wrapper">
-                                                {Video-700}
-                                            </div>
-                                            {block:Caption}
-                                            <figcaption class="caption">
-                                                {Caption}
-                                            </figcaption>
-                                            {/block:Caption}
-                                        </figure>
-                                        {/block:Video}
-
-                                        {block:Answer}
-                                        <div class="note-item note-item-asker">
-                                            <div class="text">
-                                                <p class="asker"><strong>{Asker}</strong> asked:</p>
-                                                <div class="asker-question">
-                                                    {Question}
+                                            {block:Photo}
+                                            <figure class="{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
+                                                <div class="photo-wrapper">
+                                                    <div class="photo-wrapper-inner">
+                                                        {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">{LinkCloseTag}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="avatar">
-                                                <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
-                                            </div>
-                                        </div>
+                                            </figure>
+                                            {/block:Photo}
 
-                                        {block:Answerer}
-                                        <div class="note-item note-item-answerer">
-                                            <div class="text">
-                                                <p class="answerer"><strong>{Answerer}</strong> answered:</p>
-                                                <div class="answerer-answer">
-                                                    {Answer}
-                                                </div>
-                                            </div>
-                                            <div class="avatar">
-                                                <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
-                                            </div>
-                                        </div>
-                                        {/block:Answerer}
-
-                                        <div class="replies">
-                                            {Replies}
-                                        </div>
-                                        {/block:Answer}
-
-                                    </section>
-                                    
-                                    {block:Date}
-                                    <section class="panel">
-                                        <footer class="post-footer">
-                                            <section class="post-controls">
-                                                <ul>
-                                                    <li class="reblog-control bg-fill">{ReblogButton size="21" color="white"}</li>
-                                                    <li class="like-control bg-fill">{LikeButton size="20" color="white"}</li>
-                                                    <li class="permalink-control bg-fill"><a href="{Permalink}" class="permalink-button"></a></li>
-                                                </ul>
-                                            </section>
-                                            
-                                            <section class="meta"> 
-                                                
-                                                <div id="hover-content">
+                                            {block:Photoset}
+                                            <figure class="photoset {block:Caption}with-caption{/block:Caption}">
+                                                {Photoset}
                                                 {block:Caption}
                                                 <figcaption class="caption">
                                                     {Caption}
                                                 </figcaption>
                                                 {/block:Caption}
-                                                </div>
-                                            </section>
-                                            
-                                            
-                                            {block:RebloggedFrom}
-                                            <section class="attribution-tags clearfix">
-                                                <ul>
-                                                    <li>
-                                                        <a class="reblog-link" href="{ReblogParentURL}">{ReblogParentName}</a>
-                                                    </li>
-                                                    {block:ContentSource}
-                                                    <li>
-                                                        <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
-                                                    </li>
-                                                    {/block:ContentSource}
-                                                    {block:HasTags}
-                                                        {block:Tags}
-                                                            <li>
-                                                                <a href="{TagURL}" class="tag">{Tag}</a>
-                                                            </li>
-                                                        {/block:Tags}
-                                                    {/block:HasTags} 
-                                                </ul>
-                                            </section>
-                                            {/block:RebloggedFrom}
+                                            </figure>
+                                            {/block:Photoset}
 
-                                            {block:NotReblog}
-                                                {block:HasTags}
+                                            {block:Quote}
+                                            <blockquote class="{Length}">
+                                                {Quote}
+                                            </blockquote>
+                                            {block:Source}
+                                            <div class="source">{Source}</div>
+                                            {/block:Source}
+                                            {/block:Quote}
+
+
+                                            {block:Link}
+                                            <div class="link-wrapper">
+                                                <h2><a {Target} href="{URL}">{Name}</a></h2>
+                                            </div>
+                                            {block:Description}
+                                            <div class="caption">
+                                                {Description}
+                                            </div>
+                                            {/block:Description}
+                                            {/block:Link}
+
+
+                                            {block:Chat}
+                                            {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                                <ul class="conversation">
+                                                {block:Lines}
+                                                    <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+                                                {/block:Lines}
+                                                </ul>
+                                            {/block:Chat}
+
+
+                                            {block:Audio}
+                                            <div class="audio_container">
+                                                {block:AudioEmbed}
+                                                    {AudioEmbed color="white"}
+                                                {/block:AudioEmbed}
+                                            </div>
+                                            {block:Caption}
+                                            <div class="caption">
+                                                {Caption}
+                                            </div>
+                                            {/block:Caption}
+                                            {/block:Audio}
+
+
+                                            {block:Video}                            
+                                            <figure {block:Caption}class="with-caption"{/block:Caption}>
+                                                <div class="video-wrapper">
+                                                    {Video-700}
+                                                </div>
+                                                {block:Caption}
+                                                <figcaption class="caption">
+                                                    {Caption}
+                                                </figcaption>
+                                                {/block:Caption}
+                                            </figure>
+                                            {/block:Video}
+
+                                            {block:Answer}
+                                            <div class="note-item note-item-asker">
+                                                <div class="text">
+                                                    <p class="asker"><strong>{Asker}</strong> asked:</p>
+                                                    <div class="asker-question">
+                                                        {Question}
+                                                    </div>
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+                                                </div>
+                                            </div>
+
+                                            {block:Answerer}
+                                            <div class="note-item note-item-answerer">
+                                                <div class="text">
+                                                    <p class="answerer"><strong>{Answerer}</strong> answered:</p>
+                                                    <div class="answerer-answer">
+                                                        {Answer}
+                                                    </div>
+                                                </div>
+                                                <div class="avatar">
+                                                    <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+                                                </div>
+                                            </div>
+                                            {/block:Answerer}
+
+                                            <div class="replies">
+                                                {Replies}
+                                            </div>
+                                            {/block:Answer}
+
+                                        </section>
+                                        
+                                        {block:Date}
+                                        <section class="panel">
+                                            <footer class="post-footer">
+                                                <section class="post-controls">
+                                                    <ul>
+                                                        <li class="reblog-control bg-fill">{ReblogButton size="21" color="white"}</li>
+                                                        <li class="like-control bg-fill">{LikeButton size="20" color="white"}</li>
+                                                        <li class="permalink-control bg-fill"><a href="{Permalink}" class="permalink-button"></a></li>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <section class="meta"> 
+                                                    
+                                                    <div id="hover-content">
+                                                    {block:Caption}
+                                                    <figcaption class="caption">
+                                                        {Caption}
+                                                    </figcaption>
+                                                    {/block:Caption}
+                                                    </div>
+                                                </section>
+                                                
+                                                
+                                                {block:RebloggedFrom}
                                                 <section class="attribution-tags clearfix">
                                                     <ul>
+                                                        <li>
+                                                            <a class="reblog-link" href="{ReblogParentURL}">{ReblogParentName}</a>
+                                                        </li>
                                                         {block:ContentSource}
                                                         <li>
                                                             <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
                                                         </li>
                                                         {/block:ContentSource}
-                                                        {block:Tags}
-                                                            <li>
-                                                                <a href="{TagURL}" class="tag">{Tag}</a>
-                                                            </li>
-                                                        {/block:Tags}
+                                                        {block:HasTags}
+                                                            {block:Tags}
+                                                                <li>
+                                                                    <a href="{TagURL}" class="tag">{Tag}</a>
+                                                                </li>
+                                                            {/block:Tags}
+                                                        {/block:HasTags} 
                                                     </ul>
                                                 </section>
-                                                {/block:HasTags}                                
-                                            {/block:NotReblog}
-                                            
-                                            <section>
-                                                <ul>
-                                                <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="facebook-share-icon" target="_blank">FB</a></li>
-                                                <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" target="_blank" class="twitter-share-icon">TWIT</a></li>
-                                                </ul>
-                                            </section>
+                                                {/block:RebloggedFrom}
 
-                                            
-                                        </footer>
-                                        <a href="{Permalink}"><div class="post-link-shim"><div></a>
-                                    </section>
-                                    {/block:Date}
-                                    {block:PermalinkPage}
+                                                {block:NotReblog}
+                                                    {block:HasTags}
+                                                    <section class="attribution-tags clearfix">
+                                                        <ul>
+                                                            {block:ContentSource}
+                                                            <li>
+                                                                <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+                                                            </li>
+                                                            {/block:ContentSource}
+                                                            {block:Tags}
+                                                                <li>
+                                                                    <a href="{TagURL}" class="tag">{Tag}</a>
+                                                                </li>
+                                                            {/block:Tags}
+                                                        </ul>
+                                                    </section>
+                                                    {/block:HasTags}                                
+                                                {/block:NotReblog}
+                                                
+                                                <section>
+                                                    <ul>
+                                                    <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="facebook-share-icon" target="_blank">FB</a></li>
+                                                    <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" target="_blank" class="twitter-share-icon">TWIT</a></li>
+                                                    </ul>
+                                                </section>
 
-                                        {block:PostNotes}
-                                        <section id="notes" class="notes-wrapper clearfix">
-                                            {PostNotes-64}
+                                                
+                                            </footer>
+                                            <a href="{Permalink}"><div class="post-link-shim"><div></a>
                                         </section>
-                                        {/block:PostNotes}
-
-                                        {block:Date}
-
-                                            {block:IfDisqusShortname}
-                                            <section class="comments">
-                                                <div id="disqus_thread"></div>
-                                                <script type="text/javascript">
-                                                  (function() {
-                                                   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                                   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
-                                                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                                  })();
-                                                </script>
-                                                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
-                                                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-                                            </section>
-                                            {/block:IfDisqusShortname}
-
                                         {/block:Date}
+                                        {block:PermalinkPage}
 
-                                    {/block:PermalinkPage}
-                                </div>
-                            </article>
-                    {/block:Posts}
-                </div>
-            </section>
+                                            {block:PostNotes}
+                                            <section id="notes" class="notes-wrapper clearfix">
+                                                {PostNotes-64}
+                                            </section>
+                                            {/block:PostNotes}
+
+                                            {block:Date}
+
+                                                {block:IfDisqusShortname}
+                                                <section class="comments">
+                                                    <div id="disqus_thread"></div>
+                                                    <script type="text/javascript">
+                                                      (function() {
+                                                       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                       dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+                                                       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                                      })();
+                                                    </script>
+                                                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+                                                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                                                </section>
+                                                {/block:IfDisqusShortname}
+
+                                            {/block:Date}
+
+                                        {/block:PermalinkPage}
+                                    </div>
+                                </article>
+                        {/block:Posts}
+                    </div>
+                </section>
+            </div>
             <footer id="footer" class="content clearfix">
                 {block:IndexPage}
                     {block:Pagination}

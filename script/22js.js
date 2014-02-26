@@ -29,4 +29,14 @@ $(window).resize(function () {
 
 $(document).ready(function(){
 	detectViewPort();
+	setupNav();
+	 
 });
+
+function setupNav()
+{
+	$('#nav ul li .about').on('click', function(){
+		log("nav click");
+        $('html,body').animate({scrollTop: $(this).offset().top}, 500);
+    }); 
+}
