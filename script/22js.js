@@ -49,12 +49,19 @@ function setupNav()
 
 function showSiteSection(div, divWrapper)
 {
+	
 	div.show();
 	divWrapper.addClass("section-padding");
+	scrollToTop(500);
 }
 
 function closeSiteSection(div, divWrapper)
 {
 	div.hide();
 	divWrapper.removeClass("section-padding");
+}
+
+function scrollToTop(time)
+{
+	$("html, body").animate({scrollTop: ($(this).offset()).top}, time);
 }
