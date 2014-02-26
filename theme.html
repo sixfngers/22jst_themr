@@ -247,13 +247,30 @@ start about section
 
 #about-section
 {
-    margin-top:24px;
+    /*margin-top:24px;*/
     /*display:none;*/
 }
 
-#about-header-image
+#about-header-wrapper
 {
-    text-align: left;
+    position: relative;
+}
+
+#about-section .close-button
+{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+#about-header-image .post
+{
+    margin-top: 24px;
+}
+
+.section-header
+{
+    position: relative;
 }
 
 #about-section-content
@@ -674,8 +691,11 @@ article.active .panel {
                 </div>
                 
                 <div id="about-section" class="center-max-width-960">
+                    
+                    <div class="section-header">
+                        <div class="close-button"><img alt="close button" width="37" height="37" src="https://24.media.tumblr.com/ccaf61f84ac7c7f728ba80cf244b4f7d/tumblr_n1m7imFMFs1tsri92o1_75sq.png"></div>
 
-                    <article id="about-header-image" class="photo not-page">
+                        <article id="about-header-image" class="photo not-page">
                         <div class="post-wrapper clearfix">
                             <section class="post">
                                 <figure class="high-res with-caption" data-photo-width="330">
@@ -687,9 +707,9 @@ article.active .panel {
                                 </figure>
                             </section>
                         </div>
-                    </article>
-
-
+                        </article>
+                    </div>
+                    
                     <div id="about-section-content">
                         <div id="synopsis">
                             <h3>SYNOPSIS</h3>

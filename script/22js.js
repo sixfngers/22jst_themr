@@ -36,7 +36,23 @@ $(document).ready(function(){
 function setupNav()
 {
 	$('#nav ul li .about').on('click', function(){
-		log("nav click");
-        $('html,body').animate({scrollTop: $(this).offset().top}, 500);
+		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
+		showSiteSection($("#about-section"), $("#about-section-wrapper")));
+    });
+
+    $('#about-section .section-header .close-button').on('click', function(){
+		hideSiteSection($("#about-section"), $("#about-section-wrapper")));
     }); 
+}
+
+function showSiteSection(div, divWrapper)
+{
+	div.show();
+	divWrapper.addClass("section-padding");
+}
+
+function closeSiteSection(div, divWrapper)
+{
+	div.hide();
+	divWrapper.removeClass("section-padding");
 }
