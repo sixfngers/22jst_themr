@@ -37,12 +37,11 @@ function setupNav()
 {
 	$('#nav ul li .about').on('click', function(){
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
-		showSiteSection($("#about-section"), $("#about-section-wrapper")));
+		showSiteSection($("#about-section"), $("#about-section-wrapper"));
     });
 
     $('#about-section .section-header .close-button').on('click', function(){
-		log("hit close");
-		hideSiteSection($("#about-section"), $("#about-section-wrapper")));
+		hideSiteSection($("#about-section"), $("#about-section-wrapper"));
     }); 
 }
 
