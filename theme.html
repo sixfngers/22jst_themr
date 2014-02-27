@@ -229,6 +229,12 @@
 end fixed nav styles
 */
 
+.section-padding
+{
+    /* bottom black padding for when a section is shown*/
+    padding-bottom:40px;
+}
+
 /*
 start about section
 */
@@ -242,12 +248,16 @@ start about section
     text-align:center;
     background-color: rgba(0,0,0,0.9);
     /*padding-bottom: 40px;*/
-    min-width: 960px;
+    min-width: 1000px;
 }
 
 #about-section
 {
-    /*margin-top:24px;*/
+    display:none;
+}
+
+.header-wrapper
+{
     /*display:none;*/
 }
 
@@ -417,6 +427,15 @@ section #posts
 }
 
 
+.index-page.grid #posts article
+{
+    margin-left:2px;
+    margin-right:2px;
+    margin-bottom:4px;
+    margin-top:3px;
+    width:320px;
+}
+
 #posts article
 {
     border: 1px solid #cd210d;
@@ -539,6 +558,11 @@ article.active .panel {
     position: relative;
     width: 60px;
    
+}
+
+.post-controls > ul
+{
+    width:180px;
 }
 
 .bg-fill
@@ -753,8 +777,6 @@ article.active .panel {
                 </div>
             </div>
 
-            <!-- <div id="section-blackout"></div> -->
-
             <div class="header-wrapper
                 {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}
                 {block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage}
@@ -835,7 +857,7 @@ article.active .panel {
 
             <div class="center-max-width-1000">
                 <section id="posts" class="content clearfix {block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc {/block:IfNotShowDescription}{/block:IfNotShowTitle}{block:IfNotShowHeaderImage}no-image {/block:IfNotShowHeaderImage} avatar-style-{select:Avatar style}">
-        
+
 
                     <div id="grid" data-page-id="{CurrentPage}" data-columns>
                         {block:Posts}
