@@ -38,14 +38,14 @@ function setupNav()
 	// $('#nav ul li #about-link').on('click', function(){
 	$("a[href='#about']").click(function(e) {
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
-		showSiteSection($("#about-section"), $("#about-section-wrapper"));
+		showSiteSection($("#about-section-inner-wrapper"), null);
 		e.preventDefault();
     });
 
     
 
     $('#about-section .section-header .close-button').on('click', function(){
-		closeSiteSection($("#about-section"), $("#about-section-wrapper"));
+		closeSiteSection($("#about-section-inner-wrapper"), null);
     }); 
 }
 
@@ -53,14 +53,14 @@ function showSiteSection(div, divWrapper)
 {
 	
 	div.show();
-	divWrapper.addClass("section-padding");
+	//divWrapper.addClass("section-padding");
 	scrollToTop("fast");
 }
 
 function closeSiteSection(div, divWrapper)
 {
 	div.hide();
-	divWrapper.removeClass("section-padding");
+	//divWrapper.removeClass("section-padding");
 }
 
 function scrollToTop(time)
