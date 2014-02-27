@@ -65,5 +65,5 @@ function closeSiteSection(div, divWrapper)
 
 function scrollToTop(time)
 {
-	$("html, body").animate({ scrollTop: 0 }, time, 'easeOutSine');
+	$("html, body").animate({ scrollTop: 0 }, time);
 }
