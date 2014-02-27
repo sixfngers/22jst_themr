@@ -36,10 +36,10 @@ function setupNav()
 {
 
 	// $('#nav ul li #about-link').on('click', function(){
-	$("a[href='#about']").click(function() {
-		e.preventDefault();
+	$("a[href='#about']").click(function(e) {
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
 		showSiteSection($("#about-section"), $("#about-section-wrapper"));
+		e.preventDefault();
     });
 
     
