@@ -128,6 +128,7 @@
                 }
             }
 
+
             /* Custom CSS */
             {CustomCSS}
         </style>
@@ -461,7 +462,30 @@ section #posts
 
 #posts article.active
 {
-    margin-bottom:4px
+    margin:-550px 0 4px 322px ;
+    min-height:1000px;
+    width:634px;
+    background-color: #000;
+}
+
+#posts article.active section.panel
+{
+    /*display:none;*/
+    position: relative;
+    background-color: transparent;
+}
+
+
+#posts article.active section.panel p
+{
+    font-size: 2em;
+    margin:0 auto 0 auto;
+}
+
+#posts article.active section.panel section.attribution-tags
+{
+    width:25%;
+    margin:0 auto 0 auto;
 }
 
 .post
@@ -479,6 +503,7 @@ section #posts
 {
     background:transparent;
     border-radius: 0px;
+    overflow:visible;
 }
     
 
@@ -871,6 +896,8 @@ article.active .panel {
                                                     {Body}
                                                 </div>
                                                 {/block:Body}
+
+
                                             {/block:Text}
 
                                             {block:Photo}
@@ -990,10 +1017,14 @@ article.active .panel {
                                         {block:Date}
                                         <section class="panel">
                                             <footer class="post-footer">
+
+                                                <div id="panel-note-count-wrapper">{block:NoteCount} <strong>foo bar ♥</strong>{NoteCount} {/block:NoteCount}
+                                                </div>
+
                                                 <section class="post-controls">
                                                     <ul>
                                                         <li class="reblog-control bg-fill">{ReblogButton size="21" color="white"}</li>
-                                                        <li class="like-control bg-fill">{LikeButton size="20" color="white"}</li>
+                                                        <li class="like-control bg-fill">{LikeButton}</li>
                                                         <li class="permalink-control bg-fill"><a href="{Permalink}" class="permalink-button"></a></li>
                                                     </ul>
                                                 </section>
