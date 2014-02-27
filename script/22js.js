@@ -30,9 +30,6 @@ $(window).resize(function () {
 $(document).ready(function(){
 	detectViewPort();
 	setupNav();
-
-	var $boxes = $('<div class="box"/><div class="box"/><div class="box"/>');
-	$('#grid').prepend( $boxes ).masonry( 'reload' );
 });
 
 function setupNav()
