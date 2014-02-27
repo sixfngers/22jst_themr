@@ -39,6 +39,7 @@ function setupNav()
 	$("a[href='#about']").click(function() {
 		$('html,body').animate({scrollTop: $(this).offset().top}, 500);
 		showSiteSection($("#about-section"), $("#about-section-wrapper"));
+		e.preventDefault();
     });
 
     
