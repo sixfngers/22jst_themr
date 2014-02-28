@@ -20,13 +20,14 @@
 
 <meta name="color:Background" content="#369fa0" />
 <meta name="color:Body links" content="#615151" />
-<meta name="color:Body text" content="#1d1818" />
+<meta name="color:Body text" content="#ffffff" />
+<meta name="color:Secondary text" content="#cd210d" />
 <meta name="color:Masthead background" content="#0a0303" />
 <meta name="color:Masthead links" content="#b9b8b8" />
 <meta name="color:Masthead text" content="#868484" />
 <meta name="color:Post color" content="#ffffff" />
 <meta name="color:Text highlight" content="#d83e3e" />
-<meta name="font:Body" content='Georgia,serif'/>
+<meta name="font:Body" content='Helvetica Neue,serif'/>
 <meta name="if:Infinite scroll" content="1"/>
 <meta name="if:Masthead search" content="0"/>
 <meta name="if:Masthead portrait" content="0"/>
@@ -36,6 +37,7 @@
 <meta name="image:Background" content="" />
 <meta name="text:Post margin" content='10px'/>
 <meta name="text:Post width" content='38%'/>
+<meta name="text:Twitter post" content="post this to twitter http://www.22JumpStreetMovie.com"/>
 
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
@@ -71,17 +73,45 @@ html {
 
 
 body {
-    background: {color:Background} url('{image:Background}');
+    /*background: {color:Background} url('{image:Background}');*/
     color: {color:Body text};
     font-family: {font:Body};
     font-size: {text:Font size};
     margin: 0;
     padding: 0;
+
+
+    background: url(http://31.media.tumblr.com/635f3a9625779d7014c6e57abba8bc27/tumblr_n1j821nwte1tsri92o1_500.png);
+    background-repeat:repeat-x;
+    background-size:cover;
+    background-color: #ababab;
+
 }
-a {
-    color: {color:Body links};
+
+
+}
+
+a:link {
+    /*color: {color:Body links};*/
+    color:#cd210d; 
     text-decoration: none;
 }
+a:visited {
+    /*color: {color:Body links};*/
+    color:#cd210d; 
+    text-decoration: none;
+}
+a:hover {
+    /*color: {color:Body links};*/
+    color:#cd210d; 
+    text-decoration: none;
+}
+a:active{
+    /*color: {color:Body links};*/
+    color:#cd210d; 
+    text-decoration: none;
+}
+
 blockquote {
     background: rgba(0, 0, 0, 0.2);
     border-left: 10px solid rgba(0, 0, 0, 0.2);
@@ -111,7 +141,7 @@ nav li {
 */
 
 
-article .index-article
+.index-article
 {
     /*background: #ff0000;*/
     /*margin: {text:Post margin};*/
@@ -121,11 +151,42 @@ article .index-article
     margin:0;
 }
 
-article .permalink-article
+.permalink-article
 {
     width:510px;
+    /*margin-bottom:-20px;*/
+    background-color: #000;
+    min-height: 1100px;
+    color: {color:Body text};
+    text-align:center;
 }
 
+.permalink-photo-wrapper
+{
+    width:492px;
+    margin:8px auto 0 auto;
+
+}
+
+.permalink-article hr
+{
+    color: {color:Secondary text};
+}
+
+.red-border
+{
+    border:1px solid {color:Secondary text};
+}
+
+.red-border img
+{
+    vertical-align: middle;
+}
+
+.full-width
+{
+    width:100%;
+}
 
 .column-width
 {
@@ -141,14 +202,18 @@ article .permalink-article
     float: left;
     margin-right: 1%;
 }
+
 /*Metadata*/
 .metadata {
     display: inline-block;
     width: 100%;
+    color:#ffffff;
 }
+
 .reblogged {
     float: right;
 }
+
 /*Tags and notes*/
 #tags, nav ul, .chat ul {
     list-style: none;
@@ -156,14 +221,32 @@ article .permalink-article
     margin: 0;
     padding: 0;
 }
+
 #tags li {
     float: left;
     margin-right: 1%;
 }
+
 .notes {
     clear: both;
     padding: 0;
+    color: #ffffff;
+    text-align: left;
+    margin-left:30px;
 }
+
+#notes
+{
+  color: #ffffff;
+  text-align: left;
+}
+
+
+/*a.tumblelog, a.source_tumblelog
+{
+  color:#cd210d;
+}*/
+
 
 #content-wrapper
 {
@@ -184,7 +267,7 @@ article .permalink-article
 }
 
 #stamp1 {
-  height: 400px;
+  height: 520px;
   background: black;
   /*border: 1px solid red;*/
 }
@@ -192,6 +275,11 @@ article .permalink-article
 #stamp2 {
   width: 660px;
   height: 282px;
+}
+
+.fixed-post-permalink-right-margin
+{
+    margin-right:9px;
 }
 
 /*
@@ -405,8 +493,6 @@ article .permalink-article
 {
     width:746px;
 }
-
-
 /*
 *******
     end about section
@@ -432,6 +518,125 @@ article .permalink-article
     end legal
 *******
 */
+
+
+
+
+/*
+*******
+    start post styles
+*******
+*/
+.permalink-caption {
+    width: 100%;
+    background: #090909;
+    color: #999999;
+    /*min-height: 140px;*/
+}
+
+.permalink-share-wrapper
+{
+    width:498px;
+    margin: 0 auto 0 auto;
+}
+
+.permalink-share-wrapper hr
+{
+    /*color:{Secondary text};*/
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid {Secondary text};
+    background-color:{Secondary text}
+}
+
+.share-icon-wrapper
+{
+    width:76px;
+    margin:0 auto 0 auto;
+    text-align: center;
+}
+
+.facebook-permalink-share-icon
+{
+    float:left;
+    width:38px;
+    height:32px;
+    background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.twitter-permalink-share-icon
+{
+    float:left;
+    width:38px;
+    height:32px;
+    background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png);
+    background-position: -38px 0;
+    background-repeat: no-repeat;
+}
+
+.post-controls
+{
+  width: 180px;
+  height: 62px;
+  margin: 0 auto 0 auto;
+}
+
+.post-controls ul
+{
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-controls li .like_button 
+{
+    margin: 20px auto auto;
+}
+
+.post-controls li .reblog_button
+{
+    margin: 20px auto auto;
+}
+
+.post-controls .icon-button
+{
+    width:60px;
+    height:62px;
+}
+
+.post-controls li .permalink-button
+{
+    display:block;
+    background: url(https://24.media.tumblr.com/30daddadec9ab8024be7e4dedc230476/tumblr_n1izbe3B2s1tsri92o1_100.png);
+    background-position-y:-124px;
+    background-repeat: no-repeat;
+    margin:0;
+}
+
+.notecount-wrapper
+{
+  margin-top:18px;
+}
+
+.notecount
+{
+  font-size:2em;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+
+/*
+*******
+    end post styles
+*******
+*/
+
+
 
 /*Custom CSS*/
 {CustomCSS}
@@ -527,152 +732,227 @@ article .permalink-article
 
 <!-- </header> -->
 
-<!--Content holder-->
+<!-- content holder-->
 <div id="content-wrapper">
     <div id="content">
 
-{block:Posts}
+        {block:Posts}
 
 
-{block:indexPage}
-    {block:post1}
-        <!-- fixed posts definition -->
-        <div id="stamp1" class="column-width">
-            <img src="http://24.media.tumblr.com/caebb118ae101f166bc537fbb3082c39/tumblr_n13p2jOodp1t5jijao1_1280.png">
-            <a href="http://www.tumblr.com/follow/jumpstmovies">
-                <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies">
-            </a>
+        {block:indexPage}
+            {block:post1}
+                <!-- fixed posts definition -->
+                <div id="stamp1" class="column-width">
+                    <img src="http://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" />
+                    <a href="http://www.tumblr.com/follow/jumpstmovies">
+                        <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies" />
+                    </a>
+                </div>
+                <div id="stamp2" class="stamp"></div>
+                <!-- end fixed posts definition -->
+            {/block:post1}
+            
+            <article class="index-article column-width">
+        {/block:indexPage}
+
+        {block:permalinkPage}
+            {block:post1}
+                <!-- fixed posts definition -->
+                <div id="stamp1" class="float-left column-width fixed-post-permalink-right-margin" >
+                    <img src="http://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" />
+                    <div id="stamp-follow" class="float-left column-width">
+                        <a href="http://www.tumblr.com/follow/jumpstmovies">
+                            <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end fixed posts -->
+            {/block:post1}
+
+            <article class='permalink-article float-left'>
+        {/block:permalinkPage}
+
+        
+        <!--Unique code for each post type-->
+
+        {block:Text}
+        <div class="text">
+            {block:Title}<h1 class="title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+            {Body}
+        {/block:Text}
+
+
+        <!-- photo post -->
+        {block:IndexPage}
+            {block:Photo}
+            <div class="photo">
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                {block:Caption}{Caption}{/block:Caption}
+                {/block:Photo}
+        {/block:IndexPage}
+
+        {block:PermalinkPage}
+            {block:Photo}
+            <div class="photo permalinkStamp float-left full-width">
+                <div class="permalink-photo-wrapper red-border">
+                <!-- {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag} -->
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                </div>
+
+                {block:NoteCount}
+                  <div class="notecount-wrapper">
+                    <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                  </div>
+                {/block:NoteCount}
+
+                <div class="post-controls">
+                  <ul>
+                      <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
+                      <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
+                      <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
+                  </ul>
+                </div>
+
+                {block:Caption}
+                    <div class="permalink-caption">
+                        {Caption}
+                    </div>
+                {/block:Caption}
+            {/block:Photo}
+        {/block:PermalinkPage}
+
+
+
+        {block:Photoset}
+        <div class="photoset">
+            {block:IndexPage}{Photoset-250}{/block:IndexPage}
+            {block:PermalinkPage}{Photoset-700}{/block:PermalinkPage} 
+            {block:Caption}{Caption}{/block:Caption}
+        {/block:Photoset}
+
+
+
+
+        {block:Quote}
+            <div class="quote">
+            <blockquote>{Quote}</blockquote>
+            {block:Source}<cite> {Source} </cite>{/block:Source}
+        {/block:Quote}
+
+
+
+
+        {block:Link}
+        <div class="link">
+            <h1 class="title"><a href="{URL}">{Name}</a></h1>
+            {block:Description}{Description}{/block:Description}
+        {/block:Link}
+
+
+
+
+        {block:Chat}
+        <div class="chat">
+            <ul>
+                {block:Lines}<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label}<p> {Line} </p></li>{/block:Lines}
+            </ul>
+        {/block:Chat}
+
+
+
+
+        {block:Audio}
+        <div class="audio">
+            {block:TrackName}<h1 class="title"><a href="{Permalink}">{TrackName}</a></h1>{/block:TrackName}
+            <div class="albumart">{block:AlbumArt}<img src="{AlbumArtURL}" width="500" height="500"/>{/block:AlbumArt}</div>
+            <div class="player">{AudioPlayerBlack}</div>
+            {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+            {block:Caption}{Caption}{/block:Caption}
+        {/block:Audio}
+
+
+
+        {block:Video}
+        <div class="video">
+            <div class="video-player">{Video-500}</div>
+            {block:Caption}{Caption}{/block:Caption}
+        {/block:Video}
+
+
+
+        {block:Answer}
+        <div class="answer">
+            <h1 class="title">{Question}</h1>
+            <div class="user"><img src="{AskerPortraitURL-96}"/><p>{Asker}</p></div>
+            {Answer}
+        {/block:Answer}
+
+        <!-- closing div tag from post type -->
         </div>
-        <div id="stamp2" class="stamp"></div>
-        <!-- end fixed posts definition -->
-    {/block:post1}
-    
-    <article class="index-article column-width">
-{/block:indexPage}
 
-{block:permalinkPage}
-    {block:post1}
-        <!-- fixed posts definition -->
-        <div id="stamp1" class="float-left column-width">
-            <img src="http://24.media.tumblr.com/caebb118ae101f166bc537fbb3082c39/tumblr_n13p2jOodp1t5jijao1_1280.png">
-            <div id="stamp-follow" class="float-left column-width">
-                <a href="http://www.tumblr.com/follow/jumpstmovies">
-                    <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies">
-                </a>
+
+        <!--Metadata: date, note count, content source-->
+        <header class="metadata">
+            {block:indexPage}
+              {block:Date} <a href="{Permalink}"> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time> </a> {/block:Date}
+            {/block:indexPage}
+
+            <!--
+            {block:permalinkPage}
+              {block:NoteCount} <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a> {/block:NoteCount}
+            {/block:permalinkPage}
+            -->
+            
+            {block:ContentSource}
+            <div class="reblogged">
+                <a href="{SourceURL}">{lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo} {block:RebloggedFrom}<img src="{ReblogParentPortraitURL-16}"/>{/block:RebloggedFrom} {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a>
             </div>
-        </div>
-        <!-- end fixed posts -->
-    {/block:post1}
-
-    <article class='permalink-article float-left'>
-{/block:permalinkPage}
+            {/block:ContentSource}  
+        </header>
 
 
-<!--Metadata: date, note count, content source-->
-<header class="metadata">
-    {block:Date} <a href="{Permalink}"> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time> </a> {/block:Date}
+        <!--Post footer (tags and notes) on displayed on permalink pages-->
+        {block:Permalink}
+            <footer class="details">
+                <!-- 
+                {block:HasTags}
+                    <ul id="tags">
+                        {block:Tags}<li> <a href="{TagURL}">{Tag}</a> </li>{/block:Tags}
+                    </ul>
+                {/block:HasTags}
+                -->
 
-    {block:NoteCount} <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a> {/block:NoteCount}
+                <div class="permalink-share-wrapper">
+                <hr>
+                <div class="share-icon-wrapper">
+                    <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                    <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                    <div class="clear-both"></div>
+                </div>
+                <hr>
+                </div>
+                
+                {block:PostNotes}
+                    <div id="notes">{PostNotes}</div>
+                {/block:PostNotes}
+            </footer>
+        {/block:Permalink}
 
-    {block:ContentSource}
-    <div class="reblogged">
-    <a href="{SourceURL}">{lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo} {block:RebloggedFrom}<img src="{ReblogParentPortraitURL-16}"/>{/block:RebloggedFrom}
-    {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a>
+        <!-- close article post-->
+        </article>
+        {/block:Posts}
+
+    <!-- close content -->
     </div>
-    {/block:ContentSource}  
-</header>
-<!--Unique code for each post type-->
-{block:Text}
-<div class="text">
-    {block:Title}<h1 class="title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
-    {Body}
-{/block:Text}
-
-{block:IndexPage}
-    {block:Photo}
-    <div class="photo">
-        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-        {block:Caption}{Caption}{/block:Caption}
-        {/block:Photo}
-{/block:IndexPage}
-
-{block:PermalinkPage}
-    {block:Photo}
-    <div class="photo permalinkStamp">
-        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-        {block:Caption}{Caption}{/block:Caption}
-        {/block:Photo}
-{/block:PermalinkPage}
-
-
-{block:Photoset}
-<div class="photoset">
-    {block:IndexPage}{Photoset-250}{/block:IndexPage}
-    {block:PermalinkPage}{Photoset-700}{/block:PermalinkPage} 
-    {block:Caption}{Caption}{/block:Caption}
-{/block:Photoset}
-
-{block:Quote}
-<div class="quote">
-    <blockquote>{Quote}</blockquote>
-    {block:Source}<cite> {Source} </cite>{/block:Source}
-{/block:Quote}
-
-{block:Link}
-<div class="link">
-    <h1 class="title"><a href="{URL}">{Name}</a></h1>
-    {block:Description}{Description}{/block:Description}
-{/block:Link}
-
-{block:Chat}
-<div class="chat">
-    <ul>
-        {block:Lines}<li class="{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label}<p> {Line} </p></li>{/block:Lines}
-    </ul>
-{/block:Chat}
-
-{block:Audio}
-<div class="audio">
-    {block:TrackName}<h1 class="title"><a href="{Permalink}">{TrackName}</a></h1>{/block:TrackName}
-    <div class="albumart">{block:AlbumArt}<img src="{AlbumArtURL}" width="500" height="500"/>{/block:AlbumArt}</div>
-    <div class="player">{AudioPlayerBlack}</div>
-    {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
-    {block:Caption}{Caption}{/block:Caption}
-{/block:Audio}
-
-{block:Video}
-<div class="video">
-    <div class="video-player">{Video-500}</div>
-    {block:Caption}{Caption}{/block:Caption}
-{/block:Video}
-
-{block:Answer}
-<div class="answer">
-    <h1 class="title">{Question}</h1>
-    <div class="user"><img src="{AskerPortraitURL-96}"/><p>{Asker}</p></div>
-    {Answer}
-{/block:Answer}
+<!-- close content wrapper-->
 </div>
-<!--Post footer (tags and notes) on displayed on permalink pages-->
+
 {block:Permalink}
-<footer class="details">
-{block:HasTags}
-    <ul id="tags">
-        {block:Tags}<li> <a href="{TagURL}">{Tag}</a> </li>{/block:Tags}
-    </ul>
-{/block:HasTags}
-{block:PostNotes}
-<div id="notes">
-    {PostNotes}
-</div>
-{/block:PostNotes}
-</footer>
+    <div class="clear-both"></div>
 {/block:Permalink}
- </article>
-{/block:Posts}
-<!--Close of article-->
-</div>
-</div>
+
+
+
 <!--Pagination: previous/next page links-->
 {block:Pagination}
 <div class="pagination">
@@ -682,7 +962,7 @@ article .permalink-article
 {/block:Pagination}
 
 
-
+<!-- legal content -->
 <div id="legal" class="clearfix">
     <div class="col copyright">
         <p>
