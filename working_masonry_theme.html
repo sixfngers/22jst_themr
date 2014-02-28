@@ -147,8 +147,8 @@ nav li {
     /*margin: {text:Post margin};*/
     /*padding: 3%;*/
     /*width: {text:Post width};*/
-    /*margin: 3px 2px 4px 2px;*/
-    margin:0;
+    margin: 4px auto 3px auto;
+    /*margin:0;*/
 }
 
 
@@ -191,7 +191,7 @@ nav li {
 
 .column-width
 {
-    width:330px;
+    width:314px;
 }
 
 .clear-both
@@ -251,7 +251,7 @@ nav li {
 
 #content-wrapper
 {
-    width:1002px;
+    width:970px;
     min-height:1000px;
     margin:52px auto 0 auto;
 }
@@ -274,7 +274,7 @@ nav li {
 }
 
 #stamp2 {
-  width: 660px;
+  width: 634px;
   height: 282px;
 }
 
@@ -314,14 +314,15 @@ nav li {
     width:100%;
     /*margin:0 auto 0 auto;*/
     /*text-align:center;*/
-    min-width:1002px;
+    min-width:970;
     height:48px;
 }
 
 #nav
 {
-    max-width:1002px;
-    min-width:400px;
+  width:970px;
+    /*max-width:970px;
+    min-width:970px;*/
     margin:0 auto 0 auto;
 }
 
@@ -411,12 +412,12 @@ nav li {
     text-align:center;
     background-color: rgba(0,0,0,0.9);
     /*padding-bottom: 40px;*/
-    min-width: 1002px;
+    min-width: 970px;
 }
 
 #about-section-inner-wrapper
 {
-    width:1002px;
+    width:970px;
     margin:24px auto 0 auto;
     display:none;
 }
@@ -511,6 +512,7 @@ nav li {
 */
 #legal {
     width: 100%;
+    min-width: 970px;
     background: #090909;
     color: #999999;
     min-height: 140px;
@@ -537,7 +539,7 @@ nav li {
 
 .post-wrapper
 {
-  margin: 4px 2px 3px 2px;
+  /*margin: 4px 2px 3px 2px;*/
   overflow:hidden;
   border:1px solid {color:Secondary text};
   background-color:{color:Secondary text};
@@ -598,8 +600,20 @@ nav li {
 {
   opacity: 0;
   position: absolute;
-  margin: 5px 3px 4px 3px;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  /*margin: 5px 3px 4px 3px;*/
+  /*background-color:{color:Secondary text};*/
+  background:rgba(205, 33, 13, 0.5);
 }
+
+.index-post-controls-wrapper .post-controls
+{
+  position: relative;
+  top:20%;
+}
+
 
 .index-post-controls-wrapper:hover
 {
@@ -789,6 +803,20 @@ nav li {
                       <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
                       <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
                   </ul>
+                </div>
+
+                <div class="caption-wrapper">
+                  {block:Caption}{Caption}{/block:Caption}
+                </div>
+                
+                <div class='share-controls'>
+                  <div class="permalink-share-wrapper">
+                    <div class="share-icon-wrapper">
+                        <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                        <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                        <div class="clear-both"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
