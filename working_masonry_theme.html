@@ -151,6 +151,7 @@ nav li {
     margin:0;
 }
 
+
 .permalink-article
 {
     width:510px;
@@ -344,6 +345,7 @@ nav li {
     width:225px;
     text-align:center;
     margin:auto;
+    font-size: 1.5em;
     line-height:44px;
     font-weight:bold;
 }
@@ -527,6 +529,20 @@ nav li {
     start post styles
 *******
 */
+
+.photo img
+{
+  vertical-align: top;
+}
+
+.post-wrapper
+{
+  margin: 4px 2px 3px 2px;
+  overflow:hidden;
+  border:1px solid {color:Secondary text};
+  background-color:{color:Secondary text};
+}
+
 .permalink-caption {
     width: 100%;
     background: #090909;
@@ -546,8 +562,8 @@ nav li {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid {Secondary text};
-    background-color:{Secondary text}
+    border-top: 1px solid {color:Secondary text};
+    background-color:{color:Secondary text};
 }
 
 .share-icon-wrapper
@@ -575,6 +591,19 @@ nav li {
     background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png);
     background-position: -38px 0;
     background-repeat: no-repeat;
+}
+
+
+.index-post-controls-wrapper
+{
+  opacity: 0;
+  position: absolute;
+  margin: 5px 3px 4px 3px;
+}
+
+.index-post-controls-wrapper:hover
+{
+    opacity:1;
 }
 
 .post-controls
@@ -753,6 +782,17 @@ nav li {
             {/block:post1}
             
             <article class="index-article column-width">
+              <div class="index-post-controls-wrapper">
+                <div class="post-controls">
+                  <ul>
+                      <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
+                      <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
+                      <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="post-wrapper">
         {/block:indexPage}
 
         {block:permalinkPage}
@@ -770,6 +810,7 @@ nav li {
             {/block:post1}
 
             <article class='permalink-article float-left'>
+              <div class="post-wrapper">
         {/block:permalinkPage}
 
         
@@ -786,8 +827,9 @@ nav li {
         {block:IndexPage}
             {block:Photo}
             <div class="photo">
-                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
-                {block:Caption}{Caption}{/block:Caption}
+                <!-- {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag} -->
+                <!-- {block:Caption}{Caption}{/block:Caption} -->
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
                 {/block:Photo}
         {/block:IndexPage}
 
@@ -892,23 +934,25 @@ nav li {
 
 
         <!--Metadata: date, note count, content source-->
-        <header class="metadata">
+        <!-- <header class="metadata"> -->
+            <!-- 
             {block:indexPage}
               {block:Date} <a href="{Permalink}"> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time> </a> {/block:Date}
             {/block:indexPage}
-
+            -->
+            
             <!--
             {block:permalinkPage}
               {block:NoteCount} <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a> {/block:NoteCount}
             {/block:permalinkPage}
             -->
             
-            {block:ContentSource}
+            <!-- {block:ContentSource}
             <div class="reblogged">
                 <a href="{SourceURL}">{lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo} {block:RebloggedFrom}<img src="{ReblogParentPortraitURL-16}"/>{/block:RebloggedFrom} {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a>
             </div>
             {/block:ContentSource}  
-        </header>
+        </header> -->
 
 
         <!--Post footer (tags and notes) on displayed on permalink pages-->
@@ -938,6 +982,8 @@ nav li {
             </footer>
         {/block:Permalink}
 
+          <!-- closing div tag from post wrapper -->
+          </div>
         <!-- close article post-->
         </article>
         {/block:Posts}
@@ -1023,6 +1069,10 @@ nav li {
             var $newElems = $( newElements ).css({ opacity: 0 });
             $newElems.imagesLoaded(function(){
                 $newElems.animate({ opacity: 1 });
+
+
+
+
                 $tumblelog.masonry( 'appended', $newElems);
             });
           }
