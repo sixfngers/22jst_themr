@@ -113,11 +113,19 @@ a:active{
 }
 
 blockquote {
+    /*
     background: rgba(0, 0, 0, 0.2);
     border-left: 10px solid rgba(0, 0, 0, 0.2);
+    */
     margin: 0;
     padding: 2%;
 }
+
+iframe, embed, object, video
+{
+  vertical-align: top;
+}
+
 iframe, img, embed, object, video {
     max-width: 100%;
 }
@@ -636,7 +644,7 @@ nav li {
   height:100%;
   /*margin: 5px 3px 4px 3px;*/
   /*background-color:{color:Secondary text};*/
-  background:rgba(205, 33, 13, 0.8);
+  background:rgba(205, 33, 13, 0.92);
 }
 
 .index-post-controls-wrapper .post-controls
@@ -655,6 +663,14 @@ nav li {
 .index-post-controls-wrapper:hover
 {
     opacity:1;
+}
+
+.index-post-controls-wrapper a:link
+,.index-post-controls-wrapper a:visited
+,.index-post-controls-wrapper a:hover
+,.index-post-controls-wrapper a:active
+{
+    color:#ffffff;
 }
 
 .post-controls
@@ -1094,7 +1110,7 @@ nav li {
         <div class="photoset">
             {block:IndexPage}{Photoset-250}{/block:IndexPage}
             {block:PermalinkPage}{Photoset-700}{/block:PermalinkPage} 
-            {block:Caption}{Caption}{/block:Caption}
+            <!-- {block:Caption}{Caption}{/block:Caption} -->
         {/block:Photoset}
 
 
@@ -1134,7 +1150,7 @@ nav li {
             <div class="albumart">{block:AlbumArt}<img src="{AlbumArtURL}" width="500" height="500"/>{/block:AlbumArt}</div>
             <div class="player">{AudioPlayerBlack}</div>
             {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
-            {block:Caption}{Caption}{/block:Caption}
+            <!-- {block:Caption}{Caption}{/block:Caption} -->
         {/block:Audio}
 
 
@@ -1142,7 +1158,7 @@ nav li {
         {block:Video}
         <div class="video">
             <div class="video-player">{Video-500}</div>
-            {block:Caption}{Caption}{/block:Caption}
+            <!-- {block:Caption}{Caption}{/block:Caption} -->
         {/block:Video}
 
 
