@@ -37,7 +37,7 @@
 <meta name="image:Background" content="" />
 <meta name="text:Post margin" content='10px'/>
 <meta name="text:Post width" content='38%'/>
-<meta name="text:Twitter post" content="post this to twitter http://www.22JumpStreetMovie.com"/>
+<meta name="text:Twitter text" content="post this to twitter http://www.22JumpStreetMovie.com"/>
 
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
@@ -125,6 +125,19 @@ img {
     height: auto;
     width: auto;
 }
+
+.close-button
+{
+  width:30px;
+  height:30px;
+  cursor: pointer;
+}
+
+.pagination
+{
+  display:none;
+}
+
 /*Masthead*/
 #masthead {
     /*background: {color:Masthead background} url('{image:Masthead}');
@@ -243,12 +256,6 @@ nav li {
 }
 
 
-/*a.tumblelog, a.source_tumblelog
-{
-  color:#cd210d;
-}*/
-
-
 #content-wrapper
 {
     width:970px;
@@ -263,19 +270,23 @@ nav li {
 *******
 */
 .stamp {
-  background: orange;
+  /*background: orange;*/
   /*border: 4px dotted black;*/
 }
 
 #stamp1 {
-  height: 520px;
-  background: black;
-  /*border: 1px solid red;*/
+  height: 495px;
 }
 
 #stamp2 {
   width: 634px;
-  height: 282px;
+  height: 279px;
+
+}
+
+.stamp-follow
+{
+  margin-top:7px;
 }
 
 .fixed-post-permalink-right-margin
@@ -298,103 +309,6 @@ nav li {
 {
     margin-right:4px;
 }
-
-
-
-/*
-*******
-    nav fixed to top of screen
-*******
-*/
-#nav-wrapper {
-    position: fixed;
-    z-index: 9000;
-    top: 0;
-    background:#000;
-    width:100%;
-    /*margin:0 auto 0 auto;*/
-    /*text-align:center;*/
-    min-width:970;
-    height:48px;
-}
-
-#nav
-{
-  width:970px;
-    /*max-width:970px;
-    min-width:970px;*/
-    margin:0 auto 0 auto;
-}
-
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#nav li {
-    list-style-type: none;
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-#nav .official-site-link 
-,#nav .about
-{
-    width:225px;
-    text-align:center;
-    margin:auto;
-    font-size: 1.5em;
-    line-height:44px;
-    font-weight:bold;
-}
-
-#nav a
-{
-    text-decoration:none;
-}
-
-.red-link
-{
-    color:#cd210d;
-}
-
-.nav-social-icon
-{
-    background:url(https://24.media.tumblr.com/97e4630921db1966a918cfc3b8c28816/tumblr_n1j4xnWTSq1tsri92o1_250.png) 0 0;
-    background-repeat:no-repeat;
-    height:48px;
-    width:40px;
-}
-
-.facebook-icon
-{
-    background-position:0, 0;
-}
-
-.twitter-icon
-{
-    background-position:-40px, 0;
-}
-
-.instagram-icon
-{
-    background-position:-80px, 0;
-}
-
-.nav-social-icon:hover
-{
-    opacity:.5;
-}
-
-/*
-*******
-    end nav
-*******
-*/
-
 
 
 /*
@@ -517,12 +431,98 @@ nav li {
     color: #999999;
     min-height: 140px;
 }
+
+#legal-inner-wrapper
+{
+  width:970px;
+  margin:0 auto 0 auto;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.legal-col
+{
+  margin:0 auto 0 15px;
+  float:left;
+}
+
+.copyright
+{
+  width:270px;
+  display:inline;
+  font-size: .5em;
+  text-align:center;
+}
+
+.ratings
+{
+  width:160px;
+  display:inline;
+  font-size: .5em;
+  text-align:center;
+}
+
+.ratings a, .copyright a
+{
+  color:#999999;
+}
+
+.rewards-wrapper
+{
+  width:210px;
+  display:inline;
+  font-size:.75em;
+  text-align: center;
+  margin:0 15px 0 0;
+}
+
+.rewards-wrapper a
+{
+  text-decoration: none;
+  color:#ffffff;
+}
+
+#rewards-logo
+{
+  margin:0 auto 0 auto;
+}
+
+.buy-link-wrapper
+{
+  width:260px;
+  height:80px;
+  display:inline;
+}
+
+.buy-link-inner-wrapper
+{
+  position: relative;
+  width:100%;
+  height:100%;
+  background:url(https://31.media.tumblr.com/f861f7eccbc594a0c435077ff15e098b/tumblr_n1q65fdPTE1tsri92o1_250.png);
+  background-repeat: no-repeat;
+}
+
+#amazon
+{
+  position: absolute;
+  top:35px;
+  left:56px;
+}
+
+#itunes
+{
+  position: absolute;
+  top:35px;
+  left:154px;
+}
+
+
 /*
 *******
     end legal
 *******
 */
-
 
 
 
@@ -532,17 +532,28 @@ nav li {
 *******
 */
 
+/* removes extra spacing from images so border is flush to post size*/
 .photo img
 {
   vertical-align: top;
 }
 
+.permalink-article .post-wrapper
+{
+  overflow:hidden;
+  border:none;
+  background-color:transparent;
+}
+
+.permalink-close-button
+{
+    float:right;
+}
+
 .post-wrapper
 {
-  /*margin: 4px 2px 3px 2px;*/
   overflow:hidden;
   border:1px solid {color:Secondary text};
-  background-color:{color:Secondary text};
 }
 
 .permalink-caption {
@@ -563,8 +574,8 @@ nav li {
     /*color:{Secondary text};*/
     display: block;
     height: 1px;
-    border: 0;
-    border-top: 1px solid {color:Secondary text};
+    /*border: 0;*/
+    border: 0px solid {color:Secondary text};
     background-color:{color:Secondary text};
 }
 
@@ -573,6 +584,26 @@ nav li {
     width:76px;
     margin:0 auto 0 auto;
     text-align: center;
+}
+
+.index .facebook-permalink-share-icon
+{
+    float:left;
+    width:38px;
+    height:32px;
+    background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png);
+    background-position: 0 -32px;
+    background-repeat: no-repeat;
+}
+
+.index .twitter-permalink-share-icon
+{
+  float:left;
+    width:38px;
+    height:32px;
+    background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png);
+    background-position: -38px -32px;
+    background-repeat: no-repeat;
 }
 
 .facebook-permalink-share-icon
@@ -605,13 +636,19 @@ nav li {
   height:100%;
   /*margin: 5px 3px 4px 3px;*/
   /*background-color:{color:Secondary text};*/
-  background:rgba(205, 33, 13, 0.5);
+  background:rgba(205, 33, 13, 0.8);
 }
 
 .index-post-controls-wrapper .post-controls
 {
   position: relative;
-  top:20%;
+  margin:40px auto 40px auto;
+ }
+
+.index-post-controls-wrapper .caption-wrapper p
+{
+  text-align: center;
+  margin:0 20px 0 20px;
 }
 
 
@@ -635,9 +672,16 @@ nav li {
   padding: 0;
 }
 
+.index-article .post-controls li .like_button 
+{
+    margin-top: 21px;
+    margin-left: 20px;
+}
+
 .post-controls li .like_button 
 {
-    margin: 20px auto auto;
+    margin-top: 21px;
+    margin-left: 1px;
 }
 
 .post-controls li .reblog_button
@@ -660,6 +704,21 @@ nav li {
     margin:0;
 }
 
+.share-controls
+{
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  text-align: center;
+}
+
+.share-controls p
+{
+  margin-left: 6px;
+  font-size:.825em;
+  margin-bottom:5px;
+}
+
 .notecount-wrapper
 {
   margin-top:18px;
@@ -672,6 +731,11 @@ nav li {
   color:#ffffff;
 }
 
+.bg-fill
+{
+    background-color: black;
+}
+
 
 /*
 *******
@@ -679,6 +743,126 @@ nav li {
 *******
 */
 
+
+
+/*
+*******
+    nav fixed to top of screen
+*******
+*/
+#nav-wrapper {
+    position: fixed;
+    z-index: 9000;
+    top: 0;
+    background:#000;
+    width:100%;
+    /*margin:0 auto 0 auto;*/
+    /*text-align:center;*/
+    min-width:970;
+    height:48px;
+}
+
+#nav
+{
+  width:970px;
+    /*max-width:970px;
+    min-width:970px;*/
+    margin:0 auto 0 auto;
+}
+
+/*#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}*/
+
+#nav .about
+{
+    width:300px;
+    text-align:center;
+    margin:auto;
+    font-size: 1.5em;
+    line-height:44px;
+    font-weight:bold;
+}
+
+#nav a
+{
+    text-decoration:none;
+}
+
+.red-link
+{
+    color:#cd210d;
+}
+
+/*.nav-social-icon
+{
+    background:url(https://24.media.tumblr.com/97e4630921db1966a918cfc3b8c28816/tumblr_n1j4xnWTSq1tsri92o1_250.png) 0 0;
+    background-repeat:no-repeat;
+    height:48px;
+    width:40px;
+}*/
+
+.nav-social-icon
+{
+    background:url(https://24.media.tumblr.com/ed92aaf9d5f7ce0bee659ec5f82f018b/tumblr_n1j4xnWTSq1tsri92o1_r2_250.png) 0 0;
+    background-repeat:no-repeat;
+    height:48px;
+    width:40px;
+    float:left;
+}
+
+.facebook
+{
+    background-position:0, 0;
+}
+
+.twitter
+{
+    background-position:-40px, 0;
+}
+
+.instagram
+{
+    background-position:-80px, 0;
+}
+
+.youtube
+{
+    background-position-x: -120px;
+    width: 64px;
+}
+
+.follow-text
+{
+  line-height: 44px;
+}
+
+.nav-social-icon:hover
+{
+    opacity:.5;
+}
+
+.nav-col
+{
+  margin:0 auto 0 auto;
+  float:left;
+}
+
+/*
+*******
+    end nav
+*******
+*/
 
 
 /*Custom CSS*/
@@ -690,27 +874,35 @@ nav li {
 <!-- <header id="masthead"> -->
     <div id="nav-wrapper">
         <div id="nav">
-            <ul>
-                <li class="follow">
-                    <a href="#" class="sprite ir follow"><img src="//31.media.tumblr.com/c7e1f611b3806f1de399dbe26fe4675f/tumblr_n1j503nzMh1tsri92o1_400.png" width="385px" height="48px" alt="22 Jump Street Movie In Theaters June 13th"/></a>
-                </li>
-                <li class="about">
-                    <a href="#about" class="red-link">ABOUT THE FILM</a>
-                </li>
-                <li class="official-site-link">
-                    <a href="#" class="">VISIT OFFICIAL SITE</a>
-                </li>
-                <li class="nav-social">
-                    <a href="www.facebook.com/22JumpStreet"><div class="facebook-icon nav-social-icon"></div></a>
-                    </li>
-                    <li class="nav-social">
-                    <a href="www.twitter.com"><div class="twitter-icon nav-social-icon"></div></a>
-                    </li>
-                    <li class="nav-social">
-                    <a href="www.instagram.com"><div class="instagram-icon nav-social-icon"></div></a>
-                </li>
-            </ul>
+            <div class="release-date nav-col">
+              <div>
+                <img src="https://31.media.tumblr.com/169e9a708da0323ee6577e6284145fcf/tumblr_n1qbs6lnKQ1tsri92o4_r1_400.png">
+              </div>
+            </div>
 
+            <div class="about nav-col">
+              <a href="#about" class="red-link">ABOUT THE MOVIE</a>
+            </div>
+
+            <div class="nav-social-wrapper nav-col">
+              <div class="follow-text nav-col">FOLLOW US</div>
+              
+              <a href="https://www.facebook.com/JumpStMovies">
+              <div class="facebook nav-social-icon"></div>
+              </a>
+              
+              <a href="https://twitter.com/jumpstmovies">
+              <div class="twitter nav-social-icon"></div>
+              </a>
+              
+              <a href="http://instagram.com/jumpstmovies">
+              <div class="instagram nav-social-icon"></div>
+              </a>
+              
+              <a href="http://www.youtube.com/user/SonyPictures?feature=watch">
+              <div class="youtube nav-social-icon"></div>
+              </a>
+            </div>
         </div>
     </div>
     <div id="about-section-wrapper">
@@ -718,11 +910,11 @@ nav li {
             <div id="about-section">
                 <div class="section-header">
                     <div class="close-button">
-                        <img alt="close button" width="37" height="37" src="https://24.media.tumblr.com/ccaf61f84ac7c7f728ba80cf244b4f7d/tumblr_n1m7imFMFs1tsri92o1_75sq.png">
+                        <img alt="close button" width="37" height="37" src="https://24.media.tumblr.com/b903046f782c07562a130b0b176a24d3/tumblr_n1qbs6lnKQ1tsri92o6_r1_75sq.png">
                     </div>
 
                     <div class="float-left">
-                        <img src="https://31.media.tumblr.com/8e7487e25d7de74fae1b0c0beb3abecb/tumblr_n1kw2sqLh71tsri92o1_r1_1280.png" />
+                        <img src="https://31.media.tumblr.com/c557e4ebeab0e11683578cd075111c9e/tumblr_n1qbs6lnKQ1tsri92o5_r1_1280.jpg" />
                     </div>
 
                     <div class='clear-both'></div>
@@ -786,12 +978,18 @@ nav li {
             {block:post1}
                 <!-- fixed posts definition -->
                 <div id="stamp1" class="column-width">
-                    <img src="http://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" />
-                    <a href="http://www.tumblr.com/follow/jumpstmovies">
-                        <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies" />
-                    </a>
+                    <img src="https://31.media.tumblr.com/b79acfb2680226e59a1622a9b414db57/tumblr_n1qbs6lnKQ1tsri92o2_400.png" />
+                    <div id="stamp-follow" class="float-left column-width">
+                        <a href="http://www.tumblr.com/follow/jumpstmovies">
+                            <img src="https://31.media.tumblr.com/86fa13fb6fbf012f3b38b96ab1ef1773/tumblr_n1qbs6lnKQ1tsri92o1_400.png" alt="follow jump street movies" />
+                        </a>
+                    </div>
                 </div>
-                <div id="stamp2" class="stamp"></div>
+                <div id="stamp2" class="stamp">
+                  <a href="https://www.youtube.com/watch?v=06rvPK8ydZo">
+                    <img src="https://24.media.tumblr.com/fcb2c54d4b690a16dc0772d86f472cbb/tumblr_n1qbs6lnKQ1tsri92o3_1280.png" alt="watch the red band trailer on youtube">
+                  </a>
+                </div>
                 <!-- end fixed posts definition -->
             {/block:post1}
             
@@ -810,13 +1008,12 @@ nav li {
                 </div>
                 
                 <div class='share-controls'>
-                  <div class="permalink-share-wrapper">
-                    <div class="share-icon-wrapper">
-                        <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
-                        <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
-                        <div class="clear-both"></div>
-                    </div>
-                  </div>
+                  <p>SHARE</p>
+                  <div class="share-icon-wrapper index">
+                      <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                      <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                      <div class="clear-both"></div>
+                  </div>                
                 </div>
               </div>
 
@@ -827,10 +1024,10 @@ nav li {
             {block:post1}
                 <!-- fixed posts definition -->
                 <div id="stamp1" class="float-left column-width fixed-post-permalink-right-margin" >
-                    <img src="http://24.media.tumblr.com/1174ec340cad6c971b51aa1c3c5c253c/tumblr_n0uyefiZuY1tsri92o1_r2_400.png" />
+                    <img src="https://31.media.tumblr.com/b79acfb2680226e59a1622a9b414db57/tumblr_n1qbs6lnKQ1tsri92o2_400.png" />
                     <div id="stamp-follow" class="float-left column-width">
                         <a href="http://www.tumblr.com/follow/jumpstmovies">
-                            <img src="https://24.media.tumblr.com/a9043663ac2c66b8c4fe73f69fb9590a/tumblr_n1o26m2pGP1qeyie8o1_400.png" alt="follow jump street movies" />
+                            <img src="https://31.media.tumblr.com/86fa13fb6fbf012f3b38b96ab1ef1773/tumblr_n1qbs6lnKQ1tsri92o1_400.png" alt="follow jump street movies" />
                         </a>
                     </div>
                 </div>
@@ -959,6 +1156,7 @@ nav li {
 
         <!-- closing div tag from post type -->
         </div>
+        <div class="clear-both"></div>
 
 
         <!--Metadata: date, note count, content source-->
@@ -1016,6 +1214,11 @@ nav li {
         </article>
         {/block:Posts}
 
+        {block:Permalink}
+          <div class="permalink-close-button close-button">
+              <a href="{BlogURL}"><img alt="close button" width="37" height="37" src="https://24.media.tumblr.com/b903046f782c07562a130b0b176a24d3/tumblr_n1qbs6lnKQ1tsri92o6_r1_75sq.png">
+          </div>
+        {/block:Permalink}
     <!-- close content -->
     </div>
 <!-- close content wrapper-->
@@ -1038,26 +1241,52 @@ nav li {
 
 <!-- legal content -->
 <div id="legal" class="clearfix">
-    <div class="col copyright">
-        <p>
-            &copy;<span class="year">2014</span> Sony Pictures Digital Productions Inc, All rights reserved.<br/>
-            <a href="">Privacy Policy</a> | <a href="">Terms of Use</a>
-        </p>
-    </div>
-    <div class="col ratings">
-        <p>
-            For Ratings Reasons:<br/>
-            <a href="">filmratings.com</a> | <a href="">MPAA.org</a><br/>
-            <br/>
-            Hosted by Tumblr <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-        </p>
-    </div>
-    <div class="col rewards">
-        <a href="#" class="ir sprite">Join Sony Rewards</a>
-        <p>
-            Go Undercover and get rewarded<br/>
-            for your love of movies
-        </p>
+    <div id="legal-inner-wrapper">
+      <div class="copyright legal-col">
+          <div id="studio-logos">
+            <img src="https://31.media.tumblr.com/286250e784827259bda71b8f33c0e366/tumblr_n1q65fdPTE1tsri92o5_250.png" alt="MGM Studios and Columbia Pictures">
+          </div>
+          <p>
+              &copy;<span class="year">2014</span> Sony Pictures Digital Productions Inc, All rights reserved.
+              <br/>
+              Hosted by Tumblr <a href="http://www.sony.com">Privacy Policy</a> | <a href="http://www.sony.com">Terms of Service</a>
+          </p>
+      </div>
+      <div class="ratings legal-col">
+          <div id="ratings-block">
+            <img src="https://31.media.tumblr.com/e73d5d67e2a1db90eacf51bf56c37e0a/tumblr_n1q65fdPTE1tsri92o6_r1_100.png" alt="MPAA Ratings Block">
+          </div>
+          <p>
+              For Ratings Reasons:<br/>
+              <a href="http://www.filmratings.com" target="_blank">filmratings.com</a> | <a href="http://www.mpaa.org" target="_blank">MPAA.org</a><br/>
+          </p>
+      </div>
+      <div class="rewards-wrapper legal-col">
+          <a href="http://www.sonyrewards.com/en/home/welcome" target="_blank" class="ir sprite">
+          <div id="rewards-logo">
+            <img src="https://31.media.tumblr.com/8401d9f107321671f55b0dc519b4dd11/tumblr_n1q65fdPTE1tsri92o4_250.png" alt="join sony rewards">
+          </div>
+          
+            <p>
+                GO UNDERCOVER AND GET REWARDED<br />
+                FOR YOUR LOVE OF MOVIES
+            </p>
+          </a>
+      </div>
+      <div class="buy-link-wrapper legal-col">
+        <div class="buy-link-inner-wrapper">
+          <div id="amazon">
+            <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank">
+              <img src="https://24.media.tumblr.com/d4cb573313b32307759126de7d863027/tumblr_n1q65fdPTE1tsri92o2_100.png" alt="amazon link">
+            </a>
+          </div>
+          <div id="itunes">
+            <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank">
+              <img src="https://24.media.tumblr.com/a0faed80da17d3276482cfbe23566c47/tumblr_n1q65fdPTE1tsri92o3_100.png" alt="itunes link">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
 
@@ -1074,9 +1303,8 @@ nav li {
 <!-- custom js file -->
 <script src="http://dev.bpginteractive.com/22jump/script/22js.js"></script>
 
-<script>
-
 {block:indexPage}
+<script>
 (function() {
     var $tumblelog = $('#content');
     {block:IfInfiniteScroll}
@@ -1117,6 +1345,7 @@ nav li {
 })();
 </script>
 {/block:indexPage}
+
 <!--For users adding Google Analytics ID-->
 <script>
 var _gaq=[['_setAccount','{text:Google Analytics ID}'],['_trackPageview']];
