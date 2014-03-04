@@ -6,13 +6,12 @@
     <meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014.">
     <meta name="keywords" content="22 Jump Street, 21 Jump Street, Sequel, Action Comedy, Undercover Cop, Jonah Hill, Channing Tatum, Ice Cube, Phil Lord, Chris Miller, Movie, Sony Pictures">
 
-    <meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters Summer 2014" />
+    <meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters June 13th" />
     <meta property="og:type" content="video.movie" />
-    <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014." />
+    <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters June 13th." />
     <meta property="og:image" content="http://flash.sonypictures.com/movies/22jumpstreet/share/tumblr/22jumpstreet_share.jpg" />
     <meta property="og:url" content="http://www.22JumpStreetMovie.com" />
-
-
+    
     <meta name="viewport" content="width=640"/>
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
@@ -190,6 +189,18 @@
                         }
 
 
+        .notes-container-wrapper
+        {
+          margin-top:-60px;
+          margin-bottom:14px;
+
+        }
+
+        .notes-container
+        {
+          background-color: #dddddd;
+        }
+
 
         .bubble {
             display: block;
@@ -203,18 +214,21 @@
             }
 
             .bubble .top {
-                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_top.png') top left repeat-y transparent;
+                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_top.png') top left repeat-y transparent;*/
                 width: 608px;
                 height: 34px;
                 margin: 0 auto;
             }
             
             .bubble .content {
-                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bg.png') -1px 0 repeat-y transparent;
-                width: 528px;
+                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bg.png') -1px 0 repeat-y transparent;*/
+                /*width: 528px;*/
+                width:100%;
                 line-height: 34px;
                 margin: 0 auto;
-                padding: 2px 40px;
+                /*padding: 2px 40px;*/
+                padding-top:2px;
+                /*background-color: #ff0000;*/
             }
             
                 .bubble.description .content {
@@ -228,8 +242,9 @@
                 
                 .bubble .content img.photo {
                     display: block;
-                    border: 4px solid #fff;
-                    width: 520px;
+                    /*border: 4px solid #fff;*/
+                    /*width: 520px;*/
+                    width: 100%;
                     height: auto;
                 }
                 
@@ -323,14 +338,14 @@
                     }
                     
                     .bubble .content .video {
-                        width: 520px;
+                        width: 100%;
                         font-size: 26px;
                         color: #333536;
                     }
 
                         .bubble .content .video * {
-                            width: 520px !important;
-                            border: 4px solid #fff;
+                            width: 100% !important;
+                            /*border: 4px solid #fff;*/
                             margin: 0 auto;
                         }
                         
@@ -355,7 +370,8 @@
                         }
                         
                         .bubble .content .html_photoset {
-                            width: 520px;
+                            /*width: 520px;*/
+                            width: 100%;
                             text-align: center;
                             border: none;
                         }
@@ -369,7 +385,8 @@
                             }
                             
                                 .bubble .content .html_photoset p img.photoset_photo {
-                                    width: 520px;
+                                    /*width: 520px;*/
+                                    width: 100%;
                                     margin: 0 auto;
                                     border: 4px solid #fff;
                                 }
@@ -387,7 +404,7 @@
                     }
                     
                         .bubble .content .link span {
-                            font-family: 'Lucida Grande', sans-serif;
+                            font-family: 'Helvetica Neue',"Helvetica", sans-serif;
                             vertical-align: -1px;
                         }
                     
@@ -485,7 +502,7 @@
                 .bubble .content .date,
                 .bubble .content .note_count {
                     float: left;
-                    font-weight: bold;
+                    /*font-weight: bold;*/
                     font-size: 24px;
                     /*color: #8c8e90;*/
                     color:#666666;
@@ -524,6 +541,7 @@
                         
                         .bubble .content ol.notes li.note span.action {
                             font-weight: normal;
+                            color:#303132;
                         }
                         
                         .bubble .content ol.notes li.note .answer_content {
@@ -572,7 +590,7 @@
                         }
             
             .bubble .bottom {
-                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bottom.png') -1px 0 repeat-y transparent;
+                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bottom.png') -1px 0 repeat-y transparent;*/
                 width: 608px;
                 height: 38px;
                 margin: 0 auto;
@@ -595,6 +613,7 @@
             text-align: center;
             padding: 38px 0;
             display: block;
+            margin-top:60px;
         }    
 
            .load img {
@@ -628,91 +647,12 @@
 
 
             #jumpstreet {
-                /* 
-                background: url(http://dev.bpginteractive.com/22jump/mobile/bg-main.jpg) no-repeat center top #0d0d0d;                
-                background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-main.jpg) no-repeat center top #0d0d0d;
-                background-size: 100% auto;
-                */
                 width: 640px;
                 height: 100%;
                 margin: 0 auto;
                 padding-bottom: 30px;
                 position: relative;
             }
-
-            /*.hidetext {
-                white-space: nowrap;
-                text-indent: 105%;
-                overflow: hidden;
-                color: transparent;
-                font-size: 0.1em; 
-            }
-
-            #js_legal {
-                background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-legal.png) no-repeat center top #0d0d0d;                
-                background-size: 100% auto;
-                height: 150px;
-                font-size: 1em;
-                line-height: 1em;
-                color: #aaa;
-            }
-            #js_legal .hostedBy {
-                text-align: center; 
-                padding: 2em 0 2em; }
-                #js_legal .hostedBy p {
-                    margin: 1em 0; }
-            #js_legal a,
-            #js_legal a:link,
-            #js_legal a:visited {
-                text-decoration: underline;
-                color: #fff; }
-            #js_legal a:hover, 
-            #js_legal a:active {
-                text-decoration: underline;
-                color: #eee; }
-
-            #js_legal .col {
-                float:left;
-                min-height: 100px;
-                width: 46%;
-                text-align: center; }
-            #js_legal .col p { 
-                margin: 0 0.5em; }
-            #js_legal .col.credits { }
-                #js_legal .col.credits ul,
-                #js_legal .col.credits li {        
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0; 
-                    height: 70px; }
-                #js_legal .col.credits li {        
-                    float: left;
-                    width: 24.5%; 
-                    visibility: hidden; }
-
-            #js_legal .col.rating { 
-                width: 26%; }
-                #js_legal .col.rating a { 
-                    text-transform: uppercase; }
-                #js_legal .col.rating header { 
-                    text-align: left;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-indent: 105%;
-                    font-size: 0.1em;
-                    height: 70px; 
-                    margin: 0;
-                    padding: 0; }
-            #js_legal .col.rewards {
-                width: 27.5%; } 
-            #js_legal .col.rewards a {
-                overflow: hidden;
-                display: block;
-                width: 100%;
-                height: 100px; } 
-            #js_legal .col.rewards a:hover { }
-            */
-
 
             .outer-note-wrapper
             {
@@ -733,6 +673,19 @@
             .note-content
             {
 
+            }
+
+            .lower-post
+            {
+              margin-top:8px;
+              width:100%;
+              background-color: #dddddd;
+              padding: 10px 0 10px 0
+            }
+
+            .lower-post-content-padding
+            {
+              padding:0 14px 0 14px;
             }
 
             .post-footer {
@@ -853,22 +806,7 @@
     box-shadow: 0;
     z-index: 10;
 }
-/*
-.pop-menu:before {
-    position: absolute;
-    height: 20px;
-    width: 40%;
-    left: 10px;
-    top: 18px;
-    content: 'Share';
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7em;
-    color: #292928;
-    line-height: 1em;
-}
-*/
+
 .pop-menu ul {
     position: absolute;
     bottom: 16px;
@@ -1445,18 +1383,18 @@
         <li>
             <div class="nav-item">
               <div class='nav-social-wrapper centered'>
-                <a href="http://www.facebook.com">
+                <a href="https://www.facebook.com/JumpStMovies">
                   <div class="nav-share-icon facebook"></div>
                 
-                <a href="http://www.twitter.com">
+                <a href="https://twitter.com/jumpstmovies">
                   <div class="nav-share-icon twitter"></div>
                 </a>
                 
-                <a href="http://www.instagram.com">
+                <a href="http://instagram.com/jumpstmovies">
                   <div class="nav-share-icon instagram"></div>
                 </a>
                 
-                <a href="http://www.youtube.com">
+                <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet">
                   <div class="nav-share-icon youtube"></div>
                 </a>
                 <div class="clearfix"></div>
@@ -1499,7 +1437,8 @@
                     <div class="content">
 
                         {block:Text}
-                            <div class="copy text_post">
+                            <div class="lower-post">
+                            <div class="copy text_post lower-post-content-padding">
                                 {block:Title}<h2>{Title}</h2>{/block:Title}
                                 {Body}
                                 {block:More}<p class="read_more_container"><a href="{Permalink}" class="read_more">Read More</a></p>{/block:More}
@@ -1508,8 +1447,10 @@
 
                         {block:Photo}
                             {block:HighRes}<a href="{PhotoURL-HighRes}">{/block:HighRes}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo" />{block:HighRes}</a>{/block:HighRes}
+                            
+                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy">
+                                <div class="copy lower-post-content-padding">
                                     {Caption}
                                 </div>
                             {/block:Caption}
@@ -1519,23 +1460,26 @@
                             <div class="video">
                                 {Photoset-500}
                             </div>
+                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy">
+                                <div class="copy lower-post-content-padding">
                                     {Caption}
                                 </div>
                             {/block:Caption}
                         {/block:Photoset}
 
                         {block:Link}
+                            <div class="lower-post">
                             <a href="{URL}" class="link" {Target}>{Name} <span>&rarr;</span></a>
                             {block:Description}
-                                <div class="copy">
+                                <div class="copy lower-post-content-padding">
                                     {Description}
                                 </div>
                             {/block:Description}
                         {/block:Link}
 
                         {block:Quote}
+                            <div class="lower-post">
                             <div class="quote">&#8220;{Quote}&#8221;</div>
                             {block:Source}
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:20px 0">
@@ -1562,8 +1506,9 @@
                                 <audio id="audio_file_{PostID}" src="{RawAudioURL}"></audio>
                                 <div class="clear"></div>
                             </div>
+                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy">
+                                <div class="copy lower-post-content-padding">
                                     {Caption}
                                 </div>
                             {/block:Caption}
@@ -1573,14 +1518,16 @@
                             <div class="video"> 
                                 {Video-500}
                             </div>
+                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy">
+                                <div class="copy lower-post-content-padding">
                                     {Caption}
                                 </div>
                             {/block:Caption}
                         {/block:Video}
 
                         {block:Chat}
+                            <div class="lower-post">
                             {block:Title}<h2 style="margin-bottom:26px;">{Title}</h2>{/block:Title}
                             <table class="chat" border="0" cellpadding="0" cellspacing="0">
                                 {block:Lines}
@@ -1593,17 +1540,18 @@
                         {/block:Chat}
 
                         {block:Answer}
+                            <div class="lower-post">
                             <div class="answer_question">{Question}</div>
                             <div class="answer_asker">
                                 <img src="{AskerPortraitURL-48}" width="48" height="48" />{Asker}
                             </div>
-                            <div class="copy">
+                            <div class="copy lower-post-content-padding">
                                 {Answer}
                             </div>
                         {/block:Answer}
 
                           <!-- Sharing options -->
-                          <footer class="post-footer">
+                          <footer class="post-footer lower-post-content-padding">
                             <div class="outer-note-wrapper">
                               <div class="note-wrapper">
                                 <div class="note-content">
@@ -1644,14 +1592,18 @@
                           </footer>
 
                         <div class="clear"></div>
+
+                      </div> <!-- close lower-post -->
                     </div>
                     <div class="bottom"></div>
                 </div>
                 {block:IndexPage}
-                    <div id="notes_container_{PostID}" class="bubble" style="display:none">
-                        <div class="top"></div>
-                        <div class="content bleed" id="notes_{PostID}"></div>
-                        <div class="bottom"></div>
+                    <div class="notes-container-wrapper">
+                      <div id="notes_container_{PostID}" class="bubble notes-container" style="display:none">
+                          <div class="top"></div>
+                          <div class="content bleed" id="notes_{PostID}"></div>
+                          <div class="bottom"></div>
+                      </div>
                     </div>
                 {/block:IndexPage}
                 {block:PermalinkPage}
@@ -1683,11 +1635,11 @@
 
         <section id="mobile_legal">
           <div class="dvd">
-            <a href="http://www.amazon.com">
+            <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank">
               <div class="amazon legal-button"></div>
             </a>
 
-            <a href="http://www.itunes.com">
+            <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank">
               <div class="itunes legal-button"></div>
             </a>
           </div>
