@@ -2,14 +2,70 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{Title}</title>
+    <title>22 Jump Street | Official Movie Site | Sony Pictures</title>
+    <meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014.">
+    <meta name="keywords" content="22 Jump Street, 21 Jump Street, Sequel, Action Comedy, Undercover Cop, Jonah Hill, Channing Tatum, Ice Cube, Phil Lord, Chris Miller, Movie, Sony Pictures">
+
+    <meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters Summer 2014" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014." />
+    <meta property="og:image" content="http://flash.sonypictures.com/movies/22jumpstreet/share/tumblr/22jumpstreet_share.jpg" />
+    <meta property="og:url" content="http://www.22JumpStreetMovie.com" />
+
+
     <meta name="viewport" content="width=640"/>
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
-    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-    
-<!-- tumblr styles -->
+    <!-- {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description} -->
     <style type="text/css">
+        /* 
+        /  
+        /  Helper classes and Resets
+        */
+        .row {
+            width: 100%;
+            clear: both;                
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix {
+          *zoom: 1;
+        }
+        .clearfix:before,
+        .clearfix :after {
+            display: table;
+            content: "";
+            line-height: 0;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+        .ir {
+            text-align: left;
+            color: transparent;
+            white-space: nowrap;
+            font-size: 0.1em;
+            text-indent: 105%;
+        }
+        .sprite {
+            /* 
+            background-image: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/sprite.png) !important; */ 
+            background-image: url(http://dev.bpginteractive.com/22jump/mobile/sprite.png) !important; 
+            background-repeat: no-repeat !important;
+            background-color: transparent !important;
+            background-position: 0 0;
+        }
+
+
+
         html {
             width: 640px;
             margin: auto;
@@ -20,8 +76,15 @@
             width: 640px;
             margin: 0 auto;
             padding: 0;
-            background: url('http://assets.tumblr.com/images/iphone/tumblelog/bg.png') top left repeat #757778;
-            font-family: Helvetica, Arial, sans-serif;
+            background: url(https://24.media.tumblr.com/e01e7c6bf7ec2d9a665fbcc8c72de701/tumblr_n1vi3rA99x1tsri92o3_r1_1280.jpg) no-repeat center top;
+            background-color:#ababab;
+
+            /*background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-main.jpg) no-repeat center top black;*/
+            background-size: 100% auto;
+            /*font-family: Helvetica, Arial, sans-serif;*/
+            color: #ffffff;
+            font-family: Helvetica Neue,serif;
+            font-size: 0.8em;
         }
 
         .clear {
@@ -125,6 +188,8 @@
                         header .info.showing .body .show .gradient {
                             display: none;
                         }
+
+
 
         .bubble {
             display: block;
@@ -422,14 +487,17 @@
                     float: left;
                     font-weight: bold;
                     font-size: 24px;
-                    color: #8c8e90;
+                    /*color: #8c8e90;*/
+                    color:#666666;
                     margin-top: 26px;
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
                 
+                /*
                 .bubble .content .note_count {
                     float: right;
                 }
+                */
                 
                 .bubble .content ol.notes {
                     margin: 0;
@@ -556,20 +624,645 @@
          {
             -webkit-box-shadow: none !important;
         }
-    </style>
-<!-- end tumblr styles  -->
-
-    <style>
-        body
-        {
-            background:url();
-            background-color: #ababab;
-        }
-    </style>
 
 
 
-<!-- tumblr scripts -->
+            #jumpstreet {
+                /* 
+                background: url(http://dev.bpginteractive.com/22jump/mobile/bg-main.jpg) no-repeat center top #0d0d0d;                
+                background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-main.jpg) no-repeat center top #0d0d0d;
+                background-size: 100% auto;
+                */
+                width: 640px;
+                height: 100%;
+                margin: 0 auto;
+                padding-bottom: 30px;
+                position: relative;
+            }
+
+            /*.hidetext {
+                white-space: nowrap;
+                text-indent: 105%;
+                overflow: hidden;
+                color: transparent;
+                font-size: 0.1em; 
+            }
+
+            #js_legal {
+                background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-legal.png) no-repeat center top #0d0d0d;                
+                background-size: 100% auto;
+                height: 150px;
+                font-size: 1em;
+                line-height: 1em;
+                color: #aaa;
+            }
+            #js_legal .hostedBy {
+                text-align: center; 
+                padding: 2em 0 2em; }
+                #js_legal .hostedBy p {
+                    margin: 1em 0; }
+            #js_legal a,
+            #js_legal a:link,
+            #js_legal a:visited {
+                text-decoration: underline;
+                color: #fff; }
+            #js_legal a:hover, 
+            #js_legal a:active {
+                text-decoration: underline;
+                color: #eee; }
+
+            #js_legal .col {
+                float:left;
+                min-height: 100px;
+                width: 46%;
+                text-align: center; }
+            #js_legal .col p { 
+                margin: 0 0.5em; }
+            #js_legal .col.credits { }
+                #js_legal .col.credits ul,
+                #js_legal .col.credits li {        
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0; 
+                    height: 70px; }
+                #js_legal .col.credits li {        
+                    float: left;
+                    width: 24.5%; 
+                    visibility: hidden; }
+
+            #js_legal .col.rating { 
+                width: 26%; }
+                #js_legal .col.rating a { 
+                    text-transform: uppercase; }
+                #js_legal .col.rating header { 
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-indent: 105%;
+                    font-size: 0.1em;
+                    height: 70px; 
+                    margin: 0;
+                    padding: 0; }
+            #js_legal .col.rewards {
+                width: 27.5%; } 
+            #js_legal .col.rewards a {
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                height: 100px; } 
+            #js_legal .col.rewards a:hover { }
+            */
+
+
+            .outer-note-wrapper
+            {
+              height:100%;
+              position: relative;
+              float:left;
+              clear:both;
+              width:40%;
+            }
+
+            .note-wrapper
+            {
+              position: absolute;
+              bottom:0;
+              line-height: 22px;
+            }
+
+            .note-content
+            {
+
+            }
+
+            .post-footer {
+                height: 90px;
+                /*width: 300px;*/
+                /*position: relative;
+                display: block !important;
+                clear: both;*/
+                margin: 1em 0;
+            }
+                .post-footer ul {
+                    list-style: none;
+                    margin: 0 0 0 0;
+                    padding: 0;
+                }
+                .post-footer ul {
+                    list-style-type: none;
+                    margin: 0;
+                }
+
+                .post-controls {
+                    float:right;
+                    display: block;
+                    height: 50%;
+                    margin-top:46px;
+                }
+
+                .post-controls > ul {
+                    float: none;
+                    display: block;
+                    height: 100%;
+                    margin-right: 0;
+                    list-style-type: none;
+                    margin: 0;
+                }
+                
+                .post-controls li a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    text-decoration: none;
+                    opacity: 1;
+                }
+                .post-controls li .pop {
+                    height: 100%;
+                    width: 100%;
+                }
+                .post-controls > ul > li {
+                    float: left;
+                    height: 100%;
+                    position: relative;
+                    width: 40px;
+                    margin: 0;
+                    padding: 0;
+                    border-radius: 4px;
+                }
+                    .post-controls > ul > li.share-control {
+                        width: 106px;
+                        background: #000000;
+                        line-height: 45px;
+                        text-align: center;
+                    }
+                    .post-controls > ul > li.reblog-control {
+                        width: 75px;
+                        background: #4e4e4e;
+                        margin-left: 3px;
+                        line-height: 48px;
+                    }
+                    .post-controls li .reblog_button
+                    {
+                        margin: 6px 0 0 26px !important;
+                    }
+                    
+                    .post-controls > ul > li.like-control
+                    {
+                        width: 75px;
+                        background: #4e4e4e;
+                        margin-left: 3px;
+                        line-height: 48px;
+                    }
+                    .post-controls li .reblog_button {
+                        margin: 32px 20px 0;
+                    }
+                    .post-controls li .like_button {
+                        width: 20px;
+                        height: 20px;
+                        opacity: 1;
+                        position: absolute;
+                        top: 6px;
+                        left: 26px;
+                        margin: auto;
+                    }
+                    .post-controls li .like_button iframe {
+                        margin: 0 !important;
+                    }
+/* 
+/  
+/  Sharing pop-up menu
+*/
+.pop-menu {
+    /*
+    DEBUG 
+    display: block;
+    */
+    /*background: #c9c9c7;
+    background: rgba(200,200,200,0.66);*/
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 263px;
+    width: 260px;
+    height: 90px;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+    z-index: 10;
+}
+/*
+.pop-menu:before {
+    position: absolute;
+    height: 20px;
+    width: 40%;
+    left: 10px;
+    top: 18px;
+    content: 'Share';
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7em;
+    color: #292928;
+    line-height: 1em;
+}
+*/
+.pop-menu ul {
+    position: absolute;
+    bottom: 16px;
+    left: 5px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+.pop-menu ul li {
+    width: 56px;
+    margin: 5px;
+    float: left;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.pop-menu ul li:first-child {
+    display: none;
+}
+.pop-menu ul li.tw {
+    width: 53px;
+}
+.pop-menu ul li.pin {
+    width: 43px;
+}
+.pop-menu ul li.gp {
+    width: 42px;
+}
+.pop-menu ul li:not(.no-hover):hover {
+    background: transparent;
+}
+
+.pop-menu ul li a {
+    position: relative;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    background: none;
+    color: #444;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    text-decoration: none;
+    border-bottom: none;
+    overflow: hidden;
+    text-indent: 105%;
+}
+
+.pop-menu ul li a.share-item.sprite {
+    background-position: -0 -100px;
+}
+.pop-menu ul li a.share-item.sprite.twitter {
+    background-position: -60px -100px;
+}
+.pop-menu ul li a.share-item.sprite.pinterest {
+    background-position: -120px -100px;
+}
+.pop-menu ul li a.share-item.sprite.google {
+    background-position: -180px -100px;
+}
+.share-item:before {
+    content: '';
+    background: none;
+    display: none;
+}
+
+
+/*
+*****
+  start mobile expandable nav
+*****
+*/
+
+.release-date
+{
+  height:98px;
+}
+
+.nav
+{
+  width:100%;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  display:none;
+}
+
+.collapsed-height
+{
+  height:68px;
+}
+
+.nav hr
+{
+  border-color: #646464;
+  width:90%;
+}
+
+.nav ul
+{
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item
+{
+  height:68px;
+}
+
+.nav-text
+{
+    text-align:center;
+    line-height:2.3em;
+  font-size: 2.25em;
+}
+
+.nav-share-icon
+{
+  background:url(https://31.media.tumblr.com/e936cf9b072edf5565bc99a4b9fc65bc/tumblr_n1vi3rA99x1tsri92o1_400.jpg);
+  background-repeat: no-repeat;
+  float: left;
+  height:100%;
+}
+
+.nav-social-wrapper
+{
+    width:333px;
+    height:100%;
+}
+
+.nav-item .facebook
+{
+  background-position: 0 0;
+  width:66px;
+}
+
+.nav-item .twitter
+{
+  background-position: -66px 0;
+  width:87px;
+}
+
+.nav-item .instagram
+{
+  background-position: -153px 0;
+  width:79px;
+}
+
+.nav-item .youtube
+{
+  background-position: -232px 0;
+  width:101px;
+}
+
+.nav-arrow
+{ position:absolute;
+  top:-4px;
+  left:55%;
+  background-position: 0 0;
+  width:75px;
+  height:75px;
+}
+
+.point-down
+{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+/*
+*****
+  end mobile expandable nav
+*****
+*/
+
+
+/*
+*****
+  mobile about section
+*****
+*/
+
+.about-section-content
+{
+  width:84%;
+  background-color: #ffffff;
+  color:#000000;
+  font-size: 2em;
+  display:none;
+  margin:0 auto 0 auto;
+  padding:30px 24px 16px 24px;
+}
+
+.synopsis
+{
+  float:left;
+}
+
+.about-section-content .header
+{
+  font-weight: bold;
+  line-height: .25em;
+  margin:0 14px 0 14px;
+}
+
+
+.cast-crew
+{
+  float:left;
+}
+
+.show-about
+{
+  display:block;
+}
+
+.hide-about
+{
+  display:none;
+}
+
+/*
+*****
+  end about section
+*****
+*/
+
+
+/*
+*****
+ legal section
+*****
+*/
+
+#mobile_legal {
+  /*background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-legal.png) no-repeat center top #000000;                */
+  background: url(https://24.media.tumblr.com/807f769faf9d18370fb5928e0e923666/tumblr_n1vi3rA99x1tsri92o4_r1_1280.jpg) no-repeat center top;
+  background-color: #000000;
+  background-size: 100% auto;
+  height: 550px;
+  font-size: 1em;
+  line-height: 1em;
+  color: #ffffff;
+  margin-top: 8px;
+}
+
+.dvd
+{
+  height:183px;
+  position: relative;
+}
+
+.legal-button
+{
+  position: absolute;
+  top:0;
+  left:0;
+  background: url(https://24.media.tumblr.com/f53920717109e92d5addc70514df26a9/tumblr_n1vi3rA99x1tsri92o5_r2_250.png) no-repeat;
+  background-color: transparent;
+}
+
+.itunes
+{
+  top:90px;
+  left:379px;
+  background-position: 0 -75px;
+  width:165px;
+  height:75px;
+}
+
+.amazon
+{
+  top:90px;
+  left:204px;
+  background-position: 0 0;
+  width:165px;
+  height:75px;
+}
+
+.rewards-wrapper
+{
+  width:100%;
+  height:120px;
+}
+
+.sony-rewards
+{
+  position: relative;
+  background-position: 0 -148px;
+  width:249px;
+  height:117px;
+  margin:0 auto 0 auto;
+}
+
+.lower-legal
+{
+  width:100%;
+  height:60px;
+  position: relative;
+  text-align: center;
+  margin-top: 90px
+}
+
+.studio-logos
+{
+ width:64%;
+ float:left;
+}
+
+.studio-logos p
+{
+  margin-top:10px;
+}
+
+.ratings-block
+{
+  width:35%;
+  float:left;
+}
+
+.ratings-block a.legal:link
+.ratings-block a.legal:visited
+.ratings-block a.legal:hover
+.ratings-block a.legal:active
+{
+  color:#ffffff;
+}
+
+
+.tos
+{
+  text-align: center;
+}
+
+.tos-link
+{
+  text-decoration: underline;
+}
+
+
+/*
+*****
+  end legal section
+*****
+*/
+
+
+.display-block
+{
+  display:block;
+}
+
+.centered
+{
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+.clearit
+{
+  clear:both;
+}
+
+.red-text
+{
+  color:#bb0001;
+}
+
+.black-text
+{
+  color:#000000;
+}
+
+.light-grey-text
+{
+ color:#999999;
+}
+
+.dark-grey-text
+{
+  color:666666;
+}
+
+
+
+</style>
+
     <script type="text/javascript" charset="utf-8">
         setTimeout(function() { window.scrollTo(0,1) }, 100);
                 
@@ -708,239 +1401,342 @@
             return input.replace(/<a /g, '<u ').replace(/<\/a>/g, '<\/u>');
         }
     </script>
-<!-- end tumblr scripts -->
-
-
 </head>
-
-
 <body>
- 
-    <header class="gray_bubble">
-        <a href="/" class="title">{Title}&nbsp;</a>
-        <div class="clear"></div>
-        {block:IndexPage}
-            <div class="info" id="info_container">
-                <div class="body" id="body_container">
-                    {block:Description}<span class="description_words">{PlaintextDescription}</span>{/block:Description}
-                    <div class="show" id="show_more_info" style="display:none">
-                        <a href="#" id="show_more_info_link" onclick="show_more_info(); return false;">
-                            Show all
-                        </a>
-                        <div class="gradient" id="show_gradient"></div>
-                    </div>
-                </div>
+
+    <div class="release-date">
+      <img src="https://31.media.tumblr.com/778f790bb3a1b37abe935bf447b4792e/tumblr_n1vi3rA99x1tsri92o2_r2_1280.jpg">      
+    </div>
+
+    <div id="top-nav" class="nav collapsed-height">
+      <ul>
+        <li>
+          <a id="top-nav-menu-toggle" href="#">
+            <div class="nav-item">
+              <div class="nav-text">MENU</div>
+              <div id="top-nav-arrow" class="nav-arrow"><img src="https://24.media.tumblr.com/b3f7dc4e76c08f9d5e5ccf5f4b4e69c2/tumblr_n1vi3rA99x1tsri92o2_r1_75sq.png"></div>
             </div>
-        {/block:IndexPage}
-    </header>
+          </a>
+        </li>
 
-    <div id="posts">
-        <!-- START POSTS -->
-        {block:Posts}
-            <div class="bubble">
-                <div class="top"></div>
-                <div class="content">
-
-                    {block:Text}
-                        <div class="copy text_post">
-                            {block:Title}<h2>{Title}</h2>{/block:Title}
-                            {Body}
-                            {block:More}<p class="read_more_container"><a href="{Permalink}" class="read_more">Read More</a></p>{/block:More}
-                        </div>
-                    {/block:Text}
-
-                    {block:Photo}
-                        {block:HighRes}<a href="{PhotoURL-HighRes}">{/block:HighRes}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo" />{block:HighRes}</a>{/block:HighRes}
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Photo}
-
-                    {block:Photoset}
-                        <div class="video">
-                            {Photoset-500}
-                        </div>
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Photoset}
-
-                    {block:Link}
-                        <a href="{URL}" class="link" {Target}>{Name} <span>&rarr;</span></a>
-                        {block:Description}
-                            <div class="copy">
-                                {Description}
-                            </div>
-                        {/block:Description}
-                    {/block:Link}
-
-                    {block:Quote}
-                        <div class="quote">&#8220;{Quote}&#8221;</div>
-                        {block:Source}
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:20px 0">
-                                <tr>
-                                    <td valign="top" style="width:2px; padding:0 20px 0 0">
-                                        &mdash;
-                                    </td>
-                                    <td valign="top" class="copy quote_source">
-                                        {Source}
-                                    </td>
-                                </tr>
-                            </table>
-                        {/block:Source}
-                    {/block:Quote}
-
-                    {block:Audio}
-                        <div class="audio_player {block:AlbumArt}with_cover_art{/block:AlbumArt}" id="play_audio_{PostID}"> 
-                            {block:AlbumArt}<img src="{AlbumArtURL}" class="cover"/>{/block:AlbumArt}
-                            <a class="play" onclick="play_audio({PostID}); return false;" id="play_button_{PostID}">
-                                {block:TrackName}<strong>{TrackName}</strong><br/>{/block:TrackName}
-                                {block:Artist}{Artist}{/block:Artist}
-                                <strong class="listen" style="display:none">Listen</strong>
-                            </a>
-                            <audio id="audio_file_{PostID}" src="{RawAudioURL}"></audio>
-                            <div class="clear"></div>
-                        </div>
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Audio}
-
-                    {block:Video}
-                        <div class="video"> 
-                            {Video-500}
-                        </div>
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Video}
-
-                    {block:Chat}
-                        {block:Title}<h2 style="margin-bottom:26px;">{Title}</h2>{/block:Title}
-                        <table class="chat" border="0" cellpadding="0" cellspacing="0">
-                            {block:Lines}
-                                <tr>
-                                    {block:Label}<td class="username">{Label}</td>{/block:Label}
-                                    <td width="*">{Line}</td>
-                                </tr>
-                            {/block:Lines}
-                        </table>
-                    {/block:Chat}
-
-                    {block:Answer}
-                        <div class="answer_question">{Question}</div>
-                        <div class="answer_asker">
-                            <img src="{AskerPortraitURL-48}" width="48" height="48" />{Asker}
-                        </div>
-                        <div class="copy">
-                            {Answer}
-                        </div>
-                    {/block:Answer}
-
-                    {block:Date}
-                        <a class="date" href="{Permalink}" {Target}>
-                            {TimeAgo}
-                        </a>
-                    {/block:Date}
-                    {block:NoteCount}
-                        <a href="{Permalink}" class="note_count" onclick="show_notes({PostID}, '{PostNotesURL}'); return false;" id="show_notes_{PostID}" {Target} style="padding-left:6px;">
-                            {NoteCountWithLabel}
-                        </a>
-                        <a href="#" class="note_count" onclick="hide_notes({PostID}); return false;" id="hide_notes_{PostID}" style="display: none; padding-left:6px;">
-                             Hide notes
-                        </a>
-                    {/block:NoteCount}
-<!--IF DISQUS---
-                    {block:Date}<a href="{Permalink}#disqus_thread" class="note_count" style="padding-left:6px;">Comments</a>{/block:Date}
-----ENDIF DISQUS-->
-                    <div class="clear"></div>
-                </div>
-                <div class="bottom"></div>
+        <hr id="menu-top-rule">
+        
+        <li>
+          <a id="about-menu" href="#">
+            <div class="nav-item">
+              <div class="nav-text">ABOUT THE MOVIE
+              </div>
             </div>
-            {block:IndexPage}
-                <div id="notes_container_{PostID}" class="bubble" style="display:none">
+          </a>
+        </li>
+        
+        <hr>
+        
+        <li>
+          <a href="https://www.youtube.com/watch?v=06rvPK8ydZo">
+            <div class="nav-item">
+              <div class="nav-text">WATCH THE RED BAND TRAILER</div>
+            </div>
+          </a>
+        </li>
+        
+        <hr>
+        
+        <li>
+            <div class="nav-item">
+              <div class='nav-social-wrapper centered'>
+                <a href="http://www.facebook.com">
+                  <div class="nav-share-icon facebook"></div>
+                
+                <a href="http://www.twitter.com">
+                  <div class="nav-share-icon twitter"></div>
+                </a>
+                
+                <a href="http://www.instagram.com">
+                  <div class="nav-share-icon instagram"></div>
+                </a>
+                
+                <a href="http://www.youtube.com">
+                  <div class="nav-share-icon youtube"></div>
+                </a>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+        </li>
+      <ul>
+    </div>
+
+    <div id="about-section" class="about-section-content hide-about">
+      <div class="synopsis">
+          <p class="header red-text">SYNOPSIS</p>
+          <p class="black-text">After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
+          </p>
+      </div>
+
+      <div class="cast-crew">
+          <p class="header red-text">CAST &amp; CREW</p>
+          <p class="cast-header">DIRECTED BY<br />Phil Lord &amp; Christopher Miller
+          <p class="cast-header">SCREENPLAY BY<br />Oren Uziel and Rodney Rothman</p>
+          <p class="cast-header">STORY BY<br />Michael Bacall & Jonah Hill</p>
+          <p class="cast-header">BASED ON THE TELEVISION SERIES “21 JUMP STREET” CREATED BY<br />Patrick Hasburgh & Stephen J. Cannell</p>
+          <p class="cast-header">PRODUCED BY<br />Neal H. Moritz, Jonah Hill, Channing Tatum</p>
+          <p class="cast-header">EXECUTIVE PRODUCERS<br />Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
+          <p class="cast-header">STORY BY<br />Michael Bacall & Jonah Hill</p>
+          <p class="cast-header">CAST<br />Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
+      </div>
+
+      <div class="clearit"></div>
+    </div>
+
+    <div id="jumpstreet">
+       
+
+        <div id="posts">
+            <!-- START POSTS -->
+            {block:Posts}
+                <div class="bubble">
                     <div class="top"></div>
-                    <div class="content bleed" id="notes_{PostID}"></div>
+                    <div class="content">
+
+                        {block:Text}
+                            <div class="copy text_post">
+                                {block:Title}<h2>{Title}</h2>{/block:Title}
+                                {Body}
+                                {block:More}<p class="read_more_container"><a href="{Permalink}" class="read_more">Read More</a></p>{/block:More}
+                            </div>
+                        {/block:Text}
+
+                        {block:Photo}
+                            {block:HighRes}<a href="{PhotoURL-HighRes}">{/block:HighRes}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo" />{block:HighRes}</a>{/block:HighRes}
+                            {block:Caption}
+                                <div class="copy">
+                                    {Caption}
+                                </div>
+                            {/block:Caption}
+                        {/block:Photo}
+
+                        {block:Photoset}
+                            <div class="video">
+                                {Photoset-500}
+                            </div>
+                            {block:Caption}
+                                <div class="copy">
+                                    {Caption}
+                                </div>
+                            {/block:Caption}
+                        {/block:Photoset}
+
+                        {block:Link}
+                            <a href="{URL}" class="link" {Target}>{Name} <span>&rarr;</span></a>
+                            {block:Description}
+                                <div class="copy">
+                                    {Description}
+                                </div>
+                            {/block:Description}
+                        {/block:Link}
+
+                        {block:Quote}
+                            <div class="quote">&#8220;{Quote}&#8221;</div>
+                            {block:Source}
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:20px 0">
+                                    <tr>
+                                        <td valign="top" style="width:2px; padding:0 20px 0 0">
+                                            &mdash;
+                                        </td>
+                                        <td valign="top" class="copy quote_source">
+                                            {Source}
+                                        </td>
+                                    </tr>
+                                </table>
+                            {/block:Source}
+                        {/block:Quote}
+
+                        {block:Audio}
+                            <div class="audio_player {block:AlbumArt}with_cover_art{/block:AlbumArt}" id="play_audio_{PostID}"> 
+                                {block:AlbumArt}<img src="{AlbumArtURL}" class="cover"/>{/block:AlbumArt}
+                                <a class="play" onclick="play_audio({PostID}); return false;" id="play_button_{PostID}">
+                                    {block:TrackName}<strong>{TrackName}</strong><br/>{/block:TrackName}
+                                    {block:Artist}{Artist}{/block:Artist}
+                                    <strong class="listen" style="display:none">Listen</strong>
+                                </a>
+                                <audio id="audio_file_{PostID}" src="{RawAudioURL}"></audio>
+                                <div class="clear"></div>
+                            </div>
+                            {block:Caption}
+                                <div class="copy">
+                                    {Caption}
+                                </div>
+                            {/block:Caption}
+                        {/block:Audio}
+
+                        {block:Video}
+                            <div class="video"> 
+                                {Video-500}
+                            </div>
+                            {block:Caption}
+                                <div class="copy">
+                                    {Caption}
+                                </div>
+                            {/block:Caption}
+                        {/block:Video}
+
+                        {block:Chat}
+                            {block:Title}<h2 style="margin-bottom:26px;">{Title}</h2>{/block:Title}
+                            <table class="chat" border="0" cellpadding="0" cellspacing="0">
+                                {block:Lines}
+                                    <tr>
+                                        {block:Label}<td class="username">{Label}</td>{/block:Label}
+                                        <td width="*">{Line}</td>
+                                    </tr>
+                                {/block:Lines}
+                            </table>
+                        {/block:Chat}
+
+                        {block:Answer}
+                            <div class="answer_question">{Question}</div>
+                            <div class="answer_asker">
+                                <img src="{AskerPortraitURL-48}" width="48" height="48" />{Asker}
+                            </div>
+                            <div class="copy">
+                                {Answer}
+                            </div>
+                        {/block:Answer}
+
+                          <!-- Sharing options -->
+                          <footer class="post-footer">
+                            <div class="outer-note-wrapper">
+                              <div class="note-wrapper">
+                                <div class="note-content">
+                                  {block:NoteCount}
+                                    <a href="{Permalink}" class="note_count" onclick="show_notes({PostID}, '{PostNotesURL}'); return false;" id="show_notes_{PostID}" {Target} style="padding-left:6px;">
+                                        <span class="light-grey-text">{NoteCount}</span> NOTES
+                                    </a>
+                                    <a href="#" class="note_count" onclick="hide_notes({PostID}); return false;" id="hide_notes_{PostID}" style="display: none; padding-left:6px;">
+                                         Hide notes
+                                    </a>
+                                  {/block:NoteCount}
+                                </div>
+                              </div>
+                            </div>
+                            <section class="post-controls">
+                                <ul>
+                                    <li class="share-control">
+                                        <nav class="pop">
+                                            Share
+                                            <!-- <a href="#" class="share selector">Share</a> -->
+                                            <div class="pop-menu share-menu north" id="share_{PostID}">
+                                               <!-- 
+                                                <ul>
+                                                    <li class="open-in-app"><a href="#" class="no-hover share-item open-in-app" data-post="{PostID}">Open in app</a></li>
+                                                    <li class="fb"><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="no-hover share-item sprite facebook" target="_blank">Facebook</a></li>
+                                                    <li class="tw"><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="no-hover share-item sprite twitter" target="_blank">Tweet</a></li>
+                                                    <li class="pin"><a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-HighRes}&description={URLEncodedTitle}" class="no-hover share-item sprite pinterest">Pinterest</a></li>
+                                                    <li class="gp"><a href="https://plus.google.com/share?url={URLEncodedPermalink}" class="no-hover share-item sprite google" target="_blank">Google+</a></li>
+                                                </ul>
+                                              -->
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li class="reblog-control">{ReblogButton size="21" color="white"}</li>
+                                    <li class="like-control">{LikeButton size="20" color="white"}</li>
+                                </ul>
+                            </section>
+                          </footer>
+
+                        <div class="clear"></div>
+                    </div>
                     <div class="bottom"></div>
                 </div>
-            {/block:IndexPage}
-            {block:PermalinkPage}
-<!--IF DISQUS---
-    {block:Date}
-        <div class="bubble">
-            <div class="top"></div>
-            <style type="text/css">
-                #disqus_thread {
-                    background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bg.png') -1px 0 repeat-y transparent;
-                    width: 586px;
-                    margin: 0;
-                    padding: 0 11px;
-                }
-                #disqus_thread a {
-                    text-decoration: underline;
-                }
-                #dsq-new-post h3 {
-                    margin-top: 0;
-                }
-                #dsq-content .dsq-item-trackback {
-                    margin-bottom: 0;
-                }
-                #dsq-global-toolbar {
-                    margin-top: 0 !important;
-                }
-            </style>
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = 'http://DISQUS_SHORTNAME.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-            </script>
-            <div class="content">
-                <div class="copy">
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="bottom"></div>
-        </div>
-    {/block:Date}
-----ENDIF DISQUS-->
-                {block:PostNotes}
-                    <div class="bubble">
+                {block:IndexPage}
+                    <div id="notes_container_{PostID}" class="bubble" style="display:none">
                         <div class="top"></div>
-                        <div class="content bleed">
-                            {PostNotes}
-                        </div>
+                        <div class="content bleed" id="notes_{PostID}"></div>
                         <div class="bottom"></div>
                     </div>
-                {/block:PostNotes}
-                <div style="margin-bottom:30px;"></div>
-            {/block:PermalinkPage}
-        {/block:Posts}
-        <!-- END POSTS -->
-    </div>
-    {block:IndexPage}
-        {block:NextPage}
-            <a href="/page/2" class="load gray_bubble" id="load_more" onclick="load_more_posts(); return false;">
-                Load more posts
+                {/block:IndexPage}
+                {block:PermalinkPage}
+                    {block:PostNotes}
+                        <div class="bubble">
+                            <div class="top"></div>
+                            <div class="content bleed">
+                                {PostNotes}
+                            </div>
+                            <div class="bottom"></div>
+                        </div>
+                    {/block:PostNotes}
+                    <div style="margin-bottom:30px;"></div>
+                {/block:PermalinkPage}
+            {/block:Posts}
+            <!-- END POSTS -->
+        </div>
+
+        {block:IndexPage}
+            {block:NextPage}
+                <a href="/page/2" class="load gray_bubble" id="load_more" onclick="load_more_posts(); return false;">
+                    Load more posts
+                </a>
+                <div class="load gray_bubble" id="loading_more" onclick="load_more_posts(); return false;" style="display:none">
+                    <img src="http://static.tumblr.com/thpaaos/HBrlbfdoy/loading.gif" width="32" height="32" /> Loading more posts...
+                </div>
+            {/block:NextPage}
+        {/block:IndexPage}
+
+        <section id="mobile_legal">
+          <div class="dvd">
+            <a href="http://www.amazon.com">
+              <div class="amazon legal-button"></div>
             </a>
-            <div class="load gray_bubble" id="loading_more" onclick="load_more_posts(); return false;" style="display:none">
-                <img src="http://static.tumblr.com/thpaaos/HBrlbfdoy/loading.gif" width="32" height="32" /> Loading more posts...
+
+            <a href="http://www.itunes.com">
+              <div class="itunes legal-button"></div>
+            </a>
+          </div>
+          <div class="lower-legal">
+            <div class="studio-logos">
+              <p>&copy; <span class="date">2014</span> Sony Pictures Digital Productions Inc. All rights reserved.
             </div>
-        {/block:NextPage}
-    {/block:IndexPage}
-    <div class="links">
-        <a href="http://www.tumblr.com">Powered by Tumblr</a>
-        <a href="/disable_mobile_interface" onclick="if(confirm('Switch from mobile to standard view?')){} else {return false;}">Standard view</a>
-    </div>
+            <div class="ratings-block">
+              <p>For ratings reasons:<br/>
+                <a class="tos-link" href="http://filmratings.com" target="_blank">filmratings.com</a>, <a class="tos-link" href="http://mpaa.org" target="_blank">MPAA.org</a>
+              </p>
+            </div>
+
+            <div class="clearit"></div>
+          </div>
+        
+          <div class="rewards-wrapper">
+            <a href="http://www.sony.com">
+              <div class="sony-rewards legal-button"></div>
+            </a>
+          </div>
+          
+          <div class="tos">
+            <p>Hosted by Tumblr
+              <br />
+              <a class="tos-link" href="http://www.tumblr.com/policy/en/privacy" target="_blank">Privacy Policy</a> <a class="tos-link" href="http://www.tumblr.com/policy/en/terms_of_service" target="_blank">Terms of Service</a>
+            </p>
+            <p><a class="tos-link" href="/disable_mobile_interface" onclick="if(confirm('Switch from mobile to standard view?')){} else {return false;}">Standard view</a></p>
+          </div>
+        </section>
+
+
+    </div><!-- /#wrapper -->
+
+    <div id="omniturecode"> 
+    <script type="text/javascript" src="http://www.sonypictures.com/global/scripts/s_code.js"></script> 
+    <script type="text/javascript" src="http://www.sonypictures.com/global/scripts/sp.js"></script>
+    <script type="text/javascript">
+    <!--
+        s.pageName='us:movies:22jumpstreet:tumblr:index.html';
+        s.channel=s.eVar3='us:movies';
+        s.prop3=s.eVar23='us:movies:22jumpstreet:tumblr';
+        s.prop4=s.eVar4='us:22jumpstreet';
+        s.prop5=s.eVar5='us:movies:blog';
+        s.prop11='us';
+        var s_code=s.t();if(s_code)document.write(s_code);
+    //-->
+    </script> 
+    </div> 
     
     <script type="text/javascript" charset="utf-8">
         var info_style = window.getComputedStyle(document.getElementById('body_container'), null);
@@ -952,16 +1748,120 @@
         if (navigator.userAgent.match(/Android/i)) {
             document.body.className = 'android';
         }
+
+        (function(Tumblr){
+            var follow_iframe_initialized = false;
+            if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+                // Don't do anything until the first initialize event
+                Tumblr.PostMessageListener.initialize(function(message, origin) {
+                    if (follow_iframe_initialized || message.length < 2) return;
+
+                    if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                        Tumblr.FollowTeaser.current_page = 1;
+                        Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                        Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=9759758dd2f15435e72f4fc485d64c4f");
+                        Tumblr.FollowTeaser.scroll_listener(true);
+                        follow_iframe_initialized = true;
+                    }
+                });
+            }
+        })(this.Tumblr || (this.Tumblr = {}));
+
     </script>
-<!--IF DISQUS---
-<script type="text/javascript">
-var disqus_shortname = 'DISQUS_SHORTNAME';
-(function () {
-  var s = document.createElement('script'); s.async = true;
-  s.src = 'http://disqus.com/forums/' + disqus_shortname + '/count.js';
-  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
-----ENDIF DISQUS-->
+
+    <script>
+
+    window.onload = function()
+    {
+      var navContainer = document.getElementById('top-nav');
+      changeClass(navContainer, "display-block")
+
+      function expandNav()
+      {
+        var navContainer = document.getElementById('top-nav');
+        changeClass(navContainer, "collapsed-height", true);
+      }
+
+      function collapseNav()
+      {
+        var navContainer = document.getElementById('top-nav');
+        changeClass(navContainer, "collapsed-height");
+      }
+
+      function changeClass(element, className, remove)
+      {
+        var currentClassName = element.className;
+        var newClassName;
+
+        if(remove)
+        {
+          newClassName = element.className.replace(className, '' );
+        }
+        else
+        {
+          newClassName = currentClassName + (" "+className);
+        }
+
+
+        // console.log("currentClassName "+currentClassName);
+        // console.log("newClassName "+newClassName);
+
+        element.className = newClassName;
+      }
+
+      var toggle = document.getElementById('top-nav-menu-toggle');
+      toggle.onclick = function()
+      {
+        
+        var arrow = document.getElementById("top-nav-arrow");
+        if ( arrow.className.match(/(?:^|\s)point-down(?!\S)/) )
+        {
+          changeClass(arrow, "point-down", true);
+          collapseNav();
+          hideAbout();
+
+        }
+        else
+        {
+          changeClass(arrow, "point-down");
+          expandNav();
+        }  
+
+        return false;
+      }
+
+      var aboutMenu = document.getElementById('about-menu');
+      aboutMenu.onclick = function()
+      {
+        showAbout();
+        return false;
+      }
+
+      function hideAbout()
+      {
+        var section = document.getElementById('about-section');
+        
+        if ( section.className.match(/(?:^|\s)show-about(?!\S)/) )
+        {
+          changeClass(section, "show-about", true);
+          changeClass(section, "hide-about");
+        }
+      }
+
+      function showAbout()
+      {
+        var section = document.getElementById('about-section');
+        if ( section.className.match(/(?:^|\s)hide-about(?!\S)/) )
+        {
+          changeClass(section, "hide-about", true);
+          changeClass(section, "show-about"); 
+        }
+      }
+      
+    }
+
+
+    </script>
+
 </body>
 </html>
