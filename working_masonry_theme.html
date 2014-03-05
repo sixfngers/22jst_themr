@@ -246,6 +246,25 @@ nav li {
     margin-right: 1%;
 }
 
+.tag-wrapper
+{
+  margin:16px auto 16px auto;
+}
+
+.tags-index,
+.tags
+{
+  width:90%;
+  margin:0 auto 0 auto;
+  text-align: center;
+}
+
+.tags-index a:before,
+.tags a:before
+{ 
+  content:"#";
+}
+
 .notes {
     clear: both;
     padding: 0;
@@ -258,6 +277,26 @@ nav li {
 {
   color: #ffffff;
   text-align: left;
+}
+
+.action a:link
+{
+  color:#cd210d !important;
+}
+
+.action a:visited
+{
+    color:#cd210d !important;
+}
+
+.action a:hover
+{
+  color:#ffffff !important;
+}
+
+.action a:active
+{
+  color:#cd210d !important;
 }
 
 
@@ -537,6 +576,19 @@ nav li {
 *******
 */
 
+.video
+{
+  min-height: 325px;
+  background:#000000;
+  display:table;
+}
+
+.video-player
+{
+ display:table-cell; 
+ vertical-align: middle;
+}
+
 /* removes extra spacing from images so border is flush to post size*/
 .photo img
 {
@@ -807,24 +859,33 @@ nav li {
     font-weight:bold;
 }
 
+
+blockquote a:link,
+.tags a:link,
 #nav .about a:link
 {
   color:#ffffff !important;
   text-decoration:none !important;
 }
 
+blockquote a:visited,
+.tags a:visited,
 #nav .about a:visited
 {
     color:#ffffff !important;
     text-decoration:none !important;
 }
 
+blockquote a:hover,
+.tags a:hover,
 #nav .about a:hover
 {
   color:#cd210d !important;
   text-decoration:none !important;
 }
 
+blockquote a:active,
+.tags a:active,
 #nav .about a:active
 {
   color:#cd210d !important;
@@ -936,19 +997,19 @@ nav li {
             <div class="nav-social-wrapper nav-col">
               <div class="follow-text nav-col">FOLLOW US</div>
               
-              <a href="https://www.facebook.com/JumpStMovies">
+              <a href="https://www.facebook.com/JumpStMovies" class="fanfacebook_button promotion" rel="external">
               <div class="facebook nav-social-icon"></div>
               </a>
               
-              <a href="https://twitter.com/jumpstmovies">
+              <a href="https://twitter.com/jumpstmovies" class='followtwitter_button promotion' rel='external'>
               <div class="twitter nav-social-icon"></div>
               </a>
               
-              <a href="http://instagram.com/jumpstmovies">
+              <a href="http://instagram.com/jumpstmovies" class='instagram_button promotion' rel='external'>
               <div class="instagram nav-social-icon"></div>
               </a>
               
-              <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet">
+              <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet" class='youtube_button promotion' rel='external'>
               <div class="youtube nav-social-icon"></div>
               </a>
             </div>
@@ -1029,13 +1090,13 @@ nav li {
                 <div id="stamp1" class="column-width">
                     <img src="https://31.media.tumblr.com/b79acfb2680226e59a1622a9b414db57/tumblr_n1qbs6lnKQ1tsri92o2_400.png" />
                     <div id="stamp-follow" class="float-left column-width">
-                        <a href="http://www.tumblr.com/follow/jumpstmovies">
+                        <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' rel='external'>
                             <img src="https://31.media.tumblr.com/86fa13fb6fbf012f3b38b96ab1ef1773/tumblr_n1qbs6lnKQ1tsri92o1_400.png" alt="follow jump street movies" />
                         </a>
                     </div>
                 </div>
                 <div id="stamp2" class="stamp">
-                  <a href="https://www.youtube.com/watch?v=06rvPK8ydZo">
+                  <a href="https://www.youtube.com/watch?v=06rvPK8ydZo" class='youtube_redbandtrailer_button promotion' rel='external'>
                     <img src="https://24.media.tumblr.com/0954f93599887c53601173c14c098912/tumblr_n1xd0n73hQ1tsri92o1_1280.png" alt="watch the red band trailer on youtube">
                   </a>
                 </div>
@@ -1055,7 +1116,13 @@ nav li {
                 <div class="caption-wrapper">
                   {block:Caption}{Caption}{/block:Caption}
                 </div>
-                
+                <div class="tag-wrapper">
+                  <p class="tags-index">
+                  {block:HasTags}
+                          {block:Tags}<a href="{TagURL}"> {Tag} </a>{/block:Tags}
+                  {/block:HasTags}
+                  </p>
+                </div>
                 <div class='share-controls'>
                   <p>SHARE</p>
                   <div class="share-icon-wrapper index">
@@ -1233,13 +1300,17 @@ nav li {
         <!--Post footer (tags and notes) on displayed on permalink pages-->
         {block:Permalink}
             <footer class="details">
-                <!-- 
+               <div class="tag-wrapper">
+                <p class="tags">
                 {block:HasTags}
-                    <ul id="tags">
-                        {block:Tags}<li> <a href="{TagURL}">{Tag}</a> </li>{/block:Tags}
-                    </ul>
+                    
+                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
+                    
+                    
                 {/block:HasTags}
-                -->
+              </p>
+            </div>
+               
 
                 <div class="permalink-share-wrapper">
                 <hr>
@@ -1307,11 +1378,11 @@ nav li {
           </div>
           <p>
               For Ratings Reasons:<br/>
-              <a href="http://www.filmratings.com" target="_blank">filmratings.com</a> | <a href="http://www.mpaa.org" target="_blank">MPAA.org</a><br/>
+              <a href="http://www.filmratings.com" target="_blank">FILMRATINGS.COM</a> | <a href="http://www.mpaa.org" target="_blank">MPAA.ORG</a><br/>
           </p>
       </div>
       <div class="rewards-wrapper legal-col">
-          <a href="http://www.sonyrewards.com/en/home/?utm_medium=partner_sbu_social_media&utm_source=spe_tumblr&utm_campaign=MYD8BBB6&utm_content=home&sr_title=22jumpstreet" target="_blank" class="ir sprite">
+          <a href="http://www.sonyrewards.com/en/home/?utm_medium=partner_sbu_social_media&utm_source=spe_tumblr&utm_campaign=MYD8BBB6&utm_content=home&sr_title=22jumpstreet" target="_blank" class="ir sprite sonyrewards_button promotion" rel='external'>
           <div id="rewards-logo">
             <img src="https://31.media.tumblr.com/8401d9f107321671f55b0dc519b4dd11/tumblr_n1q65fdPTE1tsri92o4_250.png" alt="join sony rewards">
           </div>
@@ -1325,12 +1396,12 @@ nav li {
       <div class="buy-link-wrapper legal-col">
         <div class="buy-link-inner-wrapper">
           <div id="amazon">
-            <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank">
+            <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank" class='amazon_button order' rel='external'>
               <img src="https://24.media.tumblr.com/d4cb573313b32307759126de7d863027/tumblr_n1q65fdPTE1tsri92o2_100.png" alt="amazon link">
             </a>
           </div>
           <div id="itunes">
-            <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank">
+            <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank" class='itunes_button order' href='itunes.com' rel='external'>
               <img src="https://24.media.tumblr.com/a0faed80da17d3276482cfbe23566c47/tumblr_n1q65fdPTE1tsri92o3_100.png" alt="itunes link">
             </a>
           </div>
