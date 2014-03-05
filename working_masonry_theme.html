@@ -45,7 +45,7 @@
 
 <meta charset="utf-8">
 
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<meta name="viewport" content="width=970" />
 
 <title>{block:TagPage}{Tag} posts - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
@@ -85,12 +85,7 @@ body {
     background-repeat:repeat-x;
     background-size:cover;
     background-color: #ababab;
-
 }
-
-
-}
-
 
 a:link {
     color:#cd210d; 
@@ -576,17 +571,30 @@ nav li {
 *******
 */
 
-.video
+.video-wrapper
 {
   min-height: 325px;
-  background:#000000;
+  background-color: #000;
+}
+
+.video
+{
+  height:100%;
+  background:#000;
   display:table;
+  width:100%;
 }
 
 .video-player
 {
  display:table-cell; 
  vertical-align: middle;
+ width:100%;
+}
+
+.video-player iframe
+{
+ width: 100%;
 }
 
 /* removes extra spacing from images so border is flush to post size*/
@@ -764,7 +772,7 @@ nav li {
 {
     display:block;
     background: url(https://24.media.tumblr.com/30daddadec9ab8024be7e4dedc230476/tumblr_n1izbe3B2s1tsri92o1_100.png);
-    background-position-y:-124px;
+    background-position:0 -124px;
     background-repeat: no-repeat;
     margin:0;
 }
@@ -1256,8 +1264,11 @@ blockquote a:active,
 
 
         {block:Video}
-        <div class="video">
+        <div class="video-wrapper">
+          <div class="video">
             <div class="video-player">{Video-500}</div>
+          </div>
+
             <!-- {block:Caption}{Caption}{/block:Caption} -->
         {/block:Video}
 
