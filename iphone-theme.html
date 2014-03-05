@@ -1110,7 +1110,7 @@
   font-size: 1em;
   line-height: 1em;
   color: #ffffff;
-  margin-top: 8px;
+  margin-top: 36px;
 }
 
 .dvd
@@ -1405,7 +1405,7 @@
           <a id="top-nav-menu-toggle" href="#">
             <div class="nav-item">
               <div class="nav-text">MENU</div>
-              <div id="top-nav-arrow" class="nav-arrow"><img src="https://24.media.tumblr.com/b3f7dc4e76c08f9d5e5ccf5f4b4e69c2/tumblr_n1vi3rA99x1tsri92o2_r1_75sq.png"></div>
+              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="https://24.media.tumblr.com/b3f7dc4e76c08f9d5e5ccf5f4b4e69c2/tumblr_n1vi3rA99x1tsri92o2_r1_75sq.png"></div>
             </div>
           </a>
         </li>
@@ -1841,14 +1841,13 @@
         if ( arrow.className.match(/(?:^|\s)point-down(?!\S)/) )
         {
           changeClass(arrow, "point-down", true);
-          collapseNav();
-          hideAbout();
-
+          expandNav();
         }
         else
         {
           changeClass(arrow, "point-down");
-          expandNav();
+          collapseNav();
+          hideAbout();
         }  
 
         return false;
