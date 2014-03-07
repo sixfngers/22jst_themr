@@ -477,6 +477,7 @@ nav li {
     background: #090909;
     color: #999999;
     min-height: 140px;
+    font-size: .6em;
 }
 
 #legal-inner-wrapper
@@ -497,7 +498,6 @@ nav li {
 {
   width:270px;
   display:inline;
-  font-size: .5em;
   text-align:center;
 }
 
@@ -505,7 +505,6 @@ nav li {
 {
   width:160px;
   display:inline;
-  font-size: .5em;
   text-align:center;
 }
 
@@ -710,6 +709,9 @@ nav li {
   /*margin: 5px 3px 4px 3px;*/
   /*background-color:{color:Secondary text};*/
   background:rgba(205, 33, 13, 0.92);
+  
+  /*ie 8 work around*/
+  top:0;
 }
 
 .index-post-controls-wrapper .post-controls
@@ -733,22 +735,33 @@ nav li {
 
 /*
 *****
-  IE 8 start
+  IE 8 hacks start
 *****
 */
 .lt-ie9 .index-post-controls-wrapper
 {
+  position:relative;
   background-color:{color:Secondary text};
 }
 
-.lt-ie9 .index-post-controls-wrapper:hover
+.lt-ie9 .share-controls
 {
-    display:block;
+  position:relative;
 }
+.lt-ie9 #about-section-wrapper
+{
+    background: #000000;
+}
+
+.lt-ie10 #legal {
+    font-size: .8em;
+}
+
 
 /*
 *****
-  end IE 8
+  end IE 8 hacks
+  life is good
 *****
 */
 
@@ -955,17 +968,17 @@ blockquote a:active,
 
 .facebook
 {
-    background-position:0, 0;
+    background-position:0 0;
 }
 
 .twitter
 {
-    background-position:-40px, 0;
+    background-position:-40px 0;
 }
 
 .instagram
 {
-    background-position:-80px, 0;
+    background-position:-80px 0;
 }
 
 .youtube
@@ -1143,35 +1156,6 @@ blockquote a:active,
             {/block:post1}
             
             <article class="index-article column-width">
-              <div class="index-post-controls-wrapper">
-                <div class="post-controls">
-                  <ul>
-                      <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
-                      <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
-                      <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
-                  </ul>
-                </div>
-
-                <div class="caption-wrapper">
-                  {block:Caption}{Caption}{/block:Caption}
-                </div>
-                <div class="tag-wrapper">
-                  <p class="tags-index">
-                  {block:HasTags}
-                          {block:Tags}<a href="{TagURL}"> {Tag} </a>{/block:Tags}
-                  {/block:HasTags}
-                  </p>
-                </div>
-                <div class='share-controls'>
-                  <p>SHARE</p>
-                  <div class="share-icon-wrapper index">
-                      <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
-                      <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
-                      <div class="clear-both"></div>
-                  </div>                
-                </div>
-              </div>
-
               <div class="post-wrapper">
         {/block:indexPage}
 
@@ -1394,6 +1378,39 @@ blockquote a:active,
 
           <!-- closing div tag from post wrapper -->
           </div>
+
+          {block:IndexPage}
+          <!-- moved here for ie 8 -->
+          <div class="index-post-controls-wrapper">
+            <div class="post-controls">
+              <ul>
+                  <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
+                  <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
+                  <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
+              </ul>
+            </div>
+
+            <div class="caption-wrapper">
+              {block:Caption}{Caption}{/block:Caption}
+            </div>
+            <div class="tag-wrapper">
+              <p class="tags-index">
+              {block:HasTags}
+                      {block:Tags}<a href="{TagURL}"> {Tag} </a>{/block:Tags}
+              {/block:HasTags}
+              </p>
+            </div>
+            <div class='share-controls'>
+              <p>SHARE</p>
+              <div class="share-icon-wrapper index">
+                  <div class="facebook-permalink-share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u={Permalink}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                  <div class="twitter-permalink-share-icon"><a href="https://twitter.com/intent/tweet?text={text:Twitter text}" target="_blank"><img src="https://24.media.tumblr.com/cd2ea42b4dc31a8d206a1b24166a4cd5/tumblr_n1ixwacrlf1tsri92o1_r1_75sq.png" width="100%" height="100%" /></a></div>
+                  <div class="clear-both"></div>
+              </div>                
+            </div>
+          </div>
+          {/block:IndexPage}
+
         <!-- close article post-->
         </article>
         {/block:Posts}
