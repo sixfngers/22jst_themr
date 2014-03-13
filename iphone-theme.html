@@ -56,8 +56,12 @@
         }
         .sprite {
             /* 
-            background-image: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/sprite.png) !important; */ 
+            background-image: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/sprite.png) !important;
+            */ 
+            
+            /*
             background-image: url(http://dev.bpginteractive.com/22jump/mobile/sprite.png) !important; 
+            */
             background-repeat: no-repeat !important;
             background-color: transparent !important;
             background-position: 0 0;
@@ -75,12 +79,8 @@
             width: 640px;
             margin: 0 auto;
             padding: 0;
-            /*background: url(https://24.media.tumblr.com/e01e7c6bf7ec2d9a665fbcc8c72de701/tumblr_n1vi3rA99x1tsri92o3_r1_1280.jpg) no-repeat center top;*/
             background-color:#ffffff;
-
-            /*background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-main.jpg) no-repeat center top black;*/
             background-size: 100% auto;
-            /*font-family: Helvetica, Arial, sans-serif;*/
             color: #ffffff;
             font-family: Helvetica Neue,serif;
             font-size: 0.8em;
@@ -94,6 +94,8 @@
             position: absolute;
             top: 51px !important;
             right: 40px !important;
+            width:640px !important;
+            height:120px !important;
         }
 
         a {
@@ -894,7 +896,7 @@
 {
     float:left;
     margin:0 6px 0 0;
-    background: url(https://31.media.tumblr.com/46999aea62b4e31598fac343e6260159/tumblr_n1oit3VOQp1tsri92o1_r1_100.png) no-repeat;
+    background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/desktop/share-icons-with-rollovers.png) no-repeat;
     width:40px;
     height:100%;
     background-color: #bb0001;
@@ -981,7 +983,7 @@
 
 .nav-share-icon
 {
-  background:url(https://31.media.tumblr.com/e936cf9b072edf5565bc99a4b9fc65bc/tumblr_n1vi3rA99x1tsri92o1_400.jpg);
+  background:url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/social-icons.jpg);
   background-repeat: no-repeat;
   float: left;
   height:100%;
@@ -1102,8 +1104,7 @@
 */
 
 #mobile_legal {
-  /*background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/tumblrdev/site/mobile/bg-legal.png) no-repeat center top #000000;                */
-  background: url(https://24.media.tumblr.com/807f769faf9d18370fb5928e0e923666/tumblr_n1vi3rA99x1tsri92o4_r1_1280.jpg) no-repeat center top;
+  background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/legal-bg.jpg) no-repeat center top;
   background-color: #000000;
   background-size: 100% auto;
   height: 550px;
@@ -1124,7 +1125,7 @@
   position: absolute;
   top:0;
   left:0;
-  background: url(https://24.media.tumblr.com/f53920717109e92d5addc70514df26a9/tumblr_n1vi3rA99x1tsri92o5_r2_250.png) no-repeat;
+  background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/legal-sprite.png) no-repeat;
   background-color: transparent;
 }
 
@@ -1248,6 +1249,19 @@
 .dark-grey-text
 {
   color:666666;
+}
+
+
+.faux-tumblr-controls
+{
+    width:100%;
+    min-height: 60px;
+    background-color:#fff;
+}
+
+.faux-tumblr-controls div
+{
+    float:left;
 }
 
 
@@ -1394,9 +1408,19 @@
     </script>
 </head>
 <body>
+    <div class="faux-tumblr-controls">
+        <div>
+            <a href="http://www.tumblr.com/open/app?referrer=mobile_banner&app_args=blog?blogName=22new&page=blog"><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/open-app.png"></a>
+        </div>
 
+        <div>
+            <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' rel='external'><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/follow.png"></a>
+        </div>
+
+        <div class="clearit"></div>
+    </div>
     <div class="release-date">
-      <img src="https://31.media.tumblr.com/778f790bb3a1b37abe935bf447b4792e/tumblr_n1vi3rA99x1tsri92o2_r2_1280.jpg">      
+      <img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/release-date.jpg">      
     </div>
 
     <div id="top-nav" class="nav collapsed-height">
@@ -1405,7 +1429,7 @@
           <a id="top-nav-menu-toggle" href="#">
             <div class="nav-item">
               <div class="nav-text">MENU</div>
-              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="https://24.media.tumblr.com/b3f7dc4e76c08f9d5e5ccf5f4b4e69c2/tumblr_n1vi3rA99x1tsri92o2_r1_75sq.png"></div>
+              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/nav-arrow.png"></div>
             </div>
           </a>
         </li>
@@ -1424,7 +1448,7 @@
         <hr>
         
         <li>
-          <a href="https://www.youtube.com/watch?v=06rvPK8ydZo">
+            <a href="https://www.youtube.com/watch?v=06rvPK8ydZo" class='youtube_redbandtrailer_button promotion' rel='external'>
             <div class="nav-item">
               <div class="nav-text">WATCH THE RED BAND TRAILER</div>
             </div>
