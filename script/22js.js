@@ -47,6 +47,15 @@ function setupNav()
     $('#about-section .section-header .close-button').on('click', function(){
 		closeSiteSection($("#about-section-inner-wrapper"), null);
     }); 
+
+
+    $( '.index-post-controls-wrapper' ).mouseenter(function() {
+    	console.log(this);
+  	})
+
+  	$( '.index-post-controls-wrapper' ).mouseleave(function() {
+    	console.log(this);
+  	});
 }
 
 function showSiteSection(div, divWrapper)
