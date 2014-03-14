@@ -82,7 +82,7 @@
             background-color:#ffffff;
             background-size: 100% auto;
             color: #ffffff;
-            font-family: Helvetica Neue,serif;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
             font-size: 0.8em;
         }
 
@@ -90,12 +90,13 @@
             clear: both;
         }
 
-        iframe#tumblr_controls {
-            position: absolute;
-            top: 51px !important;
-            right: 40px !important;
-            width:640px !important;
-            height:120px !important;
+        iframe#tumblr_controls
+        {
+            position: absolute !important;
+            width:1px !important;
+            height:1px !important;
+            visibility: hidden !important;
+            opacity:0 !important;
         }
 
         a {
@@ -896,7 +897,7 @@
 {
     float:left;
     margin:0 6px 0 0;
-    background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/desktop/share-icons-with-rollovers.png) no-repeat;
+    background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/share-icons-with-rollovers.png) no-repeat;
     width:40px;
     height:100%;
     background-color: #bb0001;
@@ -983,7 +984,7 @@
 
 .nav-share-icon
 {
-  background:url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/social-icons.jpg);
+  background:url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/social-icons.jpg);
   background-repeat: no-repeat;
   float: left;
   height:100%;
@@ -1104,7 +1105,7 @@
 */
 
 #mobile_legal {
-  background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/legal-bg.jpg) no-repeat center top;
+  background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/legal-bg.jpg) no-repeat center top;
   background-color: #000000;
   background-size: 100% auto;
   height: 550px;
@@ -1125,7 +1126,7 @@
   position: absolute;
   top:0;
   left:0;
-  background: url(http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/legal-sprite.png) no-repeat;
+  background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/legal-sprite.png) no-repeat;
   background-color: transparent;
 }
 
@@ -1410,17 +1411,17 @@
 <body>
     <div class="faux-tumblr-controls">
         <div>
-            <a href="http://www.tumblr.com/open/app?referrer=mobile_banner&app_args=blog?blogName=22new&page=blog"><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/open-app.png"></a>
+            <a href="http://www.tumblr.com/open/app?referrer=mobile_banner&app_args=blog?blogName=22new&page=blog"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/open-app.png"></a>
         </div>
 
         <div>
-            <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' rel='external'><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/follow.png"></a>
+            <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' rel='external'><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/follow.png"></a>
         </div>
 
         <div class="clearit"></div>
     </div>
     <div class="release-date">
-      <img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/release-date.jpg">      
+      <a href="http://22new.tumblr.com"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/release-date.jpg"></a>
     </div>
 
     <div id="top-nav" class="nav collapsed-height">
@@ -1429,7 +1430,7 @@
           <a id="top-nav-menu-toggle" href="#">
             <div class="nav-item">
               <div class="nav-text">MENU</div>
-              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="http://stage.sonypictures.com/movies/22jumpstreet/tumblr/assets/image/mobile/nav-arrow.png"></div>
+              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/mobile/nav-arrow.png"></div>
             </div>
           </a>
         </li>
@@ -1448,7 +1449,7 @@
         <hr>
         
         <li>
-            <a href="https://www.youtube.com/watch?v=06rvPK8ydZo" class='youtube_redbandtrailer_button promotion' rel='external'>
+            <a href="https://www.youtube.com/watch?v=06rvPK8ydZo" class='youtube_redbandtrailer_button promotion' rel='external' target="_blank">
             <div class="nav-item">
               <div class="nav-text">WATCH THE RED BAND TRAILER</div>
             </div>
@@ -1460,18 +1461,18 @@
         <li>
             <div class="nav-item">
               <div class='nav-social-wrapper centered'>
-                <a href="https://www.facebook.com/JumpStMovies" class="fanfacebook_button promotion" rel="external">
+                <a href="https://www.facebook.com/JumpStMovies" class="fanfacebook_button promotion" rel="external" target="_blank">
                   <div class="nav-share-icon facebook"></div>
                 
-                <a href="https://twitter.com/jumpstmovies" class='followtwitter_button promotion' rel='external'>
+                <a href="https://twitter.com/jumpstmovies" class='followtwitter_button promotion' rel='external' target="_blank">
                   <div class="nav-share-icon twitter"></div>
                 </a>
                 
-                <a href="http://instagram.com/jumpstmovies" class='instagram_button promotion' rel='external'>
+                <a href="http://instagram.com/jumpstmovies" class='instagram_button promotion' rel='external' target="_blank">
                   <div class="nav-share-icon instagram"></div>
                 </a>
                 
-                <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet" class='youtube_button promotion' rel='external'>
+                <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet" class='youtube_button promotion' rel='external' target="_blank">
                   <div class="nav-share-icon youtube"></div>
                 </a>
                 <div class="clearfix"></div>
@@ -1726,7 +1727,6 @@
             <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank">
               <div class="amazon legal-button"></div>
             </a>
-
             <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank">
               <div class="itunes legal-button"></div>
             </a>

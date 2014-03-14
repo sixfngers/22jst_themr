@@ -50,11 +50,11 @@ function setupNav()
 
 
     $( '.index-post-controls-wrapper' ).mouseenter(function() {
-    	console.log(this);
+    	$(this).addClass("mouseenterpost");
   	})
 
   	$( '.index-post-controls-wrapper' ).mouseleave(function() {
-    	console.log(this);
+    	$(this).removeClass("mouseenterpost");
   	});
 }
 
