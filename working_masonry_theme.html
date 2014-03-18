@@ -71,6 +71,7 @@
     color: #fff;
 }
 #content {
+    opacity: 0;
     /*margin: 2%;*/
 }
 
@@ -1430,7 +1431,7 @@ blockquote a:active,
             <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/studio-logos.png" alt="MGM Studios and Columbia Pictures">
           </div>
           <p>
-              &copy;<span class="year">2014</span> Sony Pictures Digital Productions Inc, All rights reserved.
+              &copy;<span class="year">2014</span> Sony Pictures Digital Productions Inc. All rights reserved.
               <br/>
               Hosted by Tumblr <a href="http://www.tumblr.com/policy/en/privacy" target="_blank">Privacy Policy</a> | <a href="http://www.tumblr.com/policy/en/terms_of_service" target="_blank">Terms of Service</a>
           </p>
@@ -1509,16 +1510,13 @@ blockquote a:active,
             var $newElems = $( newElements ).css({ opacity: 0 });
             $newElems.imagesLoaded(function(){
                 $newElems.animate({ opacity: 1 });
-
-
-
-
                 $tumblelog.masonry( 'appended', $newElems);
             });
           }
     );
     {/block:IfInfiniteScroll}
     $tumblelog.imagesLoaded( function(){
+      $tumblelog.css("opacity", "1");
       $tumblelog.masonry({
         columnWidth: function( containerWidth ) {
             return containerWidth / 100;
