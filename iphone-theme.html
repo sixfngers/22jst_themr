@@ -204,7 +204,26 @@
           background-color: #dddddd;
         }
 
+        .tag-wrapper
+        {
+          margin:16px auto 16px auto;
+        }
 
+        .tags-index,
+        .tags
+        {
+          width:90%;
+          margin:0 auto 0 auto;
+          text-align: center;
+          color:#333536;
+        }
+
+        .tags-index a:before,
+        .tags a:before
+        { 
+          content:"#";
+        }
+        
         .bubble {
             display: block;
             width: 608px;
@@ -1537,6 +1556,16 @@
                                     {Caption}
                                 </div>
                             {/block:Caption}
+
+
+                            {block:HasTags}
+                                <div class="tag-wrapper">
+                                    <p class="tags">
+                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
+                                    </p>
+                                </div>      
+                            {/block:HasTags}
+              
                         {/block:Photo}
 
                         {block:Photoset}
@@ -1559,6 +1588,14 @@
                                     {Description}
                                 </div>
                             {/block:Description}
+
+                            {block:HasTags}
+                                <div class="tag-wrapper">
+                                    <p class="tags">
+                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
+                                    </p>
+                                </div>      
+                            {/block:HasTags}
                         {/block:Link}
 
                         {block:Quote}
@@ -1607,6 +1644,14 @@
                                     {Caption}
                                 </div>
                             {/block:Caption}
+
+                            {block:HasTags}
+                                <div class="tag-wrapper">
+                                    <p class="tags">
+                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
+                                    </p>
+                                </div>      
+                            {/block:HasTags}
                         {/block:Video}
 
                         {block:Chat}
