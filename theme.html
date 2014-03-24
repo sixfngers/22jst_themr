@@ -143,36 +143,26 @@ img {
 
 /*Masthead*/
 #masthead {
-    /*background: {color:Masthead background} url('{image:Masthead}');
-    color: {color:Masthead text};*/
+    
 }
 #masthead a {
-    /*color: {color:Masthead links};*/
 }
-
-/*
-nav li {
-    display: inline;
-}
-*/
 
 
 .index-article
 {
     position:relative;
-    /*background: #ff0000;*/
-    /*margin: {text:Post margin};*/
-    /*padding: 3%;*/
-    /*width: {text:Post width};*/
+    /*  
+      use 0px instead of auto
+      fixes ie-9 column bug
+    */
     margin: 4px 0px 3px 0px;
-    /*margin:0;*/
 }
 
 
 .permalink-article
 {
     width:510px;
-    /*margin-bottom:-20px;*/
     background-color: #000;
     min-height: 1100px;
     color: {color:Body text};
@@ -303,7 +293,7 @@ nav li {
 {
     width:970px;
     min-height:1300px;
-    margin:52px auto 0 auto;
+    margin:80px auto 0 auto;
 }
 
 
@@ -365,10 +355,9 @@ nav li {
     z-index: 100;
     top: 0;
     width:100%;
-    margin:48px auto 0 auto;
+    margin:60px auto 0 auto;
     text-align:center;
     background-color: rgba(0,0,0,0.9);
-    /*padding-bottom: 40px;*/
     min-width: 970px;
 }
 
@@ -886,33 +875,15 @@ nav li {
     top: 0;
     background:#000;
     width:100%;
-    /*margin:0 auto 0 auto;*/
-    /*text-align:center;*/
     min-width:970;
-    height:48px;
+    height:70px;
 }
 
 #nav
 {
   width:970px;
-    /*max-width:970px;
-    min-width:970px;*/
-    margin:0 auto 0 auto;
+  margin:0 auto 0 auto;
 }
-
-/*#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#nav li {
-    list-style-type: none;
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}*/
 
 #nav .about
 {
@@ -922,6 +893,12 @@ nav li {
     font-size: 1.5em;
     line-height:49px;
     font-weight:bold;
+}
+
+#nav .about
+,#nav .nav-social-wrapper
+{
+    margin-top:22px;
 }
 
 
@@ -1033,7 +1010,8 @@ blockquote a:active,
             <div class="release-date nav-col">
               <div>
                 <h1 class="seotitle">22 Jump Street In Theaters June 13th</h1>
-                <a href="{BlogURL}"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/release-date-nav.png"></a>
+                <a href="{BlogURL}"><img src="http://dev.bpginteractive.com/22jump/assets/image/desktop/release-date-nav.png"></a>
+                <!-- <a href="{BlogURL}"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/release-date-nav.png"></a> -->
               </div>
             </div>
 
@@ -1142,7 +1120,7 @@ blockquote a:active,
             {block:post1}
                 <!-- fixed posts definition -->
                 <div id="stamp1" class="column-width">
-                    <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/keyart-top-left-post.png" />
+                    <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/keyart-top-left-post.jpg" />
                     <div id="stamp-follow" class="float-left column-width">
                         <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' target="_blank">
                             <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/follow-sticky-post.png" alt="follow jump street movies" />
@@ -1165,7 +1143,7 @@ blockquote a:active,
             {block:post1}
                 <!-- fixed posts definition -->
                 <div id="stamp1" class="float-left column-width fixed-post-permalink-right-margin" >
-                    <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/keyart-top-left-post.png" />
+                    <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/keyart-top-left-post.jpg" />
                     <div id="stamp-follow" class="float-left column-width">
                         <a href="http://www.tumblr.com/follow/jumpstmovies">
                             <img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2-dev/assets/image/desktop/follow-sticky-post.png" alt="follow jump street movies" />
