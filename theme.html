@@ -173,7 +173,7 @@ img {
 {
     width:492px;
     margin:8px auto 0 auto;
-
+    overflow:hidden;
 }
 
 .permalink-article hr
@@ -188,7 +188,7 @@ img {
 
 .red-border img
 {
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .full-width
@@ -589,10 +589,52 @@ img {
  width: 100%;
 }
 
+.photo
+{
+  /*display:table;*/
+  min-height: inherit;
+  width: 100%; /* Firefox needs this */
+   /* WebKit (Chrome & Safari) */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    
+    /* IE */
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    
+     /* Native CSS */
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+.photo-inner-wrapper
+{
+  /*display:table-cell;*/
+  /*margin:auto 0 auto 0;*/
+  /*vertical-align: middle;*/
+  
+  
+        
+  
+}
+
 /* removes extra spacing from images so border is flush to post size*/
-.photo img
+.photo-inner-wrapper img
 {
   vertical-align: top;
+  width: auto !important; /*override the width below*/
+  width: 100%;
+  max-width: 314px;
+  float: left;
+  clear: both;
 }
 
 .permalink-article .post-wrapper
@@ -609,8 +651,11 @@ img {
 
 .post-wrapper
 {
+  background-color:#000;
   overflow:hidden;
+  min-height: 310px;
   border:1px solid {color:Secondary text};
+
 }
 
 .permalink-caption {
@@ -703,7 +748,7 @@ img {
 .index-post-controls-wrapper .post-controls
 {
   position: relative;
-  margin:40px auto 40px auto;
+  margin:35px auto 35px auto;
  }
 
 .index-post-controls-wrapper .caption-wrapper p
@@ -758,6 +803,20 @@ img {
 
 .lt-ie10 #legal {
     font-size: .9em;
+}
+
+.lt-ie10 .photo
+{
+  display:table;
+  min-height: inherit;
+  width: 100%;
+}
+
+.lt-ie10 .photo-inner-wrapper
+{
+  display:table-cell;
+  margin:auto 0 auto 0;
+  vertical-align: middle;
 }
 
 
@@ -1010,8 +1069,8 @@ blockquote a:active,
             <div class="release-date nav-col">
               <div>
                 <h1 class="seotitle">22 Jump Street In Theaters June 13th</h1>
-                <a href="{BlogURL}"><img src="http://dev.bpginteractive.com/22jump/assets/image/desktop/release-date-nav.png"></a>
-                <!-- <a href="{BlogURL}"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/desktop/release-date-nav.png"></a> -->
+                <!-- <a href="{BlogURL}"><img src="http://dev.bpginteractive.com/22jump/assets/image/desktop/release-date-nav.png"></a> -->
+                <a href="{BlogURL}"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/desktop/release-date-nav.png"></a>
               </div>
             </div>
 
@@ -1170,10 +1229,13 @@ blockquote a:active,
         <!-- photo post -->
         {block:IndexPage}
             {block:Photo}
+            
             <div class="photo">
                 <!-- {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag} -->
                 <!-- {block:Caption}{Caption}{/block:Caption} -->
-                <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                <div class="photo-inner-wrapper">
+                  <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                </div>
                 {/block:Photo}
         {/block:IndexPage}
 

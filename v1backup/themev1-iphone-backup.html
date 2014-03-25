@@ -3,19 +3,20 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>22 Jump Street | Official Movie Site | Sony Pictures</title>
-    <meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters June 13th.">
+    <meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014.">
     <meta name="keywords" content="22 Jump Street, 21 Jump Street, Sequel, Action Comedy, Undercover Cop, Jonah Hill, Channing Tatum, Ice Cube, Phil Lord, Chris Miller, Movie, Sony Pictures">
 
-    <meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters June 13th" />
+    <meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters Summer 2014" />
     <meta property="og:type" content="video.movie" />
-    <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters June 13th." />
+    <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters Summer 2014." />
     <meta property="og:image" content="http://flash.sonypictures.com/movies/22jumpstreet/share/tumblr/22jumpstreet_share.jpg" />
     <meta property="og:url" content="http://www.22JumpStreetMovie.com" />
-    
+
+
     <meta name="viewport" content="width=640"/>
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
-    <!-- {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description} -->
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
     <style type="text/css">
         /* 
         /  
@@ -55,6 +56,7 @@
             text-indent: 105%;
         }
         .sprite {
+            background-image: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/site/mobile/sprite.png) !important; 
             background-repeat: no-repeat !important;
             background-color: transparent !important;
             background-position: 0 0;
@@ -72,24 +74,19 @@
             width: 640px;
             margin: 0 auto;
             padding: 0;
-            background-color:#ffffff;
+            background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/site/mobile/bg-main.jpg) no-repeat center top black;
             background-size: 100% auto;
-            color: #ffffff;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 0.8em;
+            font-family: Helvetica, Arial, sans-serif;
         }
 
         .clear {
             clear: both;
         }
 
-        iframe#tumblr_controls
-        {
-            position: absolute !important;
-            width:1px !important;
-            height:1px !important;
-            visibility: hidden !important;
-            opacity:0 !important;
+        iframe#tumblr_controls {
+            position: absolute;
+            top: 51px !important;
+            right: 40px !important;
         }
 
         a {
@@ -185,38 +182,7 @@
                         }
 
 
-        .notes-container-wrapper
-        {
-          margin-top:-60px;
-          margin-bottom:14px;
 
-        }
-
-        .notes-container
-        {
-          background-color: #dddddd;
-        }
-
-        .tag-wrapper
-        {
-          margin:16px auto 16px auto;
-        }
-
-        .tags-index,
-        .tags
-        {
-          width:90%;
-          margin:0 auto 0 auto;
-          text-align: center;
-          color:#333536;
-        }
-
-        .tags-index a:before,
-        .tags a:before
-        { 
-          content:"#";
-        }
-        
         .bubble {
             display: block;
             width: 608px;
@@ -229,21 +195,18 @@
             }
 
             .bubble .top {
-                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_top.png') top left repeat-y transparent;*/
+                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_top.png') top left repeat-y transparent;
                 width: 608px;
                 height: 34px;
                 margin: 0 auto;
             }
             
             .bubble .content {
-                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bg.png') -1px 0 repeat-y transparent;*/
-                /*width: 528px;*/
-                width:100%;
+                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bg.png') -1px 0 repeat-y transparent;
+                width: 528px;
                 line-height: 34px;
                 margin: 0 auto;
-                /*padding: 2px 40px;*/
-                padding-top:2px;
-                /*background-color: #ff0000;*/
+                padding: 2px 40px;
             }
             
                 .bubble.description .content {
@@ -257,9 +220,8 @@
                 
                 .bubble .content img.photo {
                     display: block;
-                    /*border: 4px solid #fff;*/
-                    /*width: 520px;*/
-                    width: 100%;
+                    border: 4px solid #fff;
+                    width: 520px;
                     height: auto;
                 }
                 
@@ -353,14 +315,14 @@
                     }
                     
                     .bubble .content .video {
-                        width: 100%;
+                        width: 520px;
                         font-size: 26px;
                         color: #333536;
                     }
 
                         .bubble .content .video * {
-                            width: 100% !important;
-                            /*border: 4px solid #fff;*/
+                            width: 520px !important;
+                            border: 4px solid #fff;
                             margin: 0 auto;
                         }
                         
@@ -385,8 +347,7 @@
                         }
                         
                         .bubble .content .html_photoset {
-                            /*width: 520px;*/
-                            width: 100%;
+                            width: 520px;
                             text-align: center;
                             border: none;
                         }
@@ -400,8 +361,7 @@
                             }
                             
                                 .bubble .content .html_photoset p img.photoset_photo {
-                                    /*width: 520px;*/
-                                    width: 100%;
+                                    width: 520px;
                                     margin: 0 auto;
                                     border: 4px solid #fff;
                                 }
@@ -419,7 +379,7 @@
                     }
                     
                         .bubble .content .link span {
-                            font-family: 'Helvetica Neue',"Helvetica", sans-serif;
+                            font-family: 'Lucida Grande', sans-serif;
                             vertical-align: -1px;
                         }
                     
@@ -517,19 +477,16 @@
                 .bubble .content .date,
                 .bubble .content .note_count {
                     float: left;
-                    /*font-weight: bold;*/
+                    font-weight: bold;
                     font-size: 24px;
-                    /*color: #8c8e90;*/
-                    color:#666666;
+                    color: #8c8e90;
                     margin-top: 26px;
-                    text-decoration: none;
+                    text-decoration: underline;
                 }
                 
-                /*
                 .bubble .content .note_count {
                     float: right;
                 }
-                */
                 
                 .bubble .content ol.notes {
                     margin: 0;
@@ -556,7 +513,6 @@
                         
                         .bubble .content ol.notes li.note span.action {
                             font-weight: normal;
-                            color:#303132;
                         }
                         
                         .bubble .content ol.notes li.note .answer_content {
@@ -605,7 +561,7 @@
                         }
             
             .bubble .bottom {
-                /*background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bottom.png') -1px 0 repeat-y transparent;*/
+                background: url('http://assets.tumblr.com/images/iphone/tumblelog_retina/content_bottom.png') -1px 0 repeat-y transparent;
                 width: 608px;
                 height: 38px;
                 margin: 0 auto;
@@ -628,7 +584,6 @@
             text-align: center;
             padding: 38px 0;
             display: block;
-            margin-top:60px;
         }    
 
            .load img {
@@ -662,6 +617,8 @@
 
 
             #jumpstreet {
+                background: url(http://dev.bpginteractive.com/22jump/mobile/bg-main.jpg) no-repeat center top #0d0d0d;                
+                background-size: 100% auto;
                 width: 640px;
                 height: 100%;
                 margin: 0 auto;
@@ -669,46 +626,210 @@
                 position: relative;
             }
 
-            .outer-note-wrapper
-            {
-              height:100%;
-              position: relative;
-              float:left;
-              clear:both;
-              width:40%;
+            .hidetext {
+                white-space: nowrap;
+                text-indent: 105%;
+                overflow: hidden;
+                color: transparent;
+                font-size: 0.1em; 
             }
 
-            .note-wrapper
-            {
-              position: absolute;
-              bottom:0;
-              line-height: 22px;
+            /*
+            /
+            / Nav - Social Links
+            */            
+            #socialnav {
+                height: 90px;
+                background: #0d0d0d;
+            }
+                #socialnav .social-links {
+                    list-style-type: none;
+                    list-style: none;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+                #socialnav .social-links li {
+                    list-style-type: none;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 90px;                    
+                    height: 90px;
+                    position: absolute;
+                    top: 0;
+                    left: 5%;
+                }
+                #socialnav .social-links li.tw {
+                    left: 50%;
+                    margin-left: -45px;
+                }
+                #socialnav .social-links li.inst {
+                    left: auto;
+                    right: 5%;
+                }
+                #socialnav .social-links li a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                #socialnav .social-links li.tw a {
+                    background-position: -100px 0;
+                }
+                #socialnav .social-links li.inst a {
+                    background-position: -200px 0;
+                }
+                #masthead {
+                    height: 1536px;                    
+                }
+                #masthead .title_treatment {
+                    height: 603px;
+                }
+                #masthead .callout.trailer {
+                    position: relative;
+                    height: 555px;
+                }
+                #masthead .callout.homeEnt {
+                    position: relative;
+                    height: 378px;
+                }
+                    #masthead .callout.trailer > header {
+                        height: 80px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    #masthead .callout.trailer .trailer-share {
+                        height: 85px;
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                    }
+
+                    #masthead .callout.trailer .trailer-share a {
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        height: 85px;
+                        width: 85px;
+                        margin-left: 5px;
+                        white-space: nowrap;
+                        text-indent: 105%;
+                        overflow: hidden;
+                        color: transparent;
+                        font-size: 0.1em;
+                    }
+                    #masthead .callout.trailer .trailer-share a:first-child {
+                        margin-left: -90px;
+                    }
+                    #masthead .callout.trailer a.watch {
+                        display: block;
+                        width: 100%;
+                        height: 386px;
+                    }
+
+
+                    #masthead .callout.homeEnt .button.facebook {
+                        position: absolute;
+                        top: 0;
+                        height: 94px;
+                        width: 50%;
+                        left: 25%;
+                    }
+
+                    #masthead .callout.homeEnt .button.itunes,
+                    #masthead .callout.homeEnt .button.amazon {
+                        position: absolute;
+                        bottom: 0;
+                        height: 94px;
+                        width: 30%;
+                        left: 19.5%;
+                    }
+                    #masthead .callout.homeEnt .button.amazon {
+                       left: 51%;
+                    }
+
+            .synopsis {
+                width: 80%;
+                color: white;
+                font-size: 2em;
+                margin: 1em auto;
             }
 
-            .note-content
-            {
-
+            #js_legal {
+                background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr/site/mobile/bg-legal.png) no-repeat center top #0d0d0d;                
+                background-size: 100% auto;
+                height: 150px;
+                font-size: 1em;
+                line-height: 1em;
+                color: #aaa;
             }
+            #js_legal .hostedBy {
+                text-align: center; 
+                padding: 2em 0 2em; }
+                #js_legal .hostedBy p {
+                    margin: 1em 0; }
+            #js_legal a,
+            #js_legal a:link,
+            #js_legal a:visited {
+                text-decoration: underline;
+                color: #fff; }
+            #js_legal a:hover, 
+            #js_legal a:active {
+                text-decoration: underline;
+                color: #eee; }
 
-            .lower-post
-            {
-              margin-top:8px;
-              width:100%;
-              background-color: #dddddd;
-              padding: 10px 0 10px 0
-            }
+            #js_legal .col {
+                float:left;
+                min-height: 100px;
+                width: 46%;
+                text-align: center; }
+            #js_legal .col p { 
+                margin: 0 0.5em; }
+            #js_legal .col.credits { }
+                #js_legal .col.credits ul,
+                #js_legal .col.credits li {        
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0; 
+                    height: 70px; }
+                #js_legal .col.credits li {        
+                    float: left;
+                    width: 24.5%; 
+                    visibility: hidden; }
 
-            .lower-post-content-padding
-            {
-              padding:0 14px 0 14px;
-            }
+            #js_legal .col.rating { 
+                width: 26%; }
+                #js_legal .col.rating a { 
+                    text-transform: uppercase; }
+                #js_legal .col.rating header { 
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-indent: 105%;
+                    font-size: 0.1em;
+                    height: 70px; 
+                    margin: 0;
+                    padding: 0; }
+            #js_legal .col.rewards {
+                width: 27.5%; } 
+            #js_legal .col.rewards a {
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                height: 100px; } 
+            #js_legal .col.rewards a:hover { }
+
+
 
             .post-footer {
                 height: 90px;
-                /*width: 300px;*/
-                /*position: relative;
+                width: 300px;
+                position: relative;
                 display: block !important;
-                clear: both;*/
+                clear: both;
                 margin: 1em 0;
             }
                 .post-footer ul {
@@ -722,10 +843,8 @@
                 }
 
                 .post-controls {
-                    float:right;
                     display: block;
-                    height: 50%;
-                    margin-top:6px;
+                    height: 100%;
                 }
 
                 .post-controls > ul {
@@ -758,47 +877,42 @@
                     width: 40px;
                     margin: 0;
                     padding: 0;
-                    border-radius: 4px;
                 }
                     .post-controls > ul > li.share-control {
-                        width: 106px;
-                        background: #000000;
-                        line-height: 45px;
+                        width: 144px;
+                        background: #4e4e4e;
+                        line-height: 90px;
                         text-align: center;
                     }
                     .post-controls > ul > li.reblog-control {
                         width: 75px;
-                        background: #4e4e4e;
-                        margin-left: 3px;
-                        line-height: 48px;
-                    }
-                    .post-controls li .reblog_button
-                    {
-                        margin: 6px 0 0 26px !important;
-                    }
-                    
-                    .post-controls > ul > li.like-control
-                    {
-                        width: 75px;
-                        background: #4e4e4e;
+                        background: #e83939;
                         margin-left: 3px;
                         line-height: 48px;
                     }
                     .post-controls li .reblog_button {
-                        margin: 32px 20px 0;
+                        margin: 20px 0 0 13px !important; }
+                    .post-controls > ul > li.like-control {
+                        width: 75px;
+                        background: #e83939;
+                        margin-left: 3px;
+                        line-height: 48px;
+                    }
+                    .post-controls li .reblog_button {
+                        margin: 20px 10px 0;
                     }
                     .post-controls li .like_button {
-                        width: 20px;
-                        height: 20px;
                         opacity: 1;
                         position: absolute;
-                        top: 6px;
-                        left: 26px;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
                         margin: auto;
                     }
-                    .post-controls li .like_button iframe {
-                        margin: 0 !important;
-                    }
+
+
+
 /* 
 /  
 /  Sharing pop-up menu
@@ -808,23 +922,36 @@
     DEBUG 
     display: block;
     */
-    /*background: #c9c9c7;
-    background: rgba(200,200,200,0.66);*/
+    background: #c9c9c7;
+    background: rgba(200,200,200,0.66);
     border-radius: 0;
     position: absolute;
     top: 0;
-    left: 263px;
-    width: 260px;
+    left: 301px;
+    width: 300px;
     height: 90px;
     -webkit-box-shadow: 0;
     -moz-box-shadow: 0;
     box-shadow: 0;
     z-index: 10;
 }
-
+.pop-menu:before {
+    position: absolute;
+    height: 20px;
+    width: 40%;
+    left: 10px;
+    top: 18px;
+    content: 'Share';
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7em;
+    color: #292928;
+    line-height: 1em;
+}
 .pop-menu ul {
     position: absolute;
-    bottom: 16px;
+    bottom: 0;
     left: 5px;
     height: 40px;
     margin: 0;
@@ -836,9 +963,6 @@
     float: left;
     margin-bottom: 0;
     border-bottom: 0;
-}
-.pop-menu ul li:first-child {
-    display: none;
 }
 .pop-menu ul li.tw {
     width: 53px;
@@ -890,402 +1014,7 @@
 }
 
 
-
-.share-menu
-{
-    width:100%;
-    height: 40px;
-    /*background-color: #ff0000;*/
-    /*border-radius: 4px;*/
-    margin-bottom:4px;
-}
-
-.share-visibility
-{
-  visibility:hidden;
-}
-
-.share-menu li
-{
-    float:left;
-    margin:0 6px 0 0;
-    background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/desktop/share-icons-with-rollovers.png) no-repeat;
-    width:40px;
-    height:100%;
-    background-color: #bb0001;
-    border-radius: 4px;
-}
-
-.share-menu ul
-{
-    height:100%;
-}
-
-.share-menu ul li.fb
-{
-    position: relative;
-    background-position: 0 -28px;
-    height:100%;
-}
-
-
-.share-menu ul li.tw
-{
-    position: relative;
-    background-position: -36px -28px;
-}
-
-.share-menu ul li.no-bg
-{
-    background: none;
-    display:none;
-}
-
-
-
-/*
-*****
-  start mobile expandable nav
-*****
-*/
-
-.release-date
-{
-  height:98px;
-}
-
-.nav
-{
-  width:100%;
-  background-color: #000;
-  overflow: hidden;
-  position: relative;
-  display:none;
-}
-
-.collapsed-height
-{
-  height:68px;
-}
-
-.nav hr
-{
-  border-color: #646464;
-  width:90%;
-}
-
-.nav ul
-{
-  list-style: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item
-{
-  height:68px;
-}
-
-.nav-text
-{
-    text-align:center;
-    line-height:2.3em;
-  font-size: 2.25em;
-}
-
-.nav-share-icon
-{
-  background:url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/social-icons.jpg);
-  background-repeat: no-repeat;
-  float: left;
-  height:100%;
-}
-
-.nav-social-wrapper
-{
-    width:333px;
-    height:100%;
-}
-
-.nav-item .facebook
-{
-  background-position: 0 0;
-  width:66px;
-}
-
-.nav-item .twitter
-{
-  background-position: -66px 0;
-  width:87px;
-}
-
-.nav-item .instagram
-{
-  background-position: -153px 0;
-  width:79px;
-}
-
-.nav-item .youtube
-{
-  background-position: -232px 0;
-  width:101px;
-}
-
-.nav-arrow
-{ position:absolute;
-  top:-4px;
-  left:55%;
-  background-position: 0 0;
-  width:75px;
-  height:75px;
-}
-
-.point-down
-{
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-
-/*
-*****
-  end mobile expandable nav
-*****
-*/
-
-
-/*
-*****
-  mobile about section
-*****
-*/
-
-.about-section-content
-{
-  width:84%;
-  background-color: #ffffff;
-  color:#000000;
-  font-size: 2em;
-  display:none;
-  margin:0 auto 0 auto;
-  padding:30px 24px 16px 24px;
-}
-
-.synopsis
-{
-  float:left;
-}
-
-.about-section-content .header
-{
-  font-weight: bold;
-  line-height: .25em;
-  margin:0;
-}
-
-
-.cast-crew
-{
-  float:left;
-}
-
-.show-about
-{
-  display:block;
-}
-
-.hide-about
-{
-  display:none;
-}
-
-/*
-*****
-  end about section
-*****
-*/
-
-
-/*
-*****
- legal section
-*****
-*/
-
-#mobile_legal {
-  background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/legal-bg.jpg) no-repeat center top;
-  background-color: #000000;
-  background-size: 100% auto;
-  height: 550px;
-  font-size: 1em;
-  line-height: 1em;
-  color: #ffffff;
-  margin-top: 36px;
-}
-
-.dvd
-{
-  height:183px;
-  position: relative;
-}
-
-.legal-button
-{
-  position: absolute;
-  top:0;
-  left:0;
-  background: url(http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/legal-sprite.png) no-repeat;
-  background-color: transparent;
-}
-
-.itunes
-{
-  top:90px;
-  left:379px;
-  background-position: 0 -75px;
-  width:165px;
-  height:75px;
-}
-
-.amazon
-{
-  top:90px;
-  left:204px;
-  background-position: 0 0;
-  width:165px;
-  height:75px;
-}
-
-.rewards-wrapper
-{
-  width:100%;
-  height:120px;
-}
-
-.sony-rewards
-{
-  position: relative;
-  background-position: 0 -148px;
-  width:249px;
-  height:117px;
-  margin:0 auto 0 auto;
-}
-
-.lower-legal
-{
-  width:100%;
-  height:60px;
-  position: relative;
-  text-align: center;
-  margin-top: 90px
-}
-
-.studio-logos
-{
- width:64%;
- float:left;
-}
-
-.studio-logos p
-{
-  margin-top:10px;
-}
-
-.ratings-block
-{
-  width:35%;
-  float:left;
-}
-
-.ratings-block a.legal:link
-.ratings-block a.legal:visited
-.ratings-block a.legal:hover
-.ratings-block a.legal:active
-{
-  color:#ffffff;
-}
-
-
-.tos
-{
-  text-align: center;
-}
-
-.tos-link
-{
-  text-decoration: underline;
-}
-
-
-/*
-*****
-  end legal section
-*****
-*/
-
-
-.display-block
-{
-  display:block;
-}
-
-.centered
-{
-  text-align: center;
-  margin: 0 auto 0 auto;
-}
-
-.clearit
-{
-  clear:both;
-}
-
-.red-text
-{
-  color:#bb0001;
-}
-
-.black-text
-{
-  color:#000000;
-}
-
-.light-grey-text
-{
- color:#999999;
-}
-
-.dark-grey-text
-{
-  color:666666;
-}
-
-
-.faux-tumblr-controls
-{
-    width:100%;
-    min-height: 60px;
-    background-color:#fff;
-}
-
-.faux-tumblr-controls div
-{
-    float:left;
-}
-
-.tumblr-controls
-{
-    display:none;
-}
-
-
-
-</style>
-
+    </style>
     <script type="text/javascript" charset="utf-8">
         setTimeout(function() { window.scrollTo(0,1) }, 100);
                 
@@ -1426,103 +1155,65 @@
     </script>
 </head>
 <body>
-    <div class="faux-tumblr-controls">
-        <div>
-            <a href="http://www.tumblr.com/open/app?referrer=mobile_banner&app_args=blog?blogName={Name}&page=blog"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/open-app.png"></a>
-        </div>
-
-        <div>
-            <a href="http://www.tumblr.com/follow/jumpstmovies" class='tumblr_button promotion' rel='external'><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/follow.png"></a>
-        </div>
-
-        <div class="clearit"></div>
-    </div>
-    <div class="release-date">
-      <a href="{BlogURL}"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/release-date.jpg"></a>
-    </div>
-
-    <div id="top-nav" class="nav collapsed-height">
-      <ul>
-        <li>
-          <a id="top-nav-menu-toggle" href="#">
-            <div class="nav-item">
-              <div class="nav-text">MENU</div>
-              <div id="top-nav-arrow" class="nav-arrow point-down"><img src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/image/mobile/nav-arrow.png"></div>
+ 
+<!--     <header class="gray_bubble">
+        <a href="/" class="title">{Title}&nbsp;</a>
+        <div class="clear"></div>
+        {block:IndexPage}
+            <div class="info" id="info_container">
+                <div class="body" id="body_container">
+                    {block:Description}<span class="description_words">{PlaintextDescription}</span>{/block:Description}
+                    <div class="show" id="show_more_info" style="display:none">
+                        <a href="#" id="show_more_info_link" onclick="show_more_info(); return false;">
+                            Show all
+                        </a>
+                        <div class="gradient" id="show_gradient"></div>
+                    </div>
+                </div>
             </div>
-          </a>
-        </li>
-
-        <hr id="menu-top-rule">
-        
-        <li>
-          <a id="about-menu" href="#">
-            <div class="nav-item">
-              <div class="nav-text">ABOUT THE MOVIE
-              </div>
-            </div>
-          </a>
-        </li>
-        
-        <hr>
-        
-        <li>
-            <a href="https://www.youtube.com/watch?v=06rvPK8ydZo" class='youtube_redbandtrailer_button promotion' rel='external' target="_blank">
-            <div class="nav-item">
-              <div class="nav-text">WATCH THE RED BAND TRAILER</div>
-            </div>
-          </a>
-        </li>
-        
-        <hr>
-        
-        <li>
-            <div class="nav-item">
-              <div class='nav-social-wrapper centered'>
-                <a href="https://www.facebook.com/JumpStMovies" class="fanfacebook_button promotion" rel="external" target="_blank">
-                  <div class="nav-share-icon facebook"></div>
-                
-                <a href="https://twitter.com/jumpstmovies" class='followtwitter_button promotion' rel='external' target="_blank">
-                  <div class="nav-share-icon twitter"></div>
-                </a>
-                
-                <a href="http://instagram.com/jumpstmovies" class='instagram_button promotion' rel='external' target="_blank">
-                  <div class="nav-share-icon instagram"></div>
-                </a>
-                
-                <a href="https://www.youtube.com/user/SonyPictures/custom?x=us_22JumpStreet" class='youtube_button promotion' rel='external' target="_blank">
-                  <div class="nav-share-icon youtube"></div>
-                </a>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-        </li>
-      <ul>
-    </div>
-
-    <div id="about-section" class="about-section-content hide-about">
-      <div class="synopsis">
-          <p class="header red-text">SYNOPSIS</p>
-          <p class="black-text">After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership.  Now they don't have to just crack the case - they have to figure out if they can have a mature relationship.  If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.
-          </p>
-      </div>
-
-      <div class="cast-crew">
-          <p class="header red-text">CAST &amp; CREW</p>
-          <p class="cast-header">DIRECTED BY<br />Phil Lord &amp; Christopher Miller
-          <p class="cast-header">SCREENPLAY BY<br />Oren Uziel and Rodney Rothman</p>
-          <p class="cast-header">STORY BY<br />Michael Bacall & Jonah Hill</p>
-          <p class="cast-header">BASED ON THE TELEVISION SERIES<br />“21 JUMP STREET” CREATED BY<br />Patrick Hasburgh & Stephen J. Cannell</p>
-          <p class="cast-header">PRODUCED BY<br />Neal H. Moritz, Jonah Hill, Channing Tatum</p>
-          <p class="cast-header">EXECUTIVE PRODUCERS<br />Brian Bell, Tania Landau, Phil Lord, Christopher Miller, Reid Carolin, Stephen J. Cannell</p>
-          <p class="cast-header">STORY BY<br />Michael Bacall & Jonah Hill</p>
-          <p class="cast-header">CAST<br />Jonah Hill, Channing Tatum, Peter Stormare, and Ice Cube</p>
-      </div>
-
-      <div class="clearit"></div>
-    </div>
-
+        {/block:IndexPage}
+    </header> -->
     <div id="jumpstreet">
-       
+        <nav id="socialnav">
+           <ul class="social-links">
+                <li class="fb"><a class="fanfacebook_button promotion sprite hidetext network fb" rel="external" href="https://www.facebook.com/JumpStMovies" target="_blank">Facebook</a></li>
+                <li class="tw"><a class="followtwitter_button promotion sprite hidetext network tw" rel="external" href="https://twitter.com/jumpstmovies" target="_blank">Twitter</a></li>
+                <li class="inst"><a class="instagram_button promotion sprite hidetext network inst" rel="external" href="http://instagram.com/jumpstmovies" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+        <section id="masthead">
+            <hgroup class="title_treatment">
+                <h1 class="hidetext">22 Jump Street</h1>
+                <h2 class="hidetext">Hill</h2>
+                <h2 class="hidetext">Tatum</h2>
+                <h3 class="hidetext">Summer</h3>
+            </hgroup>
+            <div class="callout trailer">
+
+                <header class="hidetext trailer">Watch the red band trailer</header>
+                <a class="youtube_redbandtrailer_button promotion hidetext watch" rel="externa" href="http://www.youtube.com/watch?v=06rvPK8ydZo" target="_blank">22 Jump Street Redband Trailer</a>
+                <aside class="trailer-share">
+                    <a class="sharetrailerfacebook_button promotion hidetext fb" rel="external" href="http://www.facebook.com/sharer.php?m2w&s=100&p[images][0]=http://flash.sonypictures.com/movies/22jumpstreet/share/tumblr/22jumpstreet_share.jpg&p[url]=http://www.youtube.com/watch?v=06rvPK8ydZo&p[title]=22%20JumpStreet%20Redband%20Trailer&p[summary]=Schmidt%20and%20Jenko%20are%20back...%20and%20headed%20to%20college!%20Check%20out%20the%20brand-new%20%23JumpStreet%20trailer%20NOW!" target="_blank">Facebook</a> 
+                    <a class="sharetrailertwitter_button promotion hidetext tw" rel="external" href="https://twitter.com/intent/tweet?text=Schmidt%20and%20Jenko%20are%20back...%20and%20headed%20to%20college!%20Check%20out%20the%20brand-new%20%23JumpStreet%20trailer%20NOW!%20http%3A%2F%2Fbit.ly%2F22JS_Trailer" target="_blank">Twitter</a> 
+                </aside>
+             </div>
+
+             <div class="callout homeEnt">
+                <header class="hidden">Get Schooled</header>
+                <small class="hidden">See “The 22 Funniest Moments of 21 Jump Street”</small>
+                <h4 class="hidden">On Blu-Ray and Digital</h4>
+                <a class="getschooledfb_button promotion hidetext button facebook" rel="external" href="https://www.facebook.com/JumpStMovies" target="_blank">facebook</a>
+                <a class="itunes_button order hidetext button itunes" rel="external" href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tag" target="_blank">iTunes</a>
+                <a class="amazon_button order hidetext button amazon" rel="external" href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA?tag=sphe-21js-social-tum-20" target="_blank">Amazon</a>
+            </div>
+
+        </section>    
+
+        {block:IndexPage}
+        <div class="clearfix row synopsis">
+            <p>After making their way through high school (twice), big changes are in store for officers Schmidt (Jonah Hill) and Jenko (Channing Tatum) when they go deep undercover at a local college. But when Jenko meets a kindred spirit on the football team, and Schmidt infiltrates the bohemian art major scene, they begin to question their partnership. Now they don't have to just crack the case - they have to figure out if they can have a mature relationship. If these two overgrown adolescents can grow from freshmen into real men, college might be the best thing that ever happened to them.</p>
+        </div>
+        {/block:IndexPage}
 
         <div id="posts">
             <!-- START POSTS -->
@@ -1532,8 +1223,7 @@
                     <div class="content">
 
                         {block:Text}
-                            <div class="lower-post">
-                            <div class="copy text_post lower-post-content-padding">
+                            <div class="copy text_post">
                                 {block:Title}<h2>{Title}</h2>{/block:Title}
                                 {Body}
                                 {block:More}<p class="read_more_container"><a href="{Permalink}" class="read_more">Read More</a></p>{/block:More}
@@ -1542,57 +1232,34 @@
 
                         {block:Photo}
                             {block:HighRes}<a href="{PhotoURL-HighRes}">{/block:HighRes}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo" />{block:HighRes}</a>{/block:HighRes}
-                            
-                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy lower-post-content-padding">
+                                <div class="copy">
                                     {Caption}
                                 </div>
                             {/block:Caption}
-
-
-                            {block:HasTags}
-                                <div class="tag-wrapper">
-                                    <p class="tags">
-                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
-                                    </p>
-                                </div>      
-                            {/block:HasTags}
-              
                         {/block:Photo}
 
                         {block:Photoset}
                             <div class="video">
                                 {Photoset-500}
                             </div>
-                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy lower-post-content-padding">
+                                <div class="copy">
                                     {Caption}
                                 </div>
                             {/block:Caption}
                         {/block:Photoset}
 
                         {block:Link}
-                            <div class="lower-post">
                             <a href="{URL}" class="link" {Target}>{Name} <span>&rarr;</span></a>
                             {block:Description}
-                                <div class="copy lower-post-content-padding">
+                                <div class="copy">
                                     {Description}
                                 </div>
                             {/block:Description}
-
-                            {block:HasTags}
-                                <div class="tag-wrapper">
-                                    <p class="tags">
-                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
-                                    </p>
-                                </div>      
-                            {/block:HasTags}
                         {/block:Link}
 
                         {block:Quote}
-                            <div class="lower-post">
                             <div class="quote">&#8220;{Quote}&#8221;</div>
                             {block:Source}
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:20px 0">
@@ -1619,9 +1286,8 @@
                                 <audio id="audio_file_{PostID}" src="{RawAudioURL}"></audio>
                                 <div class="clear"></div>
                             </div>
-                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy lower-post-content-padding">
+                                <div class="copy">
                                     {Caption}
                                 </div>
                             {/block:Caption}
@@ -1631,24 +1297,14 @@
                             <div class="video"> 
                                 {Video-500}
                             </div>
-                            <div class="lower-post">
                             {block:Caption}
-                                <div class="copy lower-post-content-padding">
+                                <div class="copy">
                                     {Caption}
                                 </div>
                             {/block:Caption}
-
-                            {block:HasTags}
-                                <div class="tag-wrapper">
-                                    <p class="tags">
-                                        {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}
-                                    </p>
-                                </div>      
-                            {/block:HasTags}
                         {/block:Video}
 
                         {block:Chat}
-                            <div class="lower-post">
                             {block:Title}<h2 style="margin-bottom:26px;">{Title}</h2>{/block:Title}
                             <table class="chat" border="0" cellpadding="0" cellspacing="0">
                                 {block:Lines}
@@ -1661,81 +1317,68 @@
                         {/block:Chat}
 
                         {block:Answer}
-                            <div class="lower-post">
                             <div class="answer_question">{Question}</div>
                             <div class="answer_asker">
                                 <img src="{AskerPortraitURL-48}" width="48" height="48" />{Asker}
                             </div>
-                            <div class="copy lower-post-content-padding">
+                            <div class="copy">
                                 {Answer}
                             </div>
                         {/block:Answer}
 
-                          <!-- Sharing options -->
-                          <footer class="post-footer lower-post-content-padding">
-                            <div class="outer-note-wrapper">
-                              <div class="note-wrapper">
-                                <div class="note-content">
-                                  {block:NoteCount}
-                                    <a href="{Permalink}" class="note_count" onclick="show_notes({PostID}, '{PostNotesURL}'); return false;" id="show_notes_{PostID}" {Target} style="padding-left:6px;">
-                                        <span class="light-grey-text">{NoteCount}</span> NOTES
-                                    </a>
-                                    <a href="#" class="note_count" onclick="hide_notes({PostID}); return false;" id="hide_notes_{PostID}" style="display: none; padding-left:6px;">
-                                         Hide notes
-                                    </a>
-                                  {/block:NoteCount}
-                                </div>
-                              </div>
-                            </div>
-                            <section class="post-controls">
-                                <div id="#share-menu" class="share-menu share-visibility">
+                        {block:Date}
+<!--                             <a class="date" href="{Permalink}" {Target}>
+                                {TimeAgo}
+                            </a> -->
+                        {/block:Date}
+
+                            <!-- Sharing options -->
+                            <footer class="post-footer">
+                                <section class="post-controls">
                                     <ul>
-                                        <li class="fb"><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="" target="_blank"></a></li>
-                                        <li class="tw"><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="" target="_blank"></a></li>
-                                        <li class="no-bg clearit"></li>
-                                        <!-- 
-                                        <li class="pin"><a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-HighRes}&description={URLEncodedTitle}" class="no-hover share-item sprite pinterest">Pinterest</a></li>
-                                        <li class="gp"><a href="https://plus.google.com/share?url={URLEncodedPermalink}" class="no-hover share-item sprite google" target="_blank">Google+</a></li>
-                                        -->
+                                        <li class="share-control">
+                                            <nav class="pop">
+                                                Share
+                                                <!-- <a href="#" class="share selector">Share</a> -->
+                                                <div class="pop-menu share-menu north" id="share_{PostID}">
+                                                    <ul>
+                                                        <li class="open-in-app"><a href="#" class="no-hover share-item open-in-app" data-post="{PostID}">Open in app</a></li>
+                                                        <li class="fb"><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="no-hover share-item sprite facebook" target="_blank">Facebook</a></li>
+                                                        <li class="tw"><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="no-hover share-item sprite twitter" target="_blank">Tweet</a></li>
+                                                        <li class="pin"><a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-HighRes}&description={URLEncodedTitle}" class="no-hover share-item sprite pinterest">Pinterest</a></li>
+                                                        <li class="gp"><a href="https://plus.google.com/share?url={URLEncodedPermalink}" class="no-hover share-item sprite google" target="_blank">Google+</a></li>
+                                                        <!--
+                                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">Mail</a></li>
+                                                        -->
+                                                    </ul>
+                                                </div>
+                                            </nav>
+                                        </li>
+                                        <li class="reblog-control">{ReblogButton size="21" color="white"}</li>
+                                        <li class="like-control">{LikeButton size="20" color="white"}</li>
                                     </ul>
-                                </div>
-                                <ul>
-                                    <li class="share-control">
-                                        <nav class="pop">
-                                            <a href="#share" class="share selector">Share</a>
-                                            <!-- 
-                                            <div class="pop-menu share-menu north" id="share_{PostID}">
-                                                <ul>
-                                                    <li class="open-in-app"><a href="#" class="no-hover share-item open-in-app" data-post="{PostID}">Open in app</a></li>
-                                                    <li class="fb"><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="no-hover share-item sprite facebook" target="_blank">Facebook</a></li>
-                                                    <li class="tw"><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="no-hover share-item sprite twitter" target="_blank">Tweet</a></li>
-                                                    <li class="pin"><a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-HighRes}&description={URLEncodedTitle}" class="no-hover share-item sprite pinterest">Pinterest</a></li>
-                                                    <li class="gp"><a href="https://plus.google.com/share?url={URLEncodedPermalink}" class="no-hover share-item sprite google" target="_blank">Google+</a></li>
-                                                </ul>
-                                              
-                                            </div> 
-                                            -->
-                                        </nav>
-                                    </li>
-                                    <li class="reblog-control">{ReblogButton size="21" color="white"}</li>
-                                    <li class="like-control">{LikeButton size="20" color="white"}</li>
-                                </ul>
-                            </section>
-                          </footer>
+                                </section>
+                            </footer>
+
+
+                        {block:NoteCount}
+                            <a href="{Permalink}" class="note_count" onclick="show_notes({PostID}, '{PostNotesURL}'); return false;" id="show_notes_{PostID}" {Target} style="padding-left:6px;">
+                                {NoteCountWithLabel}
+                            </a>
+                            <a href="#" class="note_count" onclick="hide_notes({PostID}); return false;" id="hide_notes_{PostID}" style="display: none; padding-left:6px;">
+                                 Hide notes
+                            </a>
+                        {/block:NoteCount}
 
                         <div class="clear"></div>
-
-                      </div> <!-- close lower-post -->
                     </div>
                     <div class="bottom"></div>
                 </div>
                 {block:IndexPage}
-                    <div class="notes-container-wrapper">
-                      <div id="notes_container_{PostID}" class="bubble notes-container" style="display:none">
-                          <div class="top"></div>
-                          <div class="content bleed" id="notes_{PostID}"></div>
-                          <div class="bottom"></div>
-                      </div>
+                    <div id="notes_container_{PostID}" class="bubble" style="display:none">
+                        <div class="top"></div>
+                        <div class="content bleed" id="notes_{PostID}"></div>
+                        <div class="bottom"></div>
                     </div>
                 {/block:IndexPage}
                 {block:PermalinkPage}
@@ -1765,40 +1408,30 @@
             {/block:NextPage}
         {/block:IndexPage}
 
-        <section id="mobile_legal">
-          <div class="dvd">
-            <a href="http://www.amazon.com/Jump-Street-UltraViolet-Digital-Blu-ray/dp/B003Y5H5BA/?tag=sphe-21js-22jstumblr-20" target="_blank">
-              <div class="amazon legal-button"></div>
-            </a>
-            <a href="https://itunes.apple.com/us/movie/21-jump-street/id518877094?uo=4&at=11lc79&ct=tumblrsite" target="_blank">
-              <div class="itunes legal-button"></div>
-            </a>
-          </div>
-          <div class="lower-legal">
-            <div class="studio-logos">
-              <p>&copy; <span class="date">2014</span> Sony Pictures Digital Productions Inc. All rights reserved.
-            </div>
-            <div class="ratings-block">
-              <p>For ratings reasons:<br/>
-                <a class="tos-link" href="http://filmratings.com" target="_blank">FILMRATINGS.COM</a>, <a class="tos-link" href="http://mpaa.org" target="_blank">MPAA.ORG</a>
-              </p>
-            </div>
-
-            <div class="clearit"></div>
-          </div>
-        
-          <div class="rewards-wrapper">
-            <a href="http://www.sonyrewards.com/en/home/?utm_medium=partner_sbu_social_media&utm_source=spe_tumblr&utm_campaign=MYD8BBB6&utm_content=home&sr_title=22jumpstreet" target="_blank" class="ir sprite sonyrewards_button promotion" rel='external'>
-              <div class="sony-rewards legal-button"></div>
-            </a>
-          </div>
-          
-          <div class="tos">
-            <p>Hosted by Tumblr
-              <br />
-              <a class="tos-link" href="http://www.tumblr.com/policy/en/privacy" target="_blank">Privacy Policy</a> <a class="tos-link" href="http://www.tumblr.com/policy/en/terms_of_service" target="_blank">Terms of Service</a>
-            </p>
-          </div>
+        <section id="js_legal">
+            <section class="row">
+                <div class="col credits">
+                    <ul class="logos">
+                        <li class="hidetext">MGM</li>
+                        <li class="hidetext">Columbia Pictures</li>
+                    </ul>
+                    <p>&copy; <span class="date">2013</span> Sony Pictures Digital Productions Inc. All rights reserved.<br/>
+                        <a href="http://www.sonypictures.com/corp/privacy.html" target="_blank">Privacy Policy</a> <a href="http://www.sonypictures.com/corp/tos.html" target="_blank">Terms of Use</a></p>
+                </div>
+                <div class="col rating">
+                    <header class="hidetext rated">This film is not yet rated</header>
+                    <p>For ratings reasons:<br/>
+                        <a class="filmratings" href="http://filmratings.com" target="_blank">filmratings.com</a>, <a class="mpaa" href="http://mpaa.org" target="_blank">MPAA.org</a>
+                    </p>
+                </div>
+                <div class="col rewards">
+                    <a class="sonyrewards_button promotion ir button join" rel="external" href="http://www.sonyrewards.com/en/home/welcome/?utm_medium=partner_sbu_social_media&utm_source=spe_tumblr&utm_campaign=FG8JV3CF&utm_content=home&sr_title=22jumpstreet" target="_blank">Join Sony Rewards</a>
+                </div>
+            </section>
+            <section class="row hostedBy">
+                <p>Hosted by Tumblr <a href="http://www.tumblr.com/policy/en/privacy" target="_blank">Privacy Policy</a> <a href="http://www.tumblr.com/policy/en/terms_of_service" target="_blank">Terms of Service</a></p>
+                <p><a href="/disable_mobile_interface" onclick="if(confirm('Switch from mobile to standard view?')){} else {return false;}">Standard view</a></p>
+            </section>
         </section>
 
 
@@ -1819,9 +1452,7 @@
     //-->
     </script> 
     </div> 
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+    
     <script type="text/javascript" charset="utf-8">
         var info_style = window.getComputedStyle(document.getElementById('body_container'), null);
 
@@ -1832,123 +1463,6 @@
         if (navigator.userAgent.match(/Android/i)) {
             document.body.className = 'android';
         }
-
-        (function(Tumblr){
-            var follow_iframe_initialized = false;
-            if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
-                // Don't do anything until the first initialize event
-                Tumblr.PostMessageListener.initialize(function(message, origin) {
-                    if (follow_iframe_initialized || message.length < 2) return;
-
-                    if (message[0] === 'follow_iframe' && message[1] === 'enable') {
-                        Tumblr.FollowTeaser.current_page = 1;
-                        Tumblr.FollowTeaser.infer_infinite_scroll = true;
-                        Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=9759758dd2f15435e72f4fc485d64c4f");
-                        Tumblr.FollowTeaser.scroll_listener(true);
-                        follow_iframe_initialized = true;
-                    }
-                });
-            }
-        })(this.Tumblr || (this.Tumblr = {}));
-
-    </script>
-
-    <script>
-    (function() {
-      $("a[href='#share']").click(function(e)
-      {
-        var targetSection = $(e.target).closest("section");
-        var targetMenu = targetSection.children(".share-menu");
-        targetMenu.toggleClass("share-visibility");
-        e.preventDefault();
-      });
-
-      var navContainer = document.getElementById('top-nav');
-      changeClass(navContainer, "display-block")
-
-      function expandNav()
-      {
-        var navContainer = document.getElementById('top-nav');
-        changeClass(navContainer, "collapsed-height", true);
-      }
-
-      function collapseNav()
-      {
-        var navContainer = document.getElementById('top-nav');
-        changeClass(navContainer, "collapsed-height");
-      }
-
-      function changeClass(element, className, remove)
-      {
-        var currentClassName = element.className;
-        var newClassName;
-
-        if(remove)
-        {
-          newClassName = element.className.replace(className, '' );
-        }
-        else
-        {
-          newClassName = currentClassName + (" "+className);
-        }
-
-
-        // console.log("currentClassName "+currentClassName);
-        // console.log("newClassName "+newClassName);
-
-        element.className = newClassName;
-      }
-
-      var toggle = document.getElementById('top-nav-menu-toggle');
-      toggle.onclick = function()
-      {
-        
-        var arrow = document.getElementById("top-nav-arrow");
-        if ( arrow.className.match(/(?:^|\s)point-down(?!\S)/) )
-        {
-          changeClass(arrow, "point-down", true);
-          expandNav();
-        }
-        else
-        {
-          changeClass(arrow, "point-down");
-          collapseNav();
-          hideAbout();
-        }  
-
-        return false;
-      }
-
-      var aboutMenu = document.getElementById('about-menu');
-      aboutMenu.onclick = function()
-      {
-        showAbout();
-        return false;
-      }
-
-      function hideAbout()
-      {
-        var section = document.getElementById('about-section');
-        
-        if ( section.className.match(/(?:^|\s)show-about(?!\S)/) )
-        {
-          changeClass(section, "show-about", true);
-          changeClass(section, "hide-about");
-        }
-      }
-
-      function showAbout()
-      {
-        window.scrollTo(0,415);
-        var section = document.getElementById('about-section');
-        if ( section.className.match(/(?:^|\s)hide-about(?!\S)/) )
-        {
-          changeClass(section, "hide-about", true);
-          changeClass(section, "show-about"); 
-        }
-      }        
-    })();
-
     </script>
 
 </body>
