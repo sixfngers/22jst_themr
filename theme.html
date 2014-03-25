@@ -8,14 +8,14 @@
 
 {MobileAppHeaders}
 <title>22 Jump Street | Official Movie Site | Sony Pictures</title>
-<meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters June 13th.">
+<meta name="description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street - In Theaters June 13th.">
 <meta name="keywords" content="22 Jump Street, 21 Jump Street, Sequel, Action Comedy, Undercover Cop, Jonah Hill, Channing Tatum, Ice Cube, Phil Lord, Chris Miller, Movie, Sony Pictures">
 
-<meta property="og:title" content="Enter the Official Movie Site For 22 Jump Street, In Theaters June 13th" />
+<meta property="og:title" content="22 Jump Street - In Theaters June 13th" />
 <meta property="og:type" content="video.movie" />
 <meta property="og:description" content="Jonah Hill and Channing Tatum are back undercover in the action comedy sequel 22 Jump Street. In Theaters June 13th." />
 <meta property="og:image" content="http://flash.sonypictures.com/movies/22jumpstreet/share/tumblr/22jumpstreet_share.jpg" />
-<meta property="og:url" content="http://www.22JumpStreetMovie.com" />
+<meta property="og:url" content="http://jumpstmovies.tumblr.com/" />
 
 
 <meta name="color:Background" content="#369fa0" />
@@ -729,6 +729,11 @@ img {
 }
 
 
+.video-index-post-controls-wrapper
+{
+  display:none;
+}
+
 .index-post-controls-wrapper
 {
   opacity: 0;
@@ -787,6 +792,11 @@ img {
   background-color:{color:Secondary text};
 }
 
+.lt-ie10 .video-index-post-controls-wrapper
+{
+  display:block !important;
+}
+
 .lt-ie10 .index-post-controls-wrapper:hover
 {
 
@@ -818,6 +828,12 @@ img {
   margin:auto 0 auto 0;
   vertical-align: middle;
 }
+
+.lt-ie10 .video-lower
+{
+  display:none !important;
+}
+
 
 
 /*
@@ -1326,6 +1342,16 @@ blockquote a:active,
             <div class="video-player">{Video-500}</div>
           </div>
 
+            {block:IndexPage}
+            <div class="post-controls video-lower">
+              <ul>
+                  <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
+                  <li class="float-left like-control icon-button bg-fill">{LikeButton size="21" color="white"}</li>
+                  <li class="float-left permalink-control icon-button bg-fill"><a href="{Permalink}" class="permalink-button icon-button"></a></li>
+              </ul>
+            </div>
+            {/block:IndexPage}
+          
             <!-- {block:Caption}{Caption}{/block:Caption} -->
 
           {block:PermalinkPage}
@@ -1423,7 +1449,7 @@ blockquote a:active,
 
           {block:IndexPage}
           <!-- moved here for ie 8 -->
-          <div class="index-post-controls-wrapper">
+          <div class="{block:Video}video-index-post-controls-wrapper {/block:Video}index-post-controls-wrapper">
             <div class="post-controls">
               <ul>
                   <li class="float-left reblog-control icon-button bg-fill">{ReblogButton size="21" color="white"}</li>
