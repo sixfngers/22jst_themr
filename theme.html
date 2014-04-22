@@ -169,7 +169,7 @@ img {
     text-align:center;
 }
 
-.permalink-photo-wrapper
+.permalink-photo-wrapper, .photoset-permalink-wrapper
 {
     width:492px;
     margin:8px auto 0 auto;
@@ -1289,8 +1289,15 @@ blockquote a:active,
 
         {block:Photoset}
         <div class="photoset">
-            {block:IndexPage}{Photoset-250}{/block:IndexPage}
-            {block:PermalinkPage}{Photoset-700}{/block:PermalinkPage} 
+            {block:IndexPage}
+            <div class='photoset-wrapper' rel='{JSPhotosetLayout}'>{Photoset-500}</div>
+            {/block:IndexPage}
+            
+            {block:PermalinkPage}
+            <div class="photoset-permalink-wrapper red-border">
+              <div class='photoset-wrapper' rel='{JSPhotosetLayout}'>{Photoset-700}</div>{/block:IndexPage}
+            </div>
+            {/block:PermalinkPage} 
             <!-- {block:Caption}{Caption}{/block:Caption} -->
         {/block:Photoset}
 
@@ -1574,8 +1581,10 @@ blockquote a:active,
 <!--Code for infinite scroll and grid layout-->
 
 <!-- custom js file -->
-<!-- <script src="http://dev.bpginteractive.com/22jump/script/22js.js"></script> -->
-<script src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/script/22js.js"></script>
+ 
+  <script src="http://dev.bpginteractive.com/22jump/script/22js.js"></script>
+
+<!-- <script src="http://www.sonypictures.com/movies/22jumpstreet/tumblr-v2/assets/script/22js.js"></script> -->
 
 {block:indexPage}
 <script>

@@ -459,6 +459,11 @@
                     .bubble .content .video img {
                         border: none;
                     }
+
+                    .photoset-wrapper
+                    {
+                        margin-left:54px;
+                    }
                 
                 .bubble .content .chat {
                     width: 100%;
@@ -1562,8 +1567,10 @@
                         {/block:Photo}
 
                         {block:Photoset}
-                            <div class="video">
-                                {Photoset-500}
+                            <div class='photoset-wrapper'>
+                                <div class="video">
+                                    {Photoset-500}
+                                </div>
                             </div>
                             <div class="lower-post">
                             {block:Caption}
